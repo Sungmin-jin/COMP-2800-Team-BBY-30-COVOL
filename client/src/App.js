@@ -1,13 +1,9 @@
-import React, {
-  Fragment
-} from 'react';
-import './App.css';
+import React, { Component } from 'react';
 
-const App = () =>
-  <
-  Fragment >
-  <
-  h1 > App < /h1> <
-  /Fragment>
+class App extends Component {
+  render() {
 
-export default App;
+  }
+}
+
+export default App
