@@ -10,16 +10,9 @@ function UserProfile({profilePic, userName, userEmail}) {
 
     return (
         <div>
-<<<<<<< HEAD:client/src/components/UserProfile.js
             {/* <UserHeader />
             <UserInfo /> */}
             <UserProfileBtn />
-=======
-            <UserHeader />
-            <UserInfo />
-            <EditProfileBtn />
-            <BackBtn />
->>>>>>> 3b07c48fa3b77f2ed2e3676e9b12d5ccef54bb68:client/components/UserProfile.js
         </div>
     )
 }
