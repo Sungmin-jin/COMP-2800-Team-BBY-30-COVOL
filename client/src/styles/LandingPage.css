@@ -55,14 +55,14 @@
     .logo {
         margin-top: 100px;
         margin-bottom: 50px;
-        width: 80vw;
-        height: 70vw;
+        width: 70vw;
+        height: 60vw;
     }
 
     .LandingPageBtn {
         font-size:10vw;
         margin: 5vw;
-        padding:15vw 15vw 15vw 15vw;
+        padding:5vw 5vw 5vw 5vw;
         width: 50vw;
     }
 }
