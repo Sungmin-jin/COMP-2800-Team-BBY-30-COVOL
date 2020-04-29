@@ -27,4 +27,15 @@ function UserHeader({profilePic, userName}) {
      )
 }
 
+function EditProfileBtn() {
+    return (
+        <div>
+            <input></input>
+        </div>
+    )
+}
+
+function BackBtn() {
+
+}
 export default UserProfile;
