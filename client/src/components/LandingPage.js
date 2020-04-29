@@ -5,7 +5,7 @@ import './../styles/LandingPage.css';
 
 function LandingPage({logo}) {
     return (
-        <div>
+        <div className="LandingPage">
             <LandingPageLogo logo={logo} />
             <LandingPageButton/>
         </div>
@@ -29,8 +29,8 @@ LandingPageLogo.propTypes = {
 function LandingPageButton() {
     return (
         <div className="con-1">
-            <a className="LandingPageBtn" href="">LOGIN</a>
-            <a className="LandingPageBtn" href="">REGISTER</a> 
+            <a className="LandingPageBtn login" href="">LOGIN</a>
+            <a className="LandingPageBtn register" href="">REGISTER</a> 
 
         </div>
     )
