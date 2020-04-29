@@ -1,4 +1,34 @@
 import React, { Component } from 'react';
 
-//header complete
+// This component will create a User Profile Page
+function UserProfile({profilePic, userName, userEmail}) {
+    state = {}
+
+    return (
+        <UserHeader />
+        <UserInfo />
+        <EditProfileBtn />
+        <BackBtn />
+    )
+}
+
+// function UserHeader({profilePic, userName}) {
+//     return (
+//         <img>{profilePic}</img>
+//         <h2>{userName}</h2>
+//     )
+// }
+// function UserHeader({profilePic, userName}) {
+//     return (
+//         <ImgSection picture="{profilePic}" />
+//         <h2>{userName}</h2>
+//     )
+// }
+
+// function ImgSection() {
+//     return (
+//         <img>{profilePic}</img>
+//     )
+// }
+
 export default UserProfile;
