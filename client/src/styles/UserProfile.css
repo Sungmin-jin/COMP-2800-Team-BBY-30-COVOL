@@ -1,12 +1,29 @@
-.con-1 {
+.UserProfile_Header {
+    display: grid;
+    align-items: center;
     justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.UserProfile_Header h2 {
+    margin: 0;
 }
 
 .UserProfileBtn {
     text-decoration: none;
-    
+    font-weight: bold;
+    font-size: 1.3em;
+
     display: inline-block;
     width: 50%;
-    padding: 2em;
 
+    padding: 2em;
+    border-radius: 25px;
 }
+
+.UserProfileBtn:hover {
+    background-color: #81c784;
+    color: #ffffff;
+    transition: background-color 0.5s ease-out;
+}
+
