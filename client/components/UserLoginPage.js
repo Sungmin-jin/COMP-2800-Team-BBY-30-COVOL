@@ -26,7 +26,6 @@ function PageLogo() {
 function PageTxtField() {
     return (
         <div>
-            <
         </div>
     )
 }
