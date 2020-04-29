@@ -6,10 +6,9 @@ function UserProfile({profilePic, userName, userEmail}) {
 
     return (
         <div>
-        <UserHeader />
-        <UserInfo />
-        <EditProfileBtn />
-        <BackBtn />
+            {/* <UserHeader />
+            <UserInfo /> */}
+            <UserProfileBtn />
         </div>
     )
 }
@@ -33,15 +32,14 @@ function UserProfile({profilePic, userName, userEmail}) {
 //     )
 // }
 
-function EditProfileBtn() {
+function UserProfileBtn() {
     return (
         <div>
-            <input></input>
+            <input type="button" name="Edit Profile" value=""></input>
+            <input type="button" name="Back" value=""></input>
         </div>
     )
 }
 
-function BackBtn() {
 
-}
 export default UserProfile;
