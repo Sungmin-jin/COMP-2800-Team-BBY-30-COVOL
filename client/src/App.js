@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import UserProfile from './components/UserProfile';
 
 class App extends Component {
-  state = {}
+  state = {
+    profilePic: "",
+    userName: "",
+    userEmail: ""
+  }
   
   render() {
     return (
       <div className="App">
-        <UserProfile profilePic={profilePic} userName={userName} userEmail={userEmail} />
+        <UserProfile profilePic={this.state.profilePic} userName={this.state.userName} userEmail={this.state.userEmail} />
       </div>
     )
   }
