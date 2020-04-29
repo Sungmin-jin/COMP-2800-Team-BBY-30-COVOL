@@ -5,10 +5,12 @@ function UserProfile({profilePic, userName, userEmail}) {
     state = {}
 
     return (
+        <div>
         <UserHeader />
         <UserInfo />
         <EditProfileBtn />
         <BackBtn />
+        </div>
     )
 }
 
