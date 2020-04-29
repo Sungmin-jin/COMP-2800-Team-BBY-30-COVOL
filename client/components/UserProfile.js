@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
 
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, userEmail}) {
@@ -6,31 +8,23 @@ function UserProfile({profilePic, userName, userEmail}) {
 
     return (
         <div>
-        <UserHeader />
-        <UserInfo />
-        <EditProfileBtn />
-        <BackBtn />
+            <UserHeader />
+            <UserInfo />
+            <EditProfileBtn />
+            <BackBtn />
         </div>
     )
 }
 
-// function UserHeader({profilePic, userName}) {
-//     return (
-//         <img>{profilePic}</img>
-//         <h2>{userName}</h2>
-//     )
-// }
-// function UserHeader({profilePic, userName}) {
-//     return (
-//         <ImgSection picture="{profilePic}" />
-//         <h2>{userName}</h2>
-//     )
-// }
-
-// function ImgSection() {
-//     return (
-//         <img>{profilePic}</img>
-//     )
-// }
+// This component creates the user header containing the username and
+// a profile picture.
+function UserHeader({profilePic, userName}) {
+    return (
+        <div>
+            <Avatar alt="Profile Picture" src={profilePic}/>
+            <h2>{userName}</h2>
+        </div>
+     )
+}
 
 export default UserProfile;
