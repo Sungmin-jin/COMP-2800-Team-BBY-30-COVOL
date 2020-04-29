@@ -4,14 +4,15 @@ import Avatar from '@material-ui/core/Avatar';
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import './../styles/UserProfile.css';
 
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, userEmail}) {
 
     return (
         <div>
-            {/* <UserHeader />
-            <UserInfo /> */}
+            <UserHeader picture="profilePic" user="userName" />
+            {/* <UserInfo /> */}
             <UserProfileBtn />
         </div>
     )
@@ -22,8 +23,9 @@ function UserProfile({profilePic, userName, userEmail}) {
 function UserHeader({profilePic, userName}) {
     return (
         <div>
-            <Avatar alt="Profile Picture" src={profilePic}/>
-            <h2>{userName}</h2>
+            <Avatar alt="Profile Picture" src={profilePic} />
+            {/* <h2>{userName}</h2> */}
+            <h2>BBY TEAM 30</h2>
         </div>
      )
 }
@@ -38,22 +40,22 @@ const useStyles = makeStyles(theme => ({
   }));
 
 //This compontent creates a list of all the user's Info as buttons
-function UserInfo(userEmail, userPassword) {
-    const classes = useStyles();
+// function UserInfo(userEmail, userPassword) {
+//     const classes = useStyles();
   
-    return (
-      <div className={classes.root}>
-        <List component="nav" aria-label="secondary mailbox folders">
-          <ListItem button>
-            <ListItemText primary="Email:" secondary={userEmail} />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="password:" secondary={userPassword}   />
-          </ListItem>
-        </List>
-      </div>
-    );
-  }
+//     return (
+//       <div className={classes.root}>
+//         <List component="nav" aria-label="secondary mailbox folders">
+//           <ListItem button>
+//             <ListItemText primary="Email:" secondary={userEmail} />
+//           </ListItem>
+//           <ListItem button>
+//             <ListItemText primary="password:" secondary={userPassword}   />
+//           </ListItem>
+//         </List>
+//       </div>
+//     );
+//   }
 
 function UserProfileBtn() {
     return (
