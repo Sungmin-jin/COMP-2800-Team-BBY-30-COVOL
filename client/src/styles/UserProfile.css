@@ -1,0 +1,12 @@
+.con-1 {
+    justify-content: center;
+}
+
+.UserProfileBtn {
+    text-decoration: none;
+    
+    display: inline-block;
+    width: 50%;
+    padding: 2em;
+
+}

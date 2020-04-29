@@ -5,6 +5,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import './../styles/UserProfile.css';
+import test from './../image/logo.png';
 
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, userEmail}) {
@@ -23,7 +24,8 @@ function UserProfile({profilePic, userName, userEmail}) {
 function UserHeader({profilePic, userName}) {
     return (
         <div>
-            <Avatar alt="Profile Picture" src={profilePic} />
+            {/* <Avatar alt="Profile Picture" src={profilePic} /> */}
+            <Avatar alt="Profile Picture" src={test} />
             {/* <h2>{userName}</h2> */}
             <h2>BBY TEAM 30</h2>
         </div>
@@ -59,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 
 function UserProfileBtn() {
     return (
-        <div>
+        <div className="con-1">
             <a className="UserProfileBtn" href="">Edit Profile</a>
             <a className="UserProfileBtn" href="">Back</a>
         </div>
