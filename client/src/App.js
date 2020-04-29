@@ -6,8 +6,8 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        <UserProfile />
+      <div className="App">
+        <UserProfile profilePic={profilePic} userName={userName} userEmail={userEmail} />
       </div>
     )
   }

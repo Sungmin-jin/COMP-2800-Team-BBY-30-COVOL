@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, userEmail}) {
@@ -6,31 +11,57 @@ function UserProfile({profilePic, userName, userEmail}) {
 
     return (
         <div>
+<<<<<<< HEAD:client/src/components/UserProfile.js
             {/* <UserHeader />
             <UserInfo /> */}
             <UserProfileBtn />
+=======
+            <UserHeader />
+            <UserInfo />
+            <EditProfileBtn />
+            <BackBtn />
+>>>>>>> 3b07c48fa3b77f2ed2e3676e9b12d5ccef54bb68:client/components/UserProfile.js
         </div>
     )
 }
 
-// function UserHeader({profilePic, userName}) {
-//     return (
-//         <img>{profilePic}</img>
-//         <h2>{userName}</h2>
-//     )
-// }
-// function UserHeader({profilePic, userName}) {
-//     return (
-//         <ImgSection picture="{profilePic}" />
-//         <h2>{userName}</h2>
-//     )
-// }
+// This component creates the user header containing the username and
+// a profile picture.
+function UserHeader({profilePic, userName}) {
+    return (
+        <div>
+            <Avatar alt="Profile Picture" src={profilePic}/>
+            <h2>{userName}</h2>
+        </div>
+     )
+}
 
-// function ImgSection() {
-//     return (
-//         <img>{profilePic}</img>
-//     )
-// }
+//styling for user info buttons
+const useStyles = makeStyles(theme => ({
+    root: {
+      width: "100%",
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper
+    }
+  }));
+
+//This compontent creates a list of all the user's Info as buttons
+function UserInfo(userEmail, userPassword) {
+    const classes = useStyles();
+  
+    return (
+      <div className={classes.root}>
+        <List component="nav" aria-label="secondary mailbox folders">
+          <ListItem button>
+            <ListItemText primary="Email:" secondary={userEmail} />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="password:" secondary={userPassword}   />
+          </ListItem>
+        </List>
+      </div>
+    );
+  }
 
 function UserProfileBtn() {
     return (
