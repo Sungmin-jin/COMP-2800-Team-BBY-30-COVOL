@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
 }
 
 .UserProfile_Header h2 {
