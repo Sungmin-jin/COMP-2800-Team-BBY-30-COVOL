@@ -7,7 +7,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, userEmail}) {
-    state = {}
 
     return (
         <div>
@@ -66,8 +65,8 @@ function UserInfo(userEmail, userPassword) {
 function UserProfileBtn() {
     return (
         <div>
-            <input type="button" name="Edit Profile" value=""></input>
-            <input type="button" name="Back" value=""></input>
+            <a className="UserProfileBtn" href="">Edit Profile</a>
+            <a className="UserProfileBtn" href="">Back</a>
         </div>
     )
 }
