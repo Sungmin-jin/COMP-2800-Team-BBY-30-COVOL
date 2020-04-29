@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, userEmail}) {
@@ -26,6 +29,33 @@ function UserHeader({profilePic, userName}) {
         </div>
      )
 }
+
+//styling for user info buttons
+const useStyles = makeStyles(theme => ({
+    root: {
+      width: "100%",
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper
+    }
+  }));
+
+//This compontent creates a list of all the user's Info as buttons
+function UserInfo(userEmail, userPassword) {
+    const classes = useStyles();
+  
+    return (
+      <div className={classes.root}>
+        <List component="nav" aria-label="secondary mailbox folders">
+          <ListItem button>
+            <ListItemText primary="Email:" secondary={userEmail} />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="password:" secondary={userPassword}   />
+          </ListItem>
+        </List>
+      </div>
+    );
+  }
 
 function EditProfileBtn() {
     return (
