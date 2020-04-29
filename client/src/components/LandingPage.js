@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 
-//this is the way to use an image file in React
-//you ACTUALLY have to import the image file
-// import logo from './../image/logo.png';
-
 function LandingPage({logo}) {
     return (
         <div>
             <LandingPageLogo logo={logo} />
-            <LandingPageButton/>>
+            <LandingPageButton/>
         </div>
     )
 }
@@ -22,7 +18,7 @@ LandingPage.propTypes = {
 function LandingPageLogo({logo}) {
 
     return (
-        <img alt="App Logo" src={logo}></img>
+        <img className="logo" alt="App Logo" src={logo}></img>
     )
 }
 
