@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import UserProfile from './components/UserProfile';
+import LandingPage from './components/LandingPage';
+
+//this is the way to use an image file in React
+//you ACTUALLY have to import the image file
+// import logo from './../image/logo.png';
+import logo from './image/logo.png';
 
 class App extends Component {
   state = {
@@ -10,8 +15,8 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
-        <UserProfile profilePic={this.state.profilePic} userName={this.state.userName} userEmail={this.state.userEmail} />
+      <div>
+        <LandingPage logo={logo} />
       </div>
     )
   }
