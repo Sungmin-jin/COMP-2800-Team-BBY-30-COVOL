@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
+import profilePic from './../image/logo.png';
 
 function SwipePage({profilePic, userName, userEmail}) {
 
     return (
-        <div>
-            <UserPic picture="profilePic" />
-            {/* <UserInfo /> */} 
+        <div className="SwipePage">
+            <UserPic picture={profilePic} />
+            <UserInfo name={userName} email={userEmail} /> 
             <MoreInfo />
             <YesSwipe />
             <NoSwipe />
@@ -19,23 +20,23 @@ function UserPic({profilePic}) {
     return (
         <div className="ProfilePic">
             {/* <img alt="Profile Picture" src={profilePic} /> */}
-            <img alt="Profile Picture" src={test} />
+            <img alt="Profile Picture" src={profilePic} />
         </div>
      )
 }
 
-{/* function UserInfo({}) */}
-
-function MoreInfo({userName, userEmail}) {
-    <div className="Info">
-        {/* <p>{userName}</p> */}
-        <p>Test Name</p>
-        {/* <p>{userEmail}</p> */}
-        <p>Test Email</p>
-    </div>
+function UserInfo({userName, userEmail}) {
+    return (
+        <div className="user-info">
+            {/* <p>{userName}</p> */}
+            <p>Test Name</p>
+            {/* <p>{userEmail}</p> */}
+            <p>Test Email</p>
+        </div>
+    )
 }
 
-function MoreInfo({}) {
+function MoreInfo() {
     return (
         <div className="more-info">
             <a className="info-btn" href="">More Info</a> 
@@ -43,7 +44,7 @@ function MoreInfo({}) {
     )
 }
 
-function YesSwipe({}) {
+function YesSwipe() {
     return (
         <div className="swipe-yes">
             <a className="swipe-btn" href="">Yes</a> 
@@ -51,7 +52,7 @@ function YesSwipe({}) {
     )
 }
 
-function NoSwipe({}) {
+function NoSwipe() {
     return (
         <div className="swipe-no">
             <a className="swipe-btn" href="">No</a> 

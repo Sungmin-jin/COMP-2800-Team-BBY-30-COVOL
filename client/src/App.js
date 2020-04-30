@@ -3,6 +3,7 @@ import LandingPage from './components/LandingPage';
 import UserLoginPage from './components/UserLoginPage';
 import UserProfile from './components/UserProfile';
 import WelcomePage from './components/WelcomePage';
+import SwipePage from './components/SwipePage';
 
 
 //this is the way to use an image file in React
@@ -21,11 +22,13 @@ class App extends Component {
       <div className="App">
         {/* <LandingPage logo={logo} /> */}
 
-        <UserProfile />
+        {/* <UserProfile /> */}
 
         {/* <UserLoginPage /> */}
 
-        <WelcomePage logo={logo} />
+        {/* <WelcomePage logo={logo} /> */}
+
+        <SwipePage />
       </div>
     )
   }
