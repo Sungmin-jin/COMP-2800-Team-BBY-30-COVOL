@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserProfile />
+        {/* <UserProfile /> */}
       
         {/* <LandingPage logo={logo} /> */}
       </div>
