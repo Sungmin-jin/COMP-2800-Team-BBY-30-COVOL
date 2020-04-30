@@ -1,6 +1,7 @@
-body {
+html, body {
     box-sizing: border-box;
     justify-content: center;
     text-align: center;
     margin: 0;
+    padding: 0;
 }

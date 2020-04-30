@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import LandingPage from './components/LandingPage';
+import UserLoginPage from './components/UserLoginPage';
 import UserProfile from './components/UserProfile';
+
 
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
@@ -17,7 +19,10 @@ class App extends Component {
     return (
       <div className="App">
         {/* <LandingPage logo={logo} /> */}
+
         {/* <UserProfile /> */}
+
+        {/* <UserLoginPage /> */}
       
       </div>
     )
