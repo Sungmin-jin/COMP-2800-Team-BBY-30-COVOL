@@ -15,6 +15,10 @@ export const Register = ({ setAlert, register }) => {
     password2: '',
   });
 
+  // state = {
+  //   name: ''
+  // }
+
   const { name, email, password, password2 } = formData;
 
   const onChange = (e) =>
