@@ -61,8 +61,6 @@ function UserHeader({profilePic, userName}) {
 
     return (
         <div className="UserProfile_Header">
-            {/* <Avatar alt="Profile Picture" src={profilePic} /> */}
-
             {/* $$$$ TIP $$$$ 
                 https://stackoverflow.com/questions/46066675/how-to-add-multiple-classes-in-material-ui-using-the-classes-props
                 
@@ -94,6 +92,7 @@ function UserInfo({userName, name, userEmail, userBio}) {
     const classes = useStyles2();
   
     return (
+      
       <div className={classes.root}>
         <List component="nav" 
               aria-labelledby="nested-list-subheader" 
@@ -102,21 +101,20 @@ function UserInfo({userName, name, userEmail, userBio}) {
               >
 
           <ListItem button>
-            <ListItemText primary="User Name" secondary={userName}   />
+            <ListItemText primary="User Name" secondary={userName} />
           </ListItem>
 
           <ListItem button>
             <ListItemText primary="Name" secondary={name} />
-            {/* <ListItemText primary="Email:" secondary="mkim265@my.bcit.ca" /> */}
-
           </ListItem>
 
           <ListItem button>
             <ListItemText primary="Email" secondary={userEmail}   />
+            {/* <ListItemText primary="Email:" secondary="mkim265@my.bcit.ca" /> */}
           </ListItem>
 
           <ListItem button>
-            <ListItemText primary="Bio" secondary={userBio}   />
+            <ListItemText primary="Bio" secondary={userBio} />
           </ListItem>
           
         </List>
@@ -131,10 +129,6 @@ UserInfo.ProtoType = {
   bio: PropType.string.isRequired
 }
   
-
-
-
-
 function UserProfileBtn() {
     return (
         <div>
