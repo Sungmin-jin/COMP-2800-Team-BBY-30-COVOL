@@ -15,7 +15,8 @@ function WelcomePage({logo, userName}) {
         <div>
             <WelcomePageLogo logo ={logo} />
             <WelcomePageName name ={userName} />
-            <WelcomePageBtn />
+            <WelcomePageVolunteerBtn />
+            <WelcomePageProfileBtn />
             <WelcomePageLogout />
         </div>
     )
@@ -50,12 +51,19 @@ WelcomePageName.propTypes = {
 }
 
 //This component is the buttons on the User Welcome page
-function WelcomePageBtn() {
+function WelcomePageVolunteerBtn() {
     return (
         <div className="con-1">
             <a className="WelcomePageBtn" href="">Volunteer</a>
-            <a className="WelcomePageBtn" href="">Profile</a> 
+        </div>
+    )
+}
 
+//This component is the buttons on the User Welcome page
+function WelcomePageProfileBtn() {
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn" href="">Profile</a> 
         </div>
     )
 }
