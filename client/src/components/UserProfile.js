@@ -122,8 +122,9 @@ function UserInfo({userName, name, userEmail, userBio}) {
     );
 }
 
-UserInfo.ProtoType = {
+UserInfo.PropType = {
   userName: PropType.string.isRequired,
+  age: PropType.number.isRequired,
   name: PropType.string.isRequired,
   email: PropType.string.isRequired,
   bio: PropType.string.isRequired
