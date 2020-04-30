@@ -31,7 +31,6 @@ function LandingPageButton() {
         <div className="con-1">
             <a className="LandingPageBtn login" href="">LOGIN</a>
             <a className="LandingPageBtn register" href="">REGISTER</a> 
-
         </div>
     )
 }
