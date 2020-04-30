@@ -95,8 +95,8 @@
     .LandingPage {
         grid-template-columns:repeat(2, 1fr);
         grid-template-areas:
-        "logo" "logo"
-        "login" "register"
+        "logo logo"
+        "login register"
     }
 
     .logo {
