@@ -7,7 +7,6 @@ import WelcomePage from './components/WelcomePage';
 
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
-// import logo from './../image/logo.png';
 import logo from './image/logo.png';
 
 class App extends Component {
@@ -22,7 +21,7 @@ class App extends Component {
       <div className="App">
         {/* <LandingPage logo={logo} /> */}
 
-        {/* <UserProfile /> */}
+        <UserProfile />
 
         {/* <UserLoginPage /> */}
 

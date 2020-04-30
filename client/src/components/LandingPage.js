@@ -5,9 +5,10 @@ import './../styles/LandingPage.css';
 
 function LandingPage({logo}) {
     return (
-        <div>
+        <div className="LandingPage">
             <LandingPageLogo logo={logo} />
-            <LandingPageButton/>
+            <LandingPageButtonLogin/>
+            <LandingPageButtonRegister/>
         </div>
     )
 }
@@ -26,14 +27,19 @@ LandingPageLogo.propTypes = {
     logo: PropTypes.string.isRequired
 }
 
-function LandingPageButton() {
+function LandingPageButtonLogin() {
     return (
-        <div className="con-1">
+        <div className="login">
             <a className="LandingPageBtn" href="">LOGIN</a>
-            <a className="LandingPageBtn" href="">REGISTER</a> 
-
         </div>
     )
 }
 
+function LandingPageButtonRegister() {
+    return (
+        <div className="register">
+            <a className="LandingPageBtn register" href="">REGISTER</a> 
+        </div>
+    )
+}
 export default LandingPage;
