@@ -34,10 +34,11 @@ import { Z_BLOCK } from 'zlib';
 function UserProfile({profilePic, userName, name, userEmail, userBio}) {
 
     return (
-        <div>
+        <div className="UserProfilePage">
             <UserHeader picture={profilePic} user={userName} />
             <UserInfo user={userName} name={name} userEmail={userEmail} userBio={userBio} />
-            <UserProfileBtn />
+            <UserProfileBtnEdit />
+            <UserProfileBtnBack />
         </div>
     )
 }
@@ -77,27 +78,28 @@ function UserHeader({profilePic, userName}) {
 }
 
 // styling for user info buttons
-const useStyles2 = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-      maxWidth: 1500,
-      backgroundColor: theme.palette.background.paper,
-      margin: '0 auto',
-      marginTop: '2em'
-    }
-  }));
+// const useStyles2 = makeStyles((theme) => ({
+//     root: {
+//       width: '100%',
+//       maxWidth: 1500,
+//       backgroundColor: #424242,
+//       margin: '0 auto',
+//       marginTop: '2em'
+//     }
+//   }));
 
 // This compontent creates a list of all the user's Info as buttons
 function UserInfo({userName, name, userEmail, userBio}) {
-    const classes = useStyles2();
+    // const classes = useStyles2();
   
     return (
       
-      <div className={classes.root}>
+      // <div className={classes.root}>
+      <div className="UserProfile_Info">
         <List component="nav" 
               aria-labelledby="nested-list-subheader" 
               subheader={<ListSubheader component="div" id="nested-list-subheader">User Profile</ListSubheader>} 
-              className={classes.root}
+              className="UserProfile_Info"
               >
 
           <ListItem button>
@@ -130,13 +132,20 @@ UserInfo.PropType = {
   bio: PropType.string.isRequired
 }
   
-function UserProfileBtn() {
+function UserProfileBtnEdit() {
     return (
-        <div>
-            <a className="UserProfileBtn" href="">Edit Profile</a>
-            <a className="UserProfileBtn" href="">Back</a>
-        </div>
+      <div className="edit">
+        <a className="UserProfileBtn" href="">Edit Profile</a>
+      </div>
     )
+}
+
+function UserProfileBtnBack() {
+  return (
+    <div className="back">
+      <a className="UserProfileBtn" href="">Back</a>
+    </div>
+  )
 }
 
 

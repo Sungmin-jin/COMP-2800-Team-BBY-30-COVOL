@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         {/* <LandingPage logo={logo} /> */}
 
-        {/* <UserProfile /> */}
+        <UserProfile />
 
         {/* <UserLoginPage /> */}
       
