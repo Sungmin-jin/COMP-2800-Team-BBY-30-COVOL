@@ -13,6 +13,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password2: '',
   });
 
+  // state = {
+  //   name: ''
+  // }
+
   const { name, email, password, password2 } = formData;
 
   const onChange = (e) =>
