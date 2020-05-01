@@ -32,7 +32,7 @@ function LandingPageLogo({logo}) {
 function LandingPageButtonLogin() {
     return (
         <div className="login">
-            <a className="LandingPageBtn" href="">LOGIN</a>
+            <a className="LandingPageBtn" href="/login">LOGIN</a>
         </div>
     )
 }
