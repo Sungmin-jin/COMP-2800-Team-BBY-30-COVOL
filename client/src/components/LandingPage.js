@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 
+import logo from './../image/logo.png';
+
 
 function LandingPage({logo}) {
     return (
@@ -13,9 +15,9 @@ function LandingPage({logo}) {
     )
 }
 
-LandingPage.propTypes = {
-    logo: PropTypes.string.isRequired
-}
+// LandingPage.propTypes = {
+//     logo: PropTypes.string.isRequired
+// }
 
 function LandingPageLogo({logo}) {
     return (
@@ -23,9 +25,9 @@ function LandingPageLogo({logo}) {
     )
 }
 
-LandingPageLogo.propTypes = {
-    logo: PropTypes.string.isRequired
-}
+// LandingPageLogo.propTypes = {
+//     logo: PropTypes.string.isRequired
+// }
 
 function LandingPageButtonLogin() {
     return (
