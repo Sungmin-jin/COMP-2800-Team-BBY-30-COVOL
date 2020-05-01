@@ -20,7 +20,8 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "yarn": "^1.22.4"
+    "yarn": "^1.22.4",
+    "uuid": "^8.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +44,9 @@
       "last 1 safari version"
     ]
   },
+<<<<<<< HEAD
   "proxy": "http://localhost:3000"
+=======
+  "proxy": "http://localhost:8000"
+>>>>>>> login_register_Jason
 }

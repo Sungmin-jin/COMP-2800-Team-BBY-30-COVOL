@@ -1,34 +1,38 @@
-import React, { Component } from 'react';
-import LandingPage from './components/LandingPage';
-import UserLoginPage from './components/UserLoginPage';
-import UserProfile from './components/UserProfile';
-import WelcomePage from './components/WelcomePage';
+import React, { Fragment, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Alert from './components/Alert';
+
+//Redux
+import { Provider } from 'react-redux';
+import store from './store';
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
 
 
-//this is the way to use an image file in React
-//you ACTUALLY have to import the image file
-import logo from './image/logo.png';
-
-class App extends Component {
-  state = {
-    profilePic: "",
-    userName: "",
-    userEmail: ""
-  }
-  
-  render() {
-    return (
-      <div className="App">
-        {/* <LandingPage logo={logo} /> */}
-
-        {/* <UserProfile /> */}
-
-        {/* <UserLoginPage /> */}
-
-        <WelcomePage logo={logo} />
-      </div>
-    )
-  }
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
 }
 
-export default App
+const App = () => {
+  useEffect(() => {
+    setAuthToken(localStorage.token);
+    store.dispatch(loadUser());
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <Router>
+        <Fragment>
+          <Alert />
+          <Switch>
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+          </Switch>
+        </Fragment>
+      </Router>
+    </Provider>
+  );
+};
+export default App;
