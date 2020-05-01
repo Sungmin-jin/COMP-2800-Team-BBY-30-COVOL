@@ -17,7 +17,7 @@ import logoIMG from './../image/logo.png';
 // This component will create a User Welcome Page
 function WelcomePage({logo, userName}) {
     return (
-        <div>
+        <div className="WelcomePage">
             <WelcomePageLogo logo ={logo} />
             <WelcomePageName name ={userName} />
             <WelcomePageVolunteerBtn />
