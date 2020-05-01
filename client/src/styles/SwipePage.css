@@ -74,32 +74,33 @@
     .SwipePage {
         grid-template-columns:repeat(3,1fr);
         grid-template-areas:
-        "yes pic no"
-        "yes info no"
-        "info-btn info-btn info-btn"
+        "pic pic pic"
+        "info info info"
+        "yes info-btn no"
     }
 
     .pic{
-        width: 50vw;
-        height: 50vw;
+        width: 70vw;
+        height: 70vw;
     }
     
     .user-info {
-        width: 50vw;
-        height: 20vw;
+        margin-bottom: 0;
+        width: 70vw;
+        height: 40vw;
         font-size:3vw;
     }
     
     .more-info {
-
+        margin-top:0;
     }
     
     .swipe-yes {
-
+        margin-top:0;
     }
     
     .swipe-no {
-        
+        margin-top:0;
     }
 
     .info-btn {
@@ -169,17 +170,18 @@
     }
 
     .pic{
-        width: 40vw;
-        height: 40vw;
+        width: 50vw;
+        height: 50vw;
     }
     
     .user-info {
-        width: 40vw;
-        height: 10vw;
-        font-size:1.5vw;
+        width: 50vw;
+        height: 20vw;
+        font-size:2vw;
     }
     
     .more-info {
+        margin-top:0;
     }
     
     .swipe-yes {
@@ -213,14 +215,14 @@
     }
 
     .pic{
-        width: 30vw;
-        height: 30vw;
+        width: 25vw;
+        height: 25vw;
     }
     
     .user-info {
-        width: 30vw;
+        width: 25vw;
         height: 10vw;
-        font-size:1.5vw
+        font-size:1vw
     }
     
     .more-info {
