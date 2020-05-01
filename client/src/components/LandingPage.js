@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 
-import logo from './../image/logo.png';
+import logoIMG from './../image/logo.png';
 
 
 function LandingPage({logo}) {
@@ -21,7 +21,7 @@ function LandingPage({logo}) {
 
 function LandingPageLogo({logo}) {
     return (
-        <img className="logo" alt="App Logo" src={logo}></img>
+        <img className="logo" alt="App Logo" src={logoIMG}></img>
     )
 }
 

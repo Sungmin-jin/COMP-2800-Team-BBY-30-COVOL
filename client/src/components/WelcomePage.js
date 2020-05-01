@@ -12,6 +12,8 @@ import Button from "@material-ui/core/Button";
 //CSS
 import './../styles/WelcomePage.css';
 
+import logoIMG from './../image/logo.png';
+
 // This component will create a User Welcome Page
 function WelcomePage({logo, userName}) {
     return (
@@ -34,7 +36,7 @@ WelcomePage.propTypes = {
 //This component is the logo of the User Welcome Page
 function WelcomePageLogo ({logo}) {
     return (
-        <img className="logo" alt="App Logo" src={logo}></img>
+        <img className="logo2" alt="App Logo" src={logoIMG}></img>
     )
 }
 
