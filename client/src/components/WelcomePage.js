@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import {React, Component } from 'react'
+
+//Importing Footer Component
+import Footer from './Footer';
 
 //Prop Types
 import PropTypes from 'prop-types'
@@ -18,6 +21,7 @@ function WelcomePage({logo, userName}) {
             <WelcomePageVolunteerBtn />
             <WelcomePageProfileBtn />
             <WelcomePageLogout />
+            <Footer />
         </div>
     )
 }
