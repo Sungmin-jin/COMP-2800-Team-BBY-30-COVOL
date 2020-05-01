@@ -1,0 +1,74 @@
+.footerContainer {
+    font-size: .9rem;
+    font-weight: bold;
+    color: #FFFFFF;
+
+    display: grid;
+    grid-template-areas: 
+    "copy name";
+
+    /* width: 100%; */
+    min-width: 230px;
+    /* margin: 0 auto; */
+    margin-top: 10vh;
+
+    padding: 1em;
+
+    background-color: #000000;
+    
+}
+
+.footerSpan {
+    display: inline-block;
+    margin: 0.9em;
+}
+
+.copySpan {
+    grid-area: copy;
+}
+
+.nameSpan {
+    font-weight: normal;
+    grid-area: name;
+}
+
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .footerContainer {
+        padding: 0;
+        margin-top: 13vh;
+
+    }
+
+    .footerSpan {
+        font-size: 1em;
+        margin: 0.7em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footerContainer {
+        padding: 0;
+        margin-top: 13vh;
+
+    }
+
+    .footerSpan {
+        font-size: 1.2em;
+        margin: 0.6em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:2048px) {
+    .footerContainer {
+        padding: 0;
+        margin-top: 13vh;
+
+    }
+
+    .footerSpan {
+        font-size: 1.5em;
+        margin: 0.4em;
+    }
+
+}

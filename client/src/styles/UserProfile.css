@@ -1,0 +1,132 @@
+.UserProfilePage {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
+
+.UserProfile_Header {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+    grid-area: header;
+}
+
+.UserProfile_Header h2 {
+    margin: 0;
+}
+
+.UserProfile_Info {
+    grid-area: info;
+    width: 100%;
+    max-width: 1500;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.UserProfileBtn {
+    text-decoration: none;
+    font-weight: bold;
+    font-family:calibri;
+    color:white;
+
+    background-color: lightblue;
+
+    display: inline-block;
+
+    border-radius: 25px;
+
+}
+
+.UserProfileBtn:hover {
+    background-color: teal;
+    color: white;
+    transition: background-color 0.5s ease-out;
+}
+
+.edit {
+    grid-area: edit;
+}
+
+.back {
+    grid-area: back;
+}
+
+@media (max-width: 425px) {
+    .UserProfilePage {
+        grid-template-areas: 
+        "header"
+        "info"
+        "edit"
+        "back"
+    }
+
+    .UserProfileBtn {
+        font-size:10vw;
+        padding:3vh 5vw 3vh 5vw;
+        width: 50vw;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .UserProfilePage {
+        grid-template-areas:
+        "header"
+        "info"
+        "edit"
+        "back"
+    }
+
+    .UserProfileBtn {
+        font-size:6vw;
+        padding:3vh 0vw 3vh 0vw;
+        width: 50vw;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .UserProfilePage {
+        grid-template-areas:
+        "header header"
+        "info info"
+        "edit back"
+    }
+
+    .UserProfileBtn {
+        width:40vw;
+        padding:3vh 0vw 3vh 0vw;
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:2048px) {
+    .UserProfilePage {
+        grid-template-areas:
+        "header header"
+        "info info"
+        "edit back"
+    }
+
+    .UserProfileBtn {
+        width:40vw;
+        padding:3vh 0 3vh 0;
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 2049px) {
+    .UserProfilePage {
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-areas:
+        "logo logo"
+        "login register"
+    }
+
+    .UserProfileBtn {
+        width:40vw;
+        padding:3vh 0 3vh 0;
+        font-size: 3vw;
+    }
+}

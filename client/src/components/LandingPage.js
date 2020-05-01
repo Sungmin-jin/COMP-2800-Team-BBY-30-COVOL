@@ -1,46 +1,47 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './../css/LoginPage.css';
+import './../styles/LandingPage.css';
+
+import logoIMG from './../image/logo.png';
 
 
-function LoginPage({logo}) {
+function LandingPage({logo}) {
     return (
-        <div>
-            <LoginPageLogo logo={logo} />
-            <LoginButton/>
-            <RegisterButton/>
+        <div className="LandingPage">
+            <LandingPageLogo logo={logo} />
+            <LandingPageButtonLogin/>
+            <LandingPageButtonRegister/>
         </div>
     )
 }
 
-LoginPage.propTypes = {
-    logo: PropTypes.string.isRequired
-}
+// LandingPage.propTypes = {
+//     logo: PropTypes.string.isRequired
+// }
 
-function LoginPageLogo({logo}) {
+function LandingPageLogo({logo}) {
     return (
-        <img alt="App Logo" src={logo}></img>
+        <img className="logo" alt="App Logo" src={logoIMG}></img>
     )
 }
 
-LoginPageLogo.propTypes = {
-    logo: PropTypes.string.isRequired
-}
+// LandingPageLogo.propTypes = {
+//     logo: PropTypes.string.isRequired
+// }
 
-function LoginButton() {
+function LandingPageButtonLogin() {
     return (
-        <div className="con-1 loginBtn">
-            <span>Login</span>
+        <div className="login">
+            <a className="LandingPageBtn" href="/login">LOGIN</a>
         </div>
     )
 }
 
-function RegisterButton() {
+function LandingPageButtonRegister() {
     return (
-        <div className="con-1 regBtn">
-            <span>Register</span>
+        <div className="register">
+            <a className="LandingPageBtn register" href="/register">REGISTER</a> 
         </div>
     )
 }
-
-export default LoginPage;
+export default LandingPage;
