@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './../styles/LandingPage.css';
-import profilePic from './../image/logo.png';
+import './../styles/SwipePage.css';
 
 function SwipePage({profilePic, userName, userEmail}) {
 
     return (
         <div className="SwipePage">
-            <UserPic picture={profilePic} />
-            <UserInfo name={userName} email={userEmail} /> 
+            <UserPic profilePic={profilePic} />
+            <UserInfo userName={userName} userEmail={userEmail} /> 
             <MoreInfo />
             <YesSwipe />
             <NoSwipe />
@@ -16,13 +15,18 @@ function SwipePage({profilePic, userName, userEmail}) {
     )
 }
 
+SwipePage.propTypes = {
+    profilePic: PropTypes.string.isRequired
+}
+
 function UserPic({profilePic}) {
     return (
-        <div className="ProfilePic">
-            {/* <img alt="Profile Picture" src={profilePic} /> */}
-            <img alt="Profile Picture" src={profilePic} />
-        </div>
-     )
+        <img className="pic" alt="Profile Picture" src={profilePic}></img>
+    )
+}
+
+UserPic.propTypes = {
+    profilePic: PropTypes.string.isRequired
 }
 
 function UserInfo({userName, userEmail}) {
