@@ -143,7 +143,7 @@ function UserProfileBtnEdit() {
 function UserProfileBtnBack() {
   return (
     <div className="back">
-      <a className="UserProfileBtn" href="">Back</a>
+      <a className="UserProfileBtn" href="/welcome">Back</a>
     </div>
   )
 }

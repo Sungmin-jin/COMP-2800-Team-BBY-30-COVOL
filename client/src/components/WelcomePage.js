@@ -69,7 +69,7 @@ function WelcomePageVolunteerBtn() {
 function WelcomePageProfileBtn() {
     return (
         <div className="con-1">
-            <a className="WelcomePageBtn" href="">Profile</a> 
+            <a className="WelcomePageBtn" href="./userprofile">Profile</a> 
         </div>
     )
 }

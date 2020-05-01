@@ -40,7 +40,7 @@ function LandingPageButtonLogin() {
 function LandingPageButtonRegister() {
     return (
         <div className="register">
-            <a className="LandingPageBtn register" href="">REGISTER</a> 
+            <a className="LandingPageBtn register" href="/register">REGISTER</a> 
         </div>
     )
 }
