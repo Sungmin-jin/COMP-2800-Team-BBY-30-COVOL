@@ -44,7 +44,7 @@ const App = () => {
             <Route path='/login' component={Login} />
 
             <Route path='/userprofile' component={UserProfile} />
-            <Route path='/welcome' component={WelcomePage} />
+            <Route path='/welcome' component={WelcomePage}/>
             <Route path='/swipepage' component={SwipePage} />
           </Switch>
         </Fragment>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/SwipePage.css';
+import profileIMG from './../image/profilepic.jpg'
 
 function SwipePage({profilePic, userName, userEmail}) {
 
@@ -21,7 +22,7 @@ SwipePage.propTypes = {
 
 function UserPic({profilePic}) {
     return (
-        <img className="pic" alt="Profile Picture" src={profilePic}></img>
+        <img className="pic" alt="Profile Picture" src={profileIMG}></img>
     )
 }
 
