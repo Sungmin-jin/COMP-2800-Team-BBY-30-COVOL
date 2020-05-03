@@ -21,6 +21,8 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
+  // this is checking 
+  // it checks token
   if (isAuthenticated) {
     return <Redirect to='/welcome' />;
   }
