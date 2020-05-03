@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
 
 // Our own components
 import LandingPage from './components/LandingPage';

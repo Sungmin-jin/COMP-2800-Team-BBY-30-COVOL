@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 
+// Nav component
+import Nav from './Nav';
+
 import logoIMG from './../image/logo.png';
 
 
 function LandingPage({logo}) {
     return (
         <div className="LandingPage">
+            <Nav className="nav" />
             <LandingPageLogo logo={logo} />
             <LandingPageButtonLogin/>
             <LandingPageButtonRegister/>
