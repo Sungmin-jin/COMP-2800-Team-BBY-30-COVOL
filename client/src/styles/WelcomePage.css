@@ -1,0 +1,32 @@
+.logo2 {
+    width:20vw;
+    height:15vw
+}
+
+.con-1 {
+    justify-content: center;
+}
+
+.WelcomePageBtn {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+
+    display: inline-block;
+    width: 50%;
+
+    padding: 2em;
+    border-radius: 25px;
+}
+
+.WelcomePageBtn:hover {
+    background-color: #81c784;
+    color: #ffffff;
+    transition: background-color 0.5s ease-out;
+}
+
+.WelcomePageName {
+    color: #81c784;
+    font-weight: bold;
+    font-size: 1.3em;
+}

@@ -1,4 +1,5 @@
 const express = require('express');
+// const path = require('path');
 const connectDB = require('./config/db');
 
 const app = express();
@@ -13,6 +14,7 @@ app.use(express.json({
 
 app.get('/', (req, res) => {
     res.send("Hello");
+    // res.sendFile(path.join(__dirname, './client/public', 'index.html'));
 })
 
 //Define routes
