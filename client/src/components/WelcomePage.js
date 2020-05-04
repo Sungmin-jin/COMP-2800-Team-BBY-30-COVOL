@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, { Component, useEffect } from 'react';
+
 //Importing Footer Component
 import Footer from './Footer';
 
@@ -14,15 +14,22 @@ import './../styles/WelcomePage.css';
 
 import logoIMG from './../image/logo.png';
 
-//LOGOUT
-import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
+import { connect } from 'react-redux';
+import { getCurrentProfile } from '../actions/profile';
 
 // This component will create a User Welcome Page
-function WelcomePage({ logo, userName, isAuthenticated, logout }) {
-  if (!isAuthenticated) {
-    return <Redirect to='/' />;
-  }
+function WelcomePage({
+  logo,
+  userName,
+  logout,
+  getCurrentProfile,
+  auth,
+  profile,
+}) {
+  useEffect(() => {
+    getCurrentProfile();
+  }, []);
   return (
     <div>
       <WelcomePageLogo logo={logo} />
@@ -34,27 +41,6 @@ function WelcomePage({ logo, userName, isAuthenticated, logout }) {
     </div>
   );
 }
-
-// const WelcomePage = ({
-//   logo,
-//   userName,
-//   auth: { isAuthenticated, loading },
-//   logout,
-// }) => {
-//   if (isAuthenticated) {
-//     return <Redirect to='/welcome' />;
-//   }
-//   return (
-//     <div>
-//       <WelcomePageLogo logo={logo} />
-//       <WelcomePageName name={userName} />
-//       <WelcomePageVolunteerBtn />
-//       <WelcomePageProfileBtn />
-//       <WelcomePageLogout logout={logout} />
-//       <Footer />
-//     </div>
-//   );
-// };
 
 WelcomePage.propTypes = {
   logo: PropTypes.string.isRequired,
@@ -105,34 +91,27 @@ function WelcomePageProfileBtn() {
 }
 
 //this component is the logout button on the User Welcome page
-const WelcomePageLogout = ({ logout }) => {
+function WelcomePageLogout({ logout }) {
   return (
-    <Fragment>
-      <div>
-        <a onClick={logout} href='/'>
-          Logout
-        </a>
-      </div>
-    </Fragment>
+    <div>
+      <a href='/login' onClick={logout} className='WelcomePageBtn'>
+        Log out
+      </a>
+    </div>
   );
-};
-
-// function WelcomePageLogout({ auth: logout }) {
-//   return (
-//     <div>
-//       <a onClick={logout}>Logout</a>
-//     </div>
-//   );
-// }
-
+}
 WelcomePage.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  isAuthenticated: PropTypes.bool,
+  getCurrentProfile: PropTypes.func.isRequired,
+  profile: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
+  profile: state.profile,
 });
 
-export default connect(mapStateToProps, { logout })(WelcomePage);
+export default connect(mapStateToProps, { logout, getCurrentProfile })(
+  WelcomePage
+);
