@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 
-import logoIMG from './../image/logo.png';
+// Nav component
+import Nav from './Nav';
+// Footer component
+import Footer from './Footer';
 
+import logoIMG from './../image/logo.png';
 
 function LandingPage({logo}) {
     return (
         <div className="LandingPage">
+            <Nav className="nav" />
             <LandingPageLogo logo={logo} />
             <LandingPageButtonLogin/>
             <LandingPageButtonRegister/>
+            <Footer />
         </div>
     )
 }

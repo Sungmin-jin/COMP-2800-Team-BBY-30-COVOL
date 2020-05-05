@@ -4,19 +4,6 @@
     height: 100vh;
 }
 
-.UserProfile_Header {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 2em;
-    grid-area: header;
-}
-
-.UserProfile_Header h2 {
-    margin: 0;
-}
-
 .UserProfile_Info {
     grid-area: info;
     width: 100%;

@@ -1,8 +1,12 @@
 .LandingPage {
+    background-color:white;
     width:100vw;
+    max-width: 1500px;
     height:100vh;
     display:grid;
+    /* grid-template-rows: 1fr, 6fr, 2fr, 2fr; */
     grid-template-areas:
+        "nav"
         "logo"
         "login"
         "register";
@@ -14,14 +18,11 @@
     grid-area:logo;
 }
 
-.login {
-    margin:auto;
-    grid-area:login;
-}
-
-.register {
-    margin:auto;
-    grid-area:register;
+.login {grid-area:login;}
+.register {grid-area:register;}
+.nav {
+    grid-area: nav;
+    max-height: 64px;
 }
 
 .LandingPageBtn {
@@ -45,30 +46,31 @@
 
 @media (max-width: 425px) {
     .LandingPage {
-        grid-template-columns:repeat(1, 1fr);
         grid-template-areas:
+        "nav"
         "logo"
         "login"
         "register"
     }
 
     .logo {
-        margin-top: 100px;
-        width: 70vw;
-        height: 58vw;
+        margin-top: 5vh;
+        width: 60vw;
+        height: 50vw;
     }
 
     .LandingPageBtn {
+        margin-top: 3vh;
         font-size:10vw;
-        padding:3vh 5vw 3vh 5vw;
+        padding:2vh 5vw 2vh 5vw;
         width: 50vw;
     }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
     .LandingPage {
-        grid-template-columns:repeat(1, 1fr);
         grid-template-areas:
+        "nav"
         "logo"
         "login"
         "register"
@@ -89,12 +91,14 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .LandingPage {
-        grid-template-columns:repeat(2, 1fr);
+        
         grid-template-areas:
-        "logo logo"
+        "nav"
+        "logo"
         "login register"
     }
 
+    
     .logo {
         margin-top: 100px;
         width: 30vw;
@@ -108,49 +112,24 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width:2048px) {
+@media (min-width: 1025px) {
     .LandingPage {
-        border: lightslategrey 10px solid;
-        margin: 5vh 10vw 5vh 10vw;
-        height:90vh;
-        width:80vw;
-        grid-template-columns:repeat(2, 1fr);
-        grid-template-areas:
-        "logo login"
-        "logo register"
-    }
-
-    .logo {
         margin:auto;
-        width: 30vw;
-        height: 23vw;
-    }
-
-    .LandingPageBtn {
-        width:20vw;
-        padding:3vh 0 3vh 0;
-        font-size: 2vw;
-    }
-}
-
-@media (min-width: 2049px) {
-    .LandingPage {
-        width:40vw;
-        grid-template-columns:repeat(2, 1fr);
         grid-template-areas:
-        "logo logo"
+        "nav"
+        "logo"
         "login register"
     }
 
     .logo {
-        margin-top: 200px;
-        width: 20vw;
+        margin:6vh auto 6vh auto;
+        width: 19vw;
         height: 15vw;
     }
 
     .LandingPageBtn {
         width:20vw;
         padding:3vh 0 3vh 0;
-        font-size: 3vw;
+        font-size: 2vw;
     }
 }

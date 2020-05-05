@@ -12,7 +12,7 @@
     /* margin: 0 auto; */
     margin-top: 10vh;
 
-    padding: 1em;
+    padding: 0.2em;
 
     background-color: #000000;
     
@@ -59,7 +59,7 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width:2048px) {
+@media (min-width: 1025px) {
     .footerContainer {
         padding: 0;
         margin-top: 13vh;
