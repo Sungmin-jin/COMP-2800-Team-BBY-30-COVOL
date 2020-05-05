@@ -11,7 +11,8 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/Alert';
 import PrivateRoute from './components/routing/PrivateRoute';
-
+import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/Profile-form/CreateProfile';
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
 import logo from './image/logo.png';
@@ -42,9 +43,10 @@ const App = () => {
 
             <Route path='/register' component={Register} />
             <Route path='/login' component={Login} />
-
+            <PrivateRoute path='/dashboard' component={Dashboard} />
             <Route path='/userprofile' component={UserProfile} />
             <PrivateRoute path='/welcome' component={WelcomePage} />
+            <PrivateRoute path='/create-profile' component={CreateProfile} />
             <Route path='/swipepage' component={SwipePage} />
           </Switch>
         </Fragment>

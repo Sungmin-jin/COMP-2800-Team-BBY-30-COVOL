@@ -1,5 +1,5 @@
-import React, { Component, useEffect } from 'react';
-
+import React, { Component, useEffect, Fragment } from 'react';
+import Spinner from './layout/Spinner';
 //Importing Footer Component
 import Footer from './Footer';
 
@@ -25,48 +25,37 @@ function WelcomePage({
   logout,
   getCurrentProfile,
   auth,
-  profile,
+  profile: { profile, loading },
 }) {
   useEffect(() => {
     getCurrentProfile();
   }, []);
-  return (
-    <div>
+  return loading && profile === null ? (
+    <Spinner />
+  ) : (
+    <Fragment>
       <WelcomePageLogo logo={logo} />
-      <WelcomePageName name={userName} />
+      <WelcomePageName />
       <WelcomePageVolunteerBtn />
       <WelcomePageProfileBtn />
       <WelcomePageLogout logout={logout} />
       <Footer />
-    </div>
+    </Fragment>
   );
 }
-
-WelcomePage.propTypes = {
-  logo: PropTypes.string.isRequired,
-  userName: PropTypes.string.isRequired,
-};
 
 //This component is the logo of the User Welcome Page
 function WelcomePageLogo({ logo }) {
   return <img className='logo2' alt='App Logo' src={logoIMG}></img>;
 }
 
-WelcomePageLogo.propTypes = {
-  logo: PropTypes.string.isRequired,
-};
-
 //This component is the Welcome message to the user
-function WelcomePageName({ userName }) {
+function WelcomePageName() {
   return (
     // <p className="WelcomePageName" >Welcome {userName}</p>
     <p className='WelcomePageName'>Welcome Justin</p>
   );
 }
-
-WelcomePageName.propTypes = {
-  userName: PropTypes.string.isRequired,
-};
 
 //This component is the buttons on the User Welcome page
 function WelcomePageVolunteerBtn() {
@@ -105,6 +94,7 @@ WelcomePage.propTypes = {
   auth: PropTypes.object.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
+  logo: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => ({
