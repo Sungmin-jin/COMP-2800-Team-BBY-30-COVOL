@@ -99,9 +99,15 @@
     }
 
     .UserProfileBtn {
-        width:40vw;
-        padding:3vh 0vw 3vh 0vw;
-        font-size: 4vw;
+        width:25vw;
+        padding:2vh 0vw 2vh 0vw;
+        font-size: 2vw;
+    }
+
+    .UserProfile_Info {
+        margin-left:5%;
+        width:95%;
+        height:100%;
     }
 }
 

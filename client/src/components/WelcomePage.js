@@ -12,18 +12,20 @@ import Button from "@material-ui/core/Button";
 //CSS
 import './../styles/WelcomePage.css';
 
+import Nav from './Nav';
 import logoIMG from './../image/logo.png';
 
 // This component will create a User Welcome Page
 function WelcomePage({logo, userName}) {
     return (
         <div className="WelcomePage">
+            <Nav className="nav"/>
             <WelcomePageLogo logo ={logo} />
             <WelcomePageName name ={userName} />
             <WelcomePageVolunteerBtn />
             <WelcomePageProfileBtn />
             <WelcomePageLogout />
-            <Footer />
+            <Footer className="footer"/>
         </div>
     );
 }
@@ -77,7 +79,7 @@ function WelcomePageProfileBtn() {
 //this component is the logout button on the User Welcome page
 function WelcomePageLogout() {
     return (
-        <div>
+        <div className="logout-btn">
             <Button>Logout</Button>
         </div>
     )
