@@ -6,9 +6,6 @@ import PropType from 'prop-types';
 //importing Heading component
 import Heading from './Heading';
 
-// CSS
-import './../styles/UserProfile.css';
-
 // For styling Material UI components
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -25,6 +22,8 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import PersonIcon from '@material-ui/icons/Person';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 
+// CSS
+import './../styles/UserProfile.css'
 
 // a placeholder for user profile pic
 import profilePic from './../image/logo.png';
@@ -32,18 +31,22 @@ import profilePic from './../image/logo.png';
 // ?
 import { Z_BLOCK } from 'zlib';
 
+// Navbar
+import Nav from './Nav';
+
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, isVerified, userEmail, userBio}) {
 
     return (
-        <div className="UserProfilePage">
-            <Heading picture={profilePic} user={userName} />
-            <UserInfo userName={userName}  isVerified={isVerified} userEmail={userEmail} userBio={userBio} />
-            {/* <UserInfo /> */}
+      <div className="UserProfilePage">
+        <Nav  className="navbar"/>
+        <Heading picture={profilePic} user={userName} />
+        <UserInfo userName={userName}  isVerified={isVerified} userEmail={userEmail} userBio={userBio} />
+        {/* <UserInfo /> */}
 
-            <UserProfileBtnEdit />
-            <UserProfileBtnBack />
-        </div>
+        <UserProfileBtnEdit />
+        <UserProfileBtnBack />
+      </div>  
     )
 }
 
