@@ -16,7 +16,7 @@
   }
   
   #root  {
-    background: salmon;
+    background: #28a745;
     position: fixed;
     overflow: hidden;
     width: 100%;
@@ -53,11 +53,11 @@
     border-top-right-radius: 10px;
   }
    
-  button[aria-label="previous"],
+  /* button[aria-label="previous"],
   button[aria-label="next"] {
     background: salmon !important;
     color: black !important;
-  }
+  } */
   
    h2 {
     display: inline-block;
