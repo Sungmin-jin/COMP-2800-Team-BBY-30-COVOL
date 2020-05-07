@@ -8,6 +8,9 @@ import UserProfile from  './components/UserProfile';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
 
+import Deck from "./components/Deck";
+import MediaCard from './components/MediaCard';
+
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/Alert';
@@ -46,6 +49,8 @@ const App = () => {
             <Route path='/userprofile' component={UserProfile} />
             <Route path='/welcome' component={WelcomePage}/>
             <Route path='/swipepage' component={SwipePage} />
+            <Route path='/deck' component={Deck} />
+            <Route path='mediacard' component={MediaCard} />
           </Switch>
         </Fragment>
       </Router>
