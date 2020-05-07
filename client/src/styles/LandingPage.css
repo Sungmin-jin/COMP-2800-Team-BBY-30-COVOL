@@ -4,7 +4,7 @@
     max-width: 1500px;
     height:100vh;
     display:grid;
-    grid-template-rows: 36px 1fr 6fr 2fr 1fr;
+    grid-template-rows: 36px 6fr 2fr 2fr 1fr;
     grid-template-areas:
     "nav"
     "logo"
@@ -66,20 +66,7 @@
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-    .logo {
-        margin-top: 100px;
-        width: 40vw;
-        height: 30vw;
-    }
 
-    .LandingPageBtn {
-        font-size:6vw;
-        padding:3vh 0vw 3vh 0vw;
-        width: 50vw;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
     .logo {
         margin-top: 100px;
         width: 30vw;
@@ -87,9 +74,27 @@
     }
 
     .LandingPageBtn {
-        width:40vw;
+        margin-top:10px;
+        font-size:6vw;
         padding:3vh 0vw 3vh 0vw;
-        font-size: 4vw;
+        width: 50vw;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .logo {
+        margin-top: 100px;
+        width: 30vw;
+        height: 24vw;
+    }
+
+    .LandingPageBtn {
+        margin-top:5vh;
+        width:40vw;
+        padding:2vh 0vw 2vh 0vw;
+        font-size: 3vw;
     }
 }
 
@@ -101,6 +106,7 @@
     }
 
     .LandingPageBtn {
+        margin: 0;
         width:20vw;
         padding:3vh 0 3vh 0;
         font-size: 2vw;

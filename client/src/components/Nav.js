@@ -35,9 +35,9 @@ function Nav() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            COVOL
           </Typography>
-          <Button color="inherit" component={Link} to="/" >Home</Button>
+            <Button color="inherit" component={Link} to="/aboutus" >About Us</Button>
+            <Button color="inherit" component={Link} to="/" >Home</Button>
         </Toolbar>
       </AppBar>
     </div>

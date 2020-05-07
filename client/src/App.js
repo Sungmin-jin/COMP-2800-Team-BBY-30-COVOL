@@ -11,6 +11,7 @@ import SwipePage from './components/SwipePage';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/Alert';
+import AboutUs from './components/AboutUs';
 
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
@@ -46,6 +47,7 @@ const App = () => {
             <Route path='/userprofile' component={UserProfile} />
             <Route path='/welcome' component={WelcomePage}/>
             <Route path='/swipepage' component={SwipePage} />
+            <Route path='/aboutus' component={AboutUs} />
           </Switch>
         </Fragment>
       </Router>
