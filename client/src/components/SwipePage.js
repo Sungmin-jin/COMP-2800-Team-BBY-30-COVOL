@@ -1,68 +1,65 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './../styles/SwipePage.css';
-import profileIMG from './../image/profilepic.jpg'
+import { makeStyles } from '@material-ui/core/styles';
 
-function SwipePage({profilePic, userName, userEmail}) {
+import IconButton from '@material-ui/core/IconButton';
+import CheckIcon from '@material-ui/icons/Check';
+import ClearIcon from '@material-ui/icons/Clear';
 
+
+import Nav from './Nav'
+import Footer from './Footer';
+
+import Grid from '@material-ui/core/Grid';
+import UserCard from './UserCard';
+
+const useStyles = makeStyles({
+    gridContainer: {
+        paddingLeft: '10px',
+        paddingRight: '10px',
+        paddingTop: '100px',
+    }
+  });
+
+function SwipePage() {
+    const classes = useStyles();
     return (
-        <div className="SwipePage">
-            <UserPic profilePic={profilePic} />
-            <UserInfo userName={userName} userEmail={userEmail} /> 
-            <MoreInfo />
-            <YesSwipe />
-            <NoSwipe />
+        <div className="swipePage">
+            <Nav className="swipeNav" />
+
+            <Grid container className={classes.gridContainer}  justify="center" >
+                <Grid item >
+                    <UserCard />
+                </Grid>
+            </Grid>
+
+            <Grid container className={classes.gridContainer2} justify="center" >
+                <Grid item xs={3} >
+                    <IconButton aria-label="No" color="secondary" onClick={sayNo} >
+                        <ClearIcon fontSize='large'/>
+                    </IconButton>
+                </Grid>
+
+                <Grid item xs={3} >
+                    <IconButton aria-label="Yes" color="primary" onClick={sayYes} >
+                        <CheckIcon fontSize='large'/>
+                    </IconButton>
+                </Grid>
+            </Grid>
+
+            <Footer className="swipeFooter" />
         </div>
     )
 }
 
-SwipePage.propTypes = {
-    profilePic: PropTypes.string.isRequired
+function sayNo() {
+    console.log("No");
 }
 
-function UserPic({profilePic}) {
-    return (
-        <img className="pic" alt="Profile Picture" src={profileIMG}></img>
-    )
+function sayYes() {
+    console.log("Yes");
 }
 
-UserPic.propTypes = {
-    profilePic: PropTypes.string.isRequired
-}
-
-function UserInfo({userName, userEmail}) {
-    return (
-        <div className="user-info">
-            {/* <p>{userName}</p> */}
-            <p>Test Name</p>
-            {/* <p>{userEmail}</p> */}
-            <p>Test Email</p>
-        </div>
-    )
-}
-
-function MoreInfo() {
-    return (
-        <div className="more-info">
-            <a className="info-btn" href="">More Info</a> 
-        </div>
-    )
-}
-
-function YesSwipe() {
-    return (
-        <div className="swipe-yes">
-            <a className="swipe-btn" href="">Yes</a> 
-        </div>
-    )
-}
-
-function NoSwipe() {
-    return (
-        <div className="swipe-no">
-            <a className="swipe-btn" href="">No</a> 
-        </div>
-    )
-}
 
 export default SwipePage;

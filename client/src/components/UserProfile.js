@@ -63,23 +63,7 @@ const iconStyle = makeStyles((theme) => ({
 
 // This compontent creates a list of all the user's Info as buttons
 function UserInfo({userName, isVerified, userEmail, userBio}) {
-
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     userName: "", 
-  //     isVerified: false,
-  //     userEmail: "",
-  //     userBio: "",
-      
-  //   };
-  // }
-
-
-
-
-    
+ 
 
       const classes = iconStyle();
 

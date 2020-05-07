@@ -1,4 +1,26 @@
-.SwipePage {
+.swipePage {
+    display:grid;
+    width:100%;
+    height:100vh;
+    grid-template-rows:36px 1fr 3fr 1fr 1fr;
+    grid-template-areas:
+    "nav"
+    "card"
+    "buttons"
+    "footer"
+}
+
+.swipeNav {
+    grid-area: nav;
+}
+
+
+.swipeFooter {
+    grid-area:footer;
+    margin-bottom:0;
+}  
+
+/* .SwipePage {
     width:100vw;
     height:100vh;
     display:grid;
@@ -293,4 +315,4 @@
         border-radius:4vw;
         font-size: 2vw;
     }
-}
+} */
