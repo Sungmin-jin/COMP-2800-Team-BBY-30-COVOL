@@ -64,14 +64,12 @@ function AnthonyPic() {
 function TeamParagraph() {
     return (
         <div className="TeamParagraph">
-            <p className="team-paragraph">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. In sed tempus neque. Cras iaculis, urna vitae 
-                dignissim fermentum, nulla ipsum lacinia quam, dapibus ultricies 
-                ligula ligula at ex. Donec vulputate fringilla sapien, sit amet 
-                euismod mi pulvinar a. Nam cursus nisl ac maximus sodales. Duis 
-                eu nisi dolor. Etiam non imperdiet odio, eu suscipit tellus. Ut 
-                magna sem, lobortis nec neque quis, lacinia facilisis metus. 
-                Aliquam vel libero ut arcu molestie malesuada quis in lacus.
+            <p className="team-paragraph">Due to the rise of the recent epidemic,
+            COVID-19, many groups and organizations need help to survive and
+            combat these trying times. We as a group are using this chance as a
+            learning experience while also assisting these groups in fighting back 
+            against the epidemic. We hope to make an simple to use application 
+            that can find these groups the help they need.
             </p>
         </div>
     )
