@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,6 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../actions/auth';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +27,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Nav() {
+const Nav = ({ auth: { isAuthenticated, loading }, logout }) => {
   const classes = useStyles();
+
+  const guestLink = (
+    <Button color='inherit' component={Link} to='/login'>
+      Log in
+    </Button>
+  );
+
+  const authLink = (
+    <Button color='inherit' onClick={logout}>
+      Log out
+    </Button>
+  );
 
   return (
     <div className={classes.root}>
@@ -52,13 +67,22 @@ function Nav() {
           <Button color='inherit' component={Link} to='/'>
             Home
           </Button>
-          <Button color='inherit' component={Link} to='/'>
-            Log Out
-          </Button>
+          {!loading && (
+            <Fragment>{isAuthenticated ? authLink : guestLink}</Fragment>
+          )}
         </Toolbar>
       </AppBar>
     </div>
   );
-}
+};
 
-export default Nav;
+Nav.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { logout })(Nav);
