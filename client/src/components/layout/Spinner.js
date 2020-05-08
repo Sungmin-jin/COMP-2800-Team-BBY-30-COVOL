@@ -8,9 +8,10 @@ export default () => (
       style={{ width: '200px', margin: 'auto', display: 'block' }}
       alt='Loading...'
     />
+    <br />
     <p
-      classname='large'
-      style={{ width: '500px', margin: 'auto', display: 'block' }}
+      classname='lead container'
+      style={{ margin: 'auto', display: 'block', textAlign: 'center' }}
     >
       If loading takes too much time,refresh the page please
     </p>
