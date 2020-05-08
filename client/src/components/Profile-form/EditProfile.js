@@ -25,7 +25,7 @@ const EditProfile = ({
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
       bio: loading || !profile.bio ? '' : profile.bio,
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const { company, website, location, status, skills, bio } = formData;
 
@@ -38,7 +38,7 @@ const EditProfile = ({
   };
 
   return (
-    <Fragment>
+    <div className='container'>
       <h1 className='large text-primary'> Create Your Profile</h1>
       <p className='lead'>
         Let's get some information to make your profile stand out
@@ -95,7 +95,7 @@ const EditProfile = ({
           Go Back
         </Link>
       </form>
-    </Fragment>
+    </div>
   );
 };
 

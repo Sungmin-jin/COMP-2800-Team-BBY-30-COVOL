@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Our own components
 import LandingPage from './components/LandingPage';
-import UserProfile from './components/UserProfile';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
 
+import Profiles from './components/profiles/Profiles';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/Alert';
@@ -16,6 +16,7 @@ import CreateProfile from './components/Profile-form/CreateProfile';
 import EditProfile from './components/Profile-form/EditProfile';
 import AddExperience from './components/Profile-form/AddExperience';
 import AddEducation from './components/Profile-form/AddEducation';
+import Profile from './components/profile/Profile';
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
 import logo from './image/logo.png';
@@ -43,11 +44,11 @@ const App = () => {
           <Alert />
           <Switch>
             <Route exact path='/' component={LandingPage} />
-
             <Route path='/register' component={Register} />
+            <Route path='/profiles' component={Profiles} />
+            <Route path='/profile/:id' component={Profile} />
             <Route path='/login' component={Login} />
             <PrivateRoute path='/dashboard' component={Dashboard} />
-            <Route path='/userprofile' component={UserProfile} />
             <PrivateRoute path='/welcome' component={WelcomePage} />
             <PrivateRoute path='/create-profile' component={CreateProfile} />
             <Route path='/swipepage' component={SwipePage} />
