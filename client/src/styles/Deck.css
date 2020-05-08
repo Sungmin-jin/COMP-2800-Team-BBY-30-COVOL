@@ -16,14 +16,14 @@
   }
   
   #root  {
-    background: #28a745;
+    background: teal;
     position: fixed;
     overflow: hidden;
     width: 100%;
     height: 100%;
   }
   
-    .save {
+  .cardDiv {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -33,7 +33,7 @@
     justify-content: center;
   }
   
-  .save > div {
+  .cardDiv > div {
     padding: 5px;
     background-color: white;
     background-size: auto 85%;

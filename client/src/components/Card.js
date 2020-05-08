@@ -7,8 +7,9 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
   const { name, age, text, pics } = data[i];
 
   return (
+    <div>
     <animated.div
-      className='save'
+      className='cardDiv'
       key={i}
       style={{
         transform: interpolate([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`)
@@ -32,6 +33,7 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
         </div>
       </animated.div>
     </animated.div>
+    </div>
   );
 };
 

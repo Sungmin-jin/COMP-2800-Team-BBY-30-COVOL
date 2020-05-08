@@ -13,20 +13,13 @@ const to = i => ({
   scale: 1,
   rot: 0,
   delay: i * 100
-  // x: 0,
-  // y: i * -10,
-  //scale: 1,
-  // rot: -10 + Math.random() * 20,
-  // delay: i * 100
 });
 const from = i => ({ rot: 0, scale: 1.5, y: -1000 });
 
-const trans = (r, s) => 0;  
-  // `perspective(1500px) rotateX(30deg) rotateY(${r /
-  //   10}deg) rotateZ(${r}deg) scale(${s})`;
+const trans = (r, s) =>  0; 
 
 function Deck() {
-  const [gone] = useState(() => new Set());
+   const [gone] = useState(() => new Set());
 
   const [props, set] = useSprings(data.length, i => ({
     ...to(i),
@@ -38,7 +31,6 @@ function Deck() {
       args: [index],
       down,
       delta: [xDelta],
-      distance,
       direction: [xDir],
       velocity
     }) => {
@@ -46,7 +38,7 @@ function Deck() {
 
       const dir = xDir < 0 ? -1 : 1;
 
-      if (!down && trigger) gone.add(index);
+       if (!down && trigger) gone.add(index);
 
       set(i => {
         if (index !== i) return;
@@ -70,7 +62,7 @@ function Deck() {
         setTimeout(() => gone.clear() || set(i => to(i)), 600);
     }
   );
-
+  
   return props.map(({ x, y, rot, scale }, i) => (
     <Card
       i={i}

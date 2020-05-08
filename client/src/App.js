@@ -7,9 +7,7 @@ import LandingPage from './components/LandingPage';
 import UserProfile from  './components/UserProfile';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
-
 import Deck from "./components/Deck";
-import MediaCard from './components/MediaCard';
 
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -50,7 +48,6 @@ const App = () => {
             <Route path='/welcome' component={WelcomePage}/>
             <Route path='/swipepage' component={SwipePage} />
             <Route path='/deck' component={Deck} />
-            <Route path='mediacard' component={MediaCard} />
           </Switch>
         </Fragment>
       </Router>
