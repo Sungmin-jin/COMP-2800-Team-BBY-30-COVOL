@@ -15,30 +15,25 @@ const useStyles = makeStyles({
     },
   });   
 
-function UserCard({bio, firstname, lastname, age, picture}) {
+function UserCard({picture, firstname, lastname, age, bio}) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
         <CardMedia
           className={classes.media}
-          //image={picture}
-          image="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+          image={picture}
           title="Profile Picture"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {firstname} {lastname}
-            Justin Payne
           </Typography>
           <Typography variant="h6" component="h4">
-            {age}
-            25
+            {age} 
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {bio}
-            This is just a placeholder bio so i can see how the card looks.
-            hopefully its decent because i have no idea what im doing.
           </Typography>
         </CardContent>
     </Card>

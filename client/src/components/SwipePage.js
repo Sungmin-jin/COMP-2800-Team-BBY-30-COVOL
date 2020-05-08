@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     }
   });
 
-function SwipePage() {
+function SwipePage({}) {
     const classes = useStyles();
     return (
         <div className="swipePage">
@@ -30,11 +30,16 @@ function SwipePage() {
 
             <Grid container className={classes.gridContainer}  justify="center" >
                 <Grid item >
-                    <UserCard />
+                    <UserCard 
+                    picture={data[0].picture}
+                    firstname={data[0].firstname}
+                    lastname={data[0].lastname}
+                    age={data[0].age}
+                    bio={data[0].bio}/>
                 </Grid>
             </Grid>
 
-            <Grid container className={classes.gridContainer2} justify="center" >
+            <Grid container className={classes.gridContainer2} className="swipeButton" justify="center" >
                 <Grid item xs={3} >
                     <IconButton aria-label="No" color="secondary" onClick={sayNo} >
                         <ClearIcon fontSize='large'/>
@@ -61,5 +66,15 @@ function sayYes() {
     console.log("Yes");
 }
 
+const data = [
+    {
+    id: '1',
+    firstname: 'Justin',
+    lastname: 'Payne',
+    age: '25',
+    picture: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
+    bio: 'This is just a placeholder bio so I can see how the card looks. Hopefully its decent because I have no idea what im doing.'
+    }
+    ];
 
 export default SwipePage;
