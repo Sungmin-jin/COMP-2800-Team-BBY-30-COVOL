@@ -50,7 +50,7 @@ const App = () => {
       <Router>
         <Fragment>
           <Alert />
-          <Nav />
+          <ResponsiveNav />
           <Switch>
             <Route exact path='/' component={LandingPage} />
             <Route path='/register' component={Register} />
