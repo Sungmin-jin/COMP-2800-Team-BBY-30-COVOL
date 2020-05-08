@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
 
+// Nav Component
+import Nav from './Nav';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 // TextField from Material-UI
@@ -29,11 +32,13 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 function UserLoginPage() {
     return (
         <div>
+            <Nav />
             <PageLogo />
             <PageTxtField />
             {/* <PageLink1 />
             <PageBtn1 />
             <PageLink2 /> */}
+            <Footer />
         </div>
     )
 }

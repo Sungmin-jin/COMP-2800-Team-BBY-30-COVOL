@@ -1,0 +1,183 @@
+.AboutUs {
+    display:grid;
+    width:100%;
+    height:100vh;
+    grid-template-rows: 36px 1fr 0.2fr;
+    grid-template-areas: 
+    "nav"
+    "content"
+    "footer";
+
+}
+
+.nav {
+    grid-area:nav;
+}
+
+.content {
+    width:100%;
+    grid-area:content;
+    display:grid;
+}
+
+.TonyPic {
+    margin:0 auto 0 auto;
+    grid-area:tony;
+}
+
+.JustinPic {
+    margin:0 auto 0 auto;
+    grid-area:justin;
+}
+
+.JasonPic {
+    margin:0 auto 0 auto;
+    grid-area:jason;
+}
+
+.AnthonyPic {
+    margin:0 auto 0 auto;
+    grid-area:anthony;
+}
+
+.TeamParagraph {
+    margin-bottom:0;
+    grid-area:paragraph;
+}
+
+.footer {
+    grid-area:footer;
+}
+
+.pic {
+    border-radius:100%;
+}
+
+@media (max-width: 425px) {
+
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "tony justin"
+        "jason anthony"
+        "paragraph paragraph";
+    }
+
+    .pic {
+        margin-top:40px;
+        width:20vw;
+        height:20vw;
+    }
+
+    .name {
+        font-size:3.5vw;
+    }
+
+    .team-paragraph {
+        font-size:3.5vw;
+        margin: 2vh 0 0 0;
+    }
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "tony justin"
+        "jason anthony"
+        "paragraph paragraph";
+    }
+
+    .pic {
+        margin-top:50px;
+        width:20vw;
+        height:20vw;
+    }
+
+    .name {
+        font-size:2.5vw;
+    }
+
+    .team-paragraph {
+        font-size:2.5vw;
+        margin: 5vh 10vh 0 10vh;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+    .content {
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "tony justin" 
+        "jason anthony"
+        "paragraph paragraph";
+    }
+
+    .pic {
+        margin-top:10vw;
+        width:15vw;
+        height:15vw;
+    }
+
+    .name {
+        font-size:2vw;
+    }
+
+    .team-paragraph {
+        font-size:2vw;
+        margin: 10vh 10vh 0vh 10vh;
+    }
+
+    @media (max-height: 1024px) {
+        .content {
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "tony justin jason anthony"
+            "paragraph paragraph paragraph paragraph";
+        }
+
+        .pic {
+            margin-top:10vw;
+            width:15vw;
+            height:15vw;
+        }
+
+        .name {
+            font-size:2vw;
+        }
+
+        .team-paragraph {
+            font-size:2vw;
+            margin: 10vh 10vh 0vh 10vh;
+        }
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .content {
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "tony justin jason anthony"
+        "paragraph paragraph paragraph paragraph";
+    }
+
+    .pic {
+        margin-top: 10vh;
+        width:20vh;
+        height:20vh;
+    }
+
+    .name {
+        font-size:2.5vh;
+    }
+
+    .team-paragraph {
+        font-size:2.5vh;
+        margin: 5vh 10vh 0 10vh;
+    }
+}

@@ -3,8 +3,16 @@ body {
   box-sizing: border-box;
   /* justify-content: center;
     text-align: center;
+<<<<<<< HEAD
     margin: 0 auto; */
   padding: 0;
   width: 100%;
   max-width: 1500px;
 }
+=======
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+}
+>>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e

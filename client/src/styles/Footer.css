@@ -10,9 +10,9 @@
     /* width: 100%; */
     min-width: 230px;
     /* margin: 0 auto; */
-    margin-top: 10vh;
+    margin-top: 4vh;
 
-    padding: 1em;
+    padding: 0.05em;
 
     background-color: #000000;
     
@@ -59,7 +59,7 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width:2048px) {
+@media (min-width: 1025px) {
     .footerContainer {
         padding: 0;
         margin-top: 13vh;

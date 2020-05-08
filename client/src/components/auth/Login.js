@@ -3,7 +3,9 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
-import '../../App.css';
+import './../../styles/Login.css';
+import Nav from './../Nav';
+import Footer from './../Footer';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -21,43 +23,50 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
+  // this is checking 
+  // it checks token
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
 
   return (
-    <Fragment>
-      <div className='container'>
-        <h1 className='large text-primary'>Sign In</h1>
-        <p className='lead'>Sign Into Your Account</p>
-        <form className='form' onSubmit={(e) => onSubmit(e)}>
-          <div className='form-group'>
-            <input
-              type='email'
-              placeholder='Email Address'
-              name='email'
-              value={email}
-              onChange={(e) => onChange(e)}
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              placeholder='Password'
-              name='password'
-              value={password}
-              onChange={(e) => onChange(e)}
-              minLength='6'
-            />
-          </div>
-          <input type='submit' className='btn btn-primary' value='Login' />
-        </form>
-        <p className='my-1'>
-          Don't have an account? <Link to='/register'>Sign Up</Link>
-        </p>
-      </div>
-    </Fragment>
+    <div className="Login">
+      <Nav className="nav" />
+      <Fragment>
+        <div className='container'>
+          <h1 className='large text-primary'>Sign In</h1>
+          <p className='lead'>Sign Into Your Account</p>
+          <form className='form' onSubmit={(e) => onSubmit(e)}>
+            <div className='form-group'>
+              <input
+                type='email'
+                placeholder='Email Address'
+                name='email'
+                value={email}
+                onChange={(e) => onChange(e)}
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                type='password'
+                placeholder='Password'
+                name='password'
+                value={password}
+                onChange={(e) => onChange(e)}
+                minLength='6'
+              />
+            </div>
+            <input type='submit' className='btn btn-primary' value='Login' />
+          </form>
+          <p className='my-1'>
+            Don't have an account? <Link to='/register'>Sign Up</Link>
+          </p>
+        </div>
+      </Fragment>
+      <Footer className="footer" />
+    </div>
+   
   );
 };
 

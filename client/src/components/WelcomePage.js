@@ -12,11 +12,33 @@ import Button from '@material-ui/core/Button';
 //CSS
 import './../styles/WelcomePage.css';
 
+import Nav from './Nav';
 import logoIMG from './../image/logo.png';
 
+<<<<<<< HEAD
 import { logout } from '../actions/auth';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../actions/profile';
+=======
+// This component will create a User Welcome Page
+function WelcomePage({logo, userName}) {
+    return (
+        <div className="WelcomePage">
+            <Nav className="nav"/>
+            <WelcomePageLogo logo ={logo} />
+            <WelcomePageName name ={userName} />
+            <div className="featureBtns">
+                <WelcomePageVolunteerBtn />
+                <WelcomePageListingBtn />
+                <WelcomePageManageBtn />
+            </div>
+            <WelcomePageProfileBtn />
+            <WelcomePageLogout />
+            <Footer className="footer"/>
+        </div>
+    );
+}
+>>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e
 
 // This component will create a User Welcome Page
 function WelcomePage({
@@ -59,6 +81,7 @@ function WelcomePageName() {
 
 //This component is the buttons on the User Welcome page
 function WelcomePageVolunteerBtn() {
+<<<<<<< HEAD
   return (
     <div className='con-1'>
       <a className='WelcomePageBtn' href=''>
@@ -66,10 +89,26 @@ function WelcomePageVolunteerBtn() {
       </a>
     </div>
   );
+=======
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn volunteer" href="">Find Listings</a>
+        </div>
+    )
+}
+
+function WelcomePageManageBtn() {
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn manage" href="./manage">Manage Listings</a>
+        </div>
+    )
+>>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e
 }
 
 //This component is the buttons on the User Welcome page
 function WelcomePageProfileBtn() {
+<<<<<<< HEAD
   return (
     <div className='con-1'>
       <a className='WelcomePageBtn' href='./userprofile'>
@@ -88,6 +127,30 @@ function WelcomePageLogout({ logout }) {
       </a>
     </div>
   );
+=======
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn profile" href="./userprofile">Profile</a> 
+        </div>
+    )
+}
+
+function WelcomePageListingBtn() {
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn welcome-listing" href="">Create Listings</a>
+        </div>
+    )
+}
+
+//this component is the logout button on the User Welcome page
+function WelcomePageLogout() {
+    return (
+        <div className="logout-btn">
+            <Button>Logout</Button>
+        </div>
+    )
+>>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e
 }
 WelcomePage.propTypes = {
   logout: PropTypes.func.isRequired,
