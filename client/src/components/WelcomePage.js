@@ -6,6 +6,8 @@ import Footer from './Footer';
 //Prop Types
 import PropTypes from 'prop-types';
 
+
+
 //Material UI components    
 import Button from "@material-ui/core/Button";
 
@@ -19,7 +21,8 @@ import logoIMG from './../image/logo.png';
 function WelcomePage({logo, userName}) {
     return (
         <div className="WelcomePage">
-            <Nav className="nav"/>
+            {/* <Nav className="nav"/> */}
+
             <WelcomePageLogo logo ={logo} />
             <WelcomePageName name ={userName} />
             <div className="featureBtns">

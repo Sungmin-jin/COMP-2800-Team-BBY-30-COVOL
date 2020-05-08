@@ -40,7 +40,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <div className="Register">
-      <Nav className="nav" />
+      {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign Up</h1>
