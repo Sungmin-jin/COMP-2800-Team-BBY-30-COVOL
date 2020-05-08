@@ -1,6 +1,7 @@
 .MatchesPage {
+    text-align:center;
     width:100%;
-    height:100vh;
+    height:150vh;
     display:grid;
     grid-template-areas:
     "nav"

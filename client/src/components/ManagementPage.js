@@ -27,7 +27,6 @@ function ManagementPage() {
         <FindListingsBtn />
         <Back />
       </div>
-      <Footer className='footer' />
     </div>
   );
 }

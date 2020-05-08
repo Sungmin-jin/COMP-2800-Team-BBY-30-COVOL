@@ -20,7 +20,6 @@ import placeholderIMG from './../image/placeholder.png'
 function MatchesPage() {
     return (
         <div className="MatchesPage">
-            <Nav className="nav"/>
             <div className="matches-content">
                 <Name />
                 <Image />
@@ -29,7 +28,6 @@ function MatchesPage() {
                 <Delete />
                 <Back />
             </div>
-            <Footer className="footer"/>
         </div>
     );
 }
