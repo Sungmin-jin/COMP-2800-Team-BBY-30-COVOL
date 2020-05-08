@@ -10,12 +10,7 @@ export default () => (
     />
     <p
       classname='large'
-      style={{
-        width: '500px',
-        marginTop: '10px',
-        margin: 'auto',
-        display: 'block',
-      }}
+      style={{ width: '500px', margin: 'auto', display: 'block' }}
     >
       If loading takes too much time,refresh the page please
     </p>
