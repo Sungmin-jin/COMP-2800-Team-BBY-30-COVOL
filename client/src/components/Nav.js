@@ -64,9 +64,6 @@ const Nav = ({ auth: { isAuthenticated, loading }, logout }) => {
           <Button color='inherit' component={Link} to='/aboutus'>
             About Us
           </Button>
-          <Button color='inherit' component={Link} to='/'>
-            Home
-          </Button>
           {!loading && (
             <Fragment>{isAuthenticated ? authLink : guestLink}</Fragment>
           )}
