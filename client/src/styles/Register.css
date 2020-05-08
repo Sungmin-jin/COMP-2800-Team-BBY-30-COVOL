@@ -1,0 +1,23 @@
+.Register {
+  display:grid;
+  width:100%;
+  height:100vh;
+  grid-template-rows: 32px 1fr;
+  grid-template-areas:
+  "nav"
+  "container"
+  "footer"
+}
+
+.nav {
+  grid-area:nav;
+}
+
+.container {
+  width:100%;
+  grid-area:container;
+}
+
+.footer {
+  grid-area:footer;
+}

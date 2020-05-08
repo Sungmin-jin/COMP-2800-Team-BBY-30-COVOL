@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import './../../styles/Login.css';
 import Nav from './../Nav';
+import Footer from './../Footer';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -29,8 +30,8 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <div>
-      <Nav />
+    <div className="Login">
+      <Nav className="nav" />
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign In</h1>
@@ -63,6 +64,7 @@ const Login = ({ login, isAuthenticated }) => {
           </p>
         </div>
       </Fragment>
+      <Footer className="footer" />
     </div>
    
   );

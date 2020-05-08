@@ -38,6 +38,7 @@ function UserLoginPage() {
             {/* <PageLink1 />
             <PageBtn1 />
             <PageLink2 /> */}
+            <Footer />
         </div>
     )
 }

@@ -34,6 +34,8 @@ import { Z_BLOCK } from 'zlib';
 // Navbar
 import Nav from './Nav';
 
+import Footer from './Footer';
+
 // This component will create a User Profile Page
 function UserProfile({profilePic, userName, isVerified, userEmail, userBio}) {
 
@@ -46,6 +48,7 @@ function UserProfile({profilePic, userName, isVerified, userEmail, userBio}) {
 
         <UserProfileBtnEdit />
         <UserProfileBtnBack />
+        <Footer className="footer"/>
       </div>  
     )
 }

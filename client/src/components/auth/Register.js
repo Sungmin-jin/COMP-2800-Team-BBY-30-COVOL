@@ -5,6 +5,8 @@ import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
 import Nav from './../Nav';
+import Footer from './../Footer'
+import './../../styles/Register.css';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -37,8 +39,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div>
-      <Nav />
+    <div className="Register">
+      <Nav className="nav" />
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign Up</h1>
@@ -87,6 +89,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </p>
         </div>
       </Fragment>
+      <Footer className="footer" />
     </div>
   );
 };

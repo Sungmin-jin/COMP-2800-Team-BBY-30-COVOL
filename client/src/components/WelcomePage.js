@@ -22,7 +22,11 @@ function WelcomePage({logo, userName}) {
             <Nav className="nav"/>
             <WelcomePageLogo logo ={logo} />
             <WelcomePageName name ={userName} />
-            <WelcomePageVolunteerBtn />
+            <div className="featureBtns">
+                <WelcomePageVolunteerBtn />
+                <WelcomePageListingBtn />
+                <WelcomePageManageBtn />
+            </div>
             <WelcomePageProfileBtn />
             <WelcomePageLogout />
             <Footer className="footer"/>
@@ -62,7 +66,15 @@ WelcomePageName.propTypes = {
 function WelcomePageVolunteerBtn() {
     return (
         <div className="con-1">
-            <a className="WelcomePageBtn" href="">Volunteer</a>
+            <a className="WelcomePageBtn volunteer" href="">Find Listings</a>
+        </div>
+    )
+}
+
+function WelcomePageManageBtn() {
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn manage" href="./manage">Manage Listings</a>
         </div>
     )
 }
@@ -71,7 +83,15 @@ function WelcomePageVolunteerBtn() {
 function WelcomePageProfileBtn() {
     return (
         <div className="con-1">
-            <a className="WelcomePageBtn" href="./userprofile">Profile</a> 
+            <a className="WelcomePageBtn profile" href="./userprofile">Profile</a> 
+        </div>
+    )
+}
+
+function WelcomePageListingBtn() {
+    return (
+        <div className="con-1">
+            <a className="WelcomePageBtn welcome-listing" href="">Create Listings</a>
         </div>
     )
 }

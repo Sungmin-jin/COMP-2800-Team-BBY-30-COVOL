@@ -28,11 +28,26 @@
     justify-content: center;
 }
 
+.welcome-listing {
+    grid-area:listing;
+}
+
+.volunter {
+    grid-area:volunteer;
+}
+
+.manage {
+    grid-area:manage;
+}
+
+.profile {
+    grid-area:profile;
+}
+
 .WelcomePageBtn {
     grid-area:buttons;
     text-decoration: none;
     font-weight: bold;
-
     display: inline-block;
     width: 50%;
 }
@@ -130,6 +145,14 @@
 
 @media (min-width: 1025px) {
 
+    .featureBtns {
+        justify-content: center;
+        display:grid;
+        grid-template-columns: 25% 25% 25%;
+        grid-template-areas:
+        "volunteer listing manage"
+    }
+    
     .logo2 {
         margin:7vh auto auto auto;
         width:20vw;
@@ -138,7 +161,7 @@
     
     .WelcomePageBtn {
         font-size: 1.5vw;
-        width: 50%; 
+        width: 20vw; 
         padding: 0.8em;
         border-radius: 25px;
     }
