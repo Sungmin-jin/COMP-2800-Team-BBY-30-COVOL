@@ -11,7 +11,6 @@ import Profiles from './components/profiles/Profiles';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/Alert';
-<<<<<<< HEAD
 import PrivateRoute from './components/routing/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/Profile-form/CreateProfile';
@@ -19,12 +18,10 @@ import EditProfile from './components/Profile-form/EditProfile';
 import AddExperience from './components/Profile-form/AddExperience';
 import AddEducation from './components/Profile-form/AddEducation';
 import Profile from './components/profile/Profile';
-=======
 import AboutUs from './components/AboutUs';
-import Management from './components/ManagementPage'
-import Matches from './components/MatchesPage'
+import Management from './components/ManagementPage';
+import Matches from './components/MatchesPage';
 
->>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
 import logo from './image/logo.png';
@@ -60,15 +57,12 @@ const App = () => {
             <PrivateRoute path='/welcome' component={WelcomePage} />
             <PrivateRoute path='/create-profile' component={CreateProfile} />
             <Route path='/swipepage' component={SwipePage} />
-<<<<<<< HEAD
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
-=======
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
->>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e
           </Switch>
         </Fragment>
       </Router>

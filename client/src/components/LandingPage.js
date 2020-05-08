@@ -9,33 +9,18 @@ import Nav from './Nav';
 // Footer component
 import Footer from './Footer';
 
-<<<<<<< HEAD
-function LandingPage({ logo, isAuthenticated }) {
-  if (isAuthenticated) {
-    return <Redirect to='/welcome' />;
-  }
+import logoIMG from './../image/logo.png';
 
+function LandingPage({ logo }) {
   return (
     <div className='LandingPage'>
+      <Nav className='nav' />
       <LandingPageLogo logo={logo} />
       <LandingPageButtonLogin />
       <LandingPageButtonRegister />
+      <Footer className='footer' />
     </div>
   );
-=======
-import logoIMG from './../image/logo.png';
-
-function LandingPage({logo}) {
-    return (
-        <div className="LandingPage">
-            <Nav className="nav" />
-            <LandingPageLogo logo={logo} />
-            <LandingPageButtonLogin/>
-            <LandingPageButtonRegister/>
-            <Footer className="footer" />
-        </div>
-    )
->>>>>>> e9453475b472b462052bbb8bb3a697ec5ddb7b1e
 }
 
 // LandingPage.propTypes = {
