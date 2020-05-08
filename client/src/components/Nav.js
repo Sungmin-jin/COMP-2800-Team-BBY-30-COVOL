@@ -11,10 +11,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "teal",
-  //   '&:hover': {
-  //     cursor: "pointer",
-  //  },
+    backgroundColor: 'teal',
+    //   '&:hover': {
+    //     cursor: "pointer",
+    //  },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -29,15 +29,29 @@ function Nav() {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.root} position="static">
+      <AppBar className={classes.root} position='static'>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton
+            edge='start'
+            className={classes.menuButton}
+            color='inherit'
+            aria-label='menu'
+          >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-          </Typography>
-            <Button color="inherit" component={Link} to="/aboutus" >About Us</Button>
-            <Button color="inherit" component={Link} to="/" >Home</Button>
+          <Typography variant='h6' className={classes.title}></Typography>
+          <Button color='inherit' component={Link} to='/profiles'>
+            Volunteers
+          </Button>
+          <Button color='inherit' component={Link} to='/dashboard'>
+            My Profile
+          </Button>
+          <Button color='inherit' component={Link} to='/aboutus'>
+            About Us
+          </Button>
+          <Button color='inherit' component={Link} to='/'>
+            Home
+          </Button>
         </Toolbar>
       </AppBar>
     </div>

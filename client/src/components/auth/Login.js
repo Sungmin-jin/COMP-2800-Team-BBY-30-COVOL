@@ -27,7 +27,7 @@ const Login = ({ login, isAuthenticated }) => {
   // this is checking 
   // it checks token
   if (isAuthenticated) {
-    return <Redirect to='/welcome' />;
+    return <Redirect to='/dashboard' />;
   }
 
   return (
