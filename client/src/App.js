@@ -55,7 +55,7 @@ const App = () => {
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
           </Switch>
-          <Footer className="footer" />
+          {/* <Footer className="footer" /> */}
         </Fragment>
       </Router>
     </Provider>
