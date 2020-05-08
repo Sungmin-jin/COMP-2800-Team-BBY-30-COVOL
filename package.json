@@ -1,7 +1,7 @@
 {
   "name": "COVOL",
   "version": "1.0.0",
-  "description": "Volunteer networking app",
+  "description": "Volunteer matching Website",
   "main": "server.js",
   "scripts": {
     "start": "node -r esm server.js",
@@ -15,7 +15,6 @@
     "url": "git+https://github.com/jungho1109/devConnector2.git"
   },
   "author": "Team 30",
-  "license": "BCIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.2.4",
