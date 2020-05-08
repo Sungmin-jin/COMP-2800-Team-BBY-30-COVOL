@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     gridContainer: {
         paddingLeft: '10px',
         paddingRight: '10px',
-        paddingTop: '100px',
+        paddingTop: '10px',
     }
   });
 
@@ -52,8 +52,11 @@ function SwipePage({}) {
                     </IconButton>
                 </Grid>
             </Grid>
-
-            <Footer className="swipeFooter" />
+            <Grid>
+                <Grid item ex={12} >
+                <Footer className="swipeFooter" />
+                </Grid>
+            </Grid>
         </div>
     )
 }

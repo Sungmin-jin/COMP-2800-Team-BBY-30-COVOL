@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
       maxWidth: 350,
+      minHeight: 350,
+      maxHeight: 500,
     },
     media: {
       height: 225,
@@ -33,7 +35,7 @@ function UserCard({picture, firstname, lastname, age, bio}) {
             {age} 
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {bio}
+            {bio} 
           </Typography>
         </CardContent>
     </Card>
