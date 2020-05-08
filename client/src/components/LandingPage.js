@@ -36,7 +36,10 @@ function LandingPageLogo({ logo }) {
 
 function LandingPageButtonLogin() {
   return (
-    <div className='login'>
+    <div
+      className='login'
+      style={{ margin: 'auto', display: 'block', textAlign: 'center' }}
+    >
       <a className='LandingPageBtn' href='/login'>
         LOGIN
       </a>
@@ -46,7 +49,10 @@ function LandingPageButtonLogin() {
 
 function LandingPageButtonRegister() {
   return (
-    <div className='register'>
+    <div
+      className='register'
+      style={{ margin: 'auto', display: 'block', textAlign: 'center' }}
+    >
       <a className='LandingPageBtn register' href='/register'>
         REGISTER
       </a>
