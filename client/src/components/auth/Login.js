@@ -7,7 +7,6 @@ import './../../styles/Login.css';
 import Nav from './../Nav';
 import Footer from './../Footer';
 
-
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
@@ -24,14 +23,14 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
-  // this is checking 
+  // this is checking
   // it checks token
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
 
   return (
-    <div className="Login">
+    <div className='Login'>
       {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
@@ -65,9 +64,7 @@ const Login = ({ login, isAuthenticated }) => {
           </p>
         </div>
       </Fragment>
-      <Footer className="footer" />
     </div>
-   
   );
 };
 

@@ -5,7 +5,7 @@ import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
 import Nav from './../Nav';
-import Footer from './../Footer'
+import Footer from './../Footer';
 import './../../styles/Register.css';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -39,7 +39,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div className="Register">
+    <div className='Register'>
       {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
@@ -89,7 +89,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </p>
         </div>
       </Fragment>
-      <Footer className="footer" />
     </div>
   );
 };
