@@ -14,7 +14,6 @@ import logoIMG from './../image/logo.png';
 function LandingPage({ logo }) {
   return (
     <div className='LandingPage'>
-      <Nav className='nav' />
       <LandingPageLogo logo={logo} />
       <LandingPageButtonLogin />
       <LandingPageButtonRegister />
