@@ -14,11 +14,13 @@ import './../styles/ManagementPage.css';
 
 import Nav from './Nav';
 
+
 // This component will create a User Management Page
 function ManagementPage() {
     return (
         <div className="ManagementPage">
-            <Nav className="nav"/>
+            {/* <Nav className="nav"/> */}
+            
             <div className="management-content">
                 <ManageCreatedListings />
                 <ManageFoundListings />

@@ -7,6 +7,7 @@ import './../../styles/Login.css';
 import Nav from './../Nav';
 import Footer from './../Footer';
 
+
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
@@ -31,7 +32,7 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <div className="Login">
-      <Nav className="nav" />
+      {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign In</h1>
