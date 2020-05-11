@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import './../../styles/Login.css';
-import Nav from './../Nav';
-import Footer from './../Footer';
 
 
 const Login = ({ login, isAuthenticated }) => {
@@ -65,7 +63,6 @@ const Login = ({ login, isAuthenticated }) => {
           </p>
         </div>
       </Fragment>
-      <Footer className="footer" />
     </div>
    
   );
