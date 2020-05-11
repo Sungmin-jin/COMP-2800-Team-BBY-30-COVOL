@@ -35,12 +35,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to='/welcome' />;
+    return <Redirect to='/dashboard' />;
   }
 
   return (
     <div className="Register">
-      <Nav className="nav" />
+      {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign Up</h1>

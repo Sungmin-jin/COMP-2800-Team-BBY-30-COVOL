@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ResponsiveNav from './ResponsiveNav';
+
 //Prop Types
 import PropType from 'prop-types';
 
@@ -41,7 +43,8 @@ function UserProfile({profilePic, userName, isVerified, userEmail, userBio}) {
 
     return (
       <div className="UserProfilePage">
-        <Nav  className="navbar"/>
+        {/* <Nav  className="navbar"/> */}
+        <ResponsiveNav />
         <Heading picture={profilePic} user={userName} />
         <UserInfo userName={userName}  isVerified={isVerified} userEmail={userEmail} userBio={userBio} />
         {/* <UserInfo /> */}

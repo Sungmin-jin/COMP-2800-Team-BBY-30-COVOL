@@ -44,8 +44,11 @@
     grid-area:profile;
 }
 
-.WelcomePageBtn {
+.featureBtns {
     grid-area:buttons;
+}
+
+.WelcomePageBtn {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;

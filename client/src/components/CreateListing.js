@@ -1,18 +1,7 @@
 import React, {Component} from 'react'
 
-//Importing Footer Component
-import Footer from './Footer';
-
-//Prop Types
-import PropTypes from 'prop-types';
-
-//Material UI components    
-import Button from "@material-ui/core/Button";
-
 //CSS
 import './../styles/MatchesPage.css';
-
-import Nav from './Nav';
 
 import placeholderIMG from './../image/placeholder.png'
 
@@ -22,7 +11,6 @@ function MatchesPage() {
         <div className="MatchesPage">
             <div className="matches-content">
                 <Name />
-                <Image />
                 <Desc />
                 <Info />
                 <Delete />
@@ -32,35 +20,21 @@ function MatchesPage() {
     );
 }
 
-function Image() {
-    return (
-        <div className="Image">
-            <img className="image" alt="Listing Image" src={placeholderIMG}></img>
-        </div>
-    )
-}
-
 function Name() {
     return (
-        <div className="Name">
-            <h1>Placeholder Name</h1>
-        </div>
+        <form className="Name">
+            <label>Listing Name:</label>
+            <text name="listingName"></text>
+        </form>
     )
 }
 
 function Desc() {
     return (
-        <div className="Desc">
-            <h2>Description: </h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id 
-                lorem lectus. Maecenas rhoncus elit tincidunt diam volutpat mattis. 
-                Sed interdum urna leo, vitae auctor dui pellentesque vel. Duis non 
-                elit laoreet, pretium purus ut, malesuada turpis. Donec laoreet accumsan 
-                erat, sed convallis sem sollicitudin vel. Nulla vestibulum enim nec odio 
-                dignissim, sed finibus nisi commodo. Quisque eget scelerisque lorem. 
-                Pellentesque habitant morbi tristique senectus et netus et malesuada 
-                fames ac turpis egestas.</p>
-        </div>
+        <form className="Desc">
+            <label>Description: </label>
+            <textarea name="desc"></textarea>
+        </form>
     )
 }
 

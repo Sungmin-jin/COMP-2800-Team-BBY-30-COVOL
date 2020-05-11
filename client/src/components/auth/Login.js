@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import './../../styles/Login.css';
-import Nav from './../Nav';
-import Footer from './../Footer';
+
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -26,12 +25,12 @@ const Login = ({ login, isAuthenticated }) => {
   // this is checking 
   // it checks token
   if (isAuthenticated) {
-    return <Redirect to='/welcome' />;
+    return <Redirect to='/dashboard' />;
   }
 
   return (
     <div className="Login">
-      <Nav className="nav" />
+      {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign In</h1>
@@ -64,7 +63,6 @@ const Login = ({ login, isAuthenticated }) => {
           </p>
         </div>
       </Fragment>
-      <Footer className="footer" />
     </div>
    
   );
