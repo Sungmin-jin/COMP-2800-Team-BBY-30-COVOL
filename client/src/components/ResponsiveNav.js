@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -142,11 +143,11 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           {['Home', 'Volunteers', 'My Profile', 'About us', 'Logout'].map((text, index) => (
-            <ListItem button key={text} >
+            <ListItem button key={text} component={Link} to={"/" + text} >
               {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
               <ListItemIcon>
-                {index === 0 && <HomeIcon onClick={() => window.open('http://localhost:3000/')}/>}
-                {index === 1 && <SupervisorAccountIcon href="./volunteers" />}
+                {index === 0 && <HomeIcon />}
+                {index === 1 && <SupervisorAccountIcon />}
                 {index === 2 && <AccountCircleIcon />}
                 {index === 3 && <InfoIcon/>}
                 {index === 4 && <ExitToAppIcon />}

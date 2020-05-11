@@ -50,9 +50,10 @@ const App = () => {
       <Router>
         <Fragment>
           <Alert />
-          <Nav />
+          <ResponsiveNav />
           <Switch>
             <Route exact path='/' component={LandingPage} />
+            <Route exact path='/' path='/Home' component={LandingPage} />
             <Route path='/register' component={Register} />
             <Route path='/profiles' component={Profiles} />
             <Route path='/profile/:id' component={Profile} />
