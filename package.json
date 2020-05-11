@@ -1,38 +1,35 @@
 {
-  "name": "project-2",
+  "name": "COVOL",
   "version": "1.0.0",
-  "description": "Volunteer Matching Website",
-  "main": "app.js",
+  "description": "Volunteer networking app",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
-    "server": "nodemon",
+    "start": "node -r esm server.js",
+    "server": "nodemon -r esm server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sungmin-jin/Project-2.git"
+    "url": "git+https://github.com/jungho1109/devConnector2.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sungmin-jin/Project-2/issues"
-  },
-  "homepage": "https://github.com/Sungmin-jin/Project-2#readme",
+  "author": "Team 30",
+  "license": "BCIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "concurrently": "^5.2.0",
-    "config": "^3.3.1",
+    "config": "^3.2.4",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
-    "express-validator": "^6.4.0",
+    "express-validator": "^6.3.0",
     "gravatar": "^1.8.0",
+    "i": "^0.3.6",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.10",
-    "node": "^13.13.0",
-    "nodemon": "^2.0.3",
-    "require": "^2.4.20",
-    "yarn": "^1.22.4"
+    "mongoose": "^5.7.13",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.1"
   }
 }
