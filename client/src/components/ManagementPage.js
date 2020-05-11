@@ -74,7 +74,7 @@ function ManageFoundListings() {
 function CreateListingsBtn() {
   return (
     <div className='CreateListingsBtn'>
-      <a className='management-btn create-listings' href=''>
+      <a className='management-btn create-listings' href='/create-listing'>
         Create Listings
       </a>
     </div>

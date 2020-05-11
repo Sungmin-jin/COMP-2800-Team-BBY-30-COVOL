@@ -21,6 +21,7 @@ import Profile from './components/profile/Profile';
 import AboutUs from './components/AboutUs';
 import Management from './components/ManagementPage';
 import Matches from './components/MatchesPage';
+import Create from './components/CreateListing';
 import ResponsiveNav from './components/ResponsiveNav';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -64,6 +65,7 @@ const App = () => {
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
+            <PrivateRoute path='/create-listing' component={Create} />
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
