@@ -51,12 +51,18 @@ const App = () => {
       <Router>
         <Fragment>
           <Alert />
-          <Nav />
+          <ResponsiveNav />
           <Switch>
             <Route exact path='/' component={LandingPage} />
+            <Route exact path='/' path='/Home' component={LandingPage} />
+
             <Route path='/register' component={Register} />
-            <Route path='/profiles' component={Profiles} />
+
             <Route path='/profile/:id' component={Profile} />
+
+            <Route exact path='/profiles' path='/profile' component={Profiles} />
+            <Route path='/profiles' component={Profiles} />
+
             <Route path='/login' component={Login} />
             <PrivateRoute path='/dashboard' component={Dashboard} />
             <PrivateRoute path='/welcome' component={WelcomePage} />
@@ -65,7 +71,9 @@ const App = () => {
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
-            <Route path='/aboutus' component={AboutUs} />
+
+            <Route path='/Aboutus' component={AboutUs} />
+            
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
             <Route path='/home' component={Home} />
