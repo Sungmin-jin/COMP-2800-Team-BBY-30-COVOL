@@ -20,7 +20,7 @@ import AddEducation from './components/Profile-form/AddEducation';
 import Profile from './components/profile/Profile';
 import AboutUs from './components/AboutUs';
 import Management from './components/ManagementPage';
-import Matches from './components/MatchesPage';
+import Info from './components/InfoPage';
 import Create from './components/CreateListing';
 import ResponsiveNav from './components/ResponsiveNav';
 import Nav from './components/Nav';
@@ -68,7 +68,7 @@ const App = () => {
             <PrivateRoute path='/create-listing' component={Create} />
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
-            <Route path='/matches' component={Matches} />
+            <Route path='/info' component={Info} />
           </Switch>
           <Footer />
         </Fragment>

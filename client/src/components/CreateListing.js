@@ -7,11 +7,11 @@ function MatchesPage() {
     return (
         <div className="MatchesPage">
             <div className="matches-content">
-                <Name />
+                { /** <Name />
                 <Desc />
                 <Info />
                 <Delete />
-                <Back />
+                <Back /> */}
             </div>
         </div>
     );
@@ -35,6 +35,7 @@ function Desc() {
     )
 }
 
+{ /** 
 function Tasks() {
 
 }
@@ -43,22 +44,24 @@ function Requirements() {
 
 }
 
-function Time() {
-    
-}
+*/ }
 
 function Location() {
-    <form>
+    return (
+        <form>
         <label>Location:</label>
         <input type="text" name="location"></input>
-    </form>
+        </form>
+    )
 }
 
 function Additional() {
-    <form>
+    return (
+        <form>
         <label>Additional Info:</label>
         <textarea name="additional"></textarea>
-    </form>
+        </form>
+    )
 }
 
 function Back() {
