@@ -13,7 +13,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
   return loading ? (
     <Spinner />
   ) : (
-    <div class='container'>
+    <div className='container'>
       <h1 className='learge text-primary'>Volunteer Lists</h1>
       <div className='posts'>
         {posts.map((post) => (

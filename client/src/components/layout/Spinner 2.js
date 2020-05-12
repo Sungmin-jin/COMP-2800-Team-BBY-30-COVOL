@@ -9,7 +9,7 @@ export default () => (
       alt='Loading...'
     />
     <p
-      classname='large'
+      className='large'
       style={{ width: '500px', margin: 'auto', display: 'block' }}
     >
       If loading takes too much time,refresh the page please
