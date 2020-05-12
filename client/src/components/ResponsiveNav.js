@@ -49,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
   },
   hide: {
     display: 'none',
@@ -106,7 +103,7 @@ function url(url) {
   }
 }
 
-export default function PersistentDrawerLeft() {
+export default function ResponsiveNav() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
