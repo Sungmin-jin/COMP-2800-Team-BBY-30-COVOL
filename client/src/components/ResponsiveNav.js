@@ -150,8 +150,8 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Home', 'Volunteers', 'My Profile', 'About us', 'Logout'].map((text, index) => (
-            <ListItem button key={text} component={Link} to={"/" + text} >
+          {['Home', 'Volunteers', 'Profile', 'About us', 'Logout'].map((text, index) => (
+            <ListItem button key={text} component={Link} to={"/" + text.trim()} >
               {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
               <ListItemIcon>
                 {index === 0 && <HomeIcon />}
