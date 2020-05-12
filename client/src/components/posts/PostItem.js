@@ -8,7 +8,7 @@ import { deletePost } from '../../actions/post';
 const PostItem = ({
   deletePost,
   auth,
-  post: { _id, text, name, avatar, title, location, task, user, date },
+  post: { _id, text, name, avatar, title, location, email, task, user, date },
 }) => (
   <div>
     <div>
@@ -22,6 +22,7 @@ const PostItem = ({
       <p>{location}</p>
       <p>{title}</p>
       <p>{task}</p>
+      <p>{email}</p>
       <p>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
       </p>

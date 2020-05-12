@@ -32,6 +32,7 @@ router.post(
         title: req.body.title,
         task: req.body.task,
         location: req.body.location,
+        email: user.email,
         name: user.name,
         avatar: user.avatar,
         user: req.user.id,
