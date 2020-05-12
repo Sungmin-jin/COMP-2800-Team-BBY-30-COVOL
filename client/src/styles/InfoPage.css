@@ -1,4 +1,4 @@
-.MatchesPage {
+.InfoPage {
     text-align:center;
     width:100%;
     height:150vh;
@@ -14,7 +14,7 @@
     grid-area:nav;
 }
 
-.matches-content {
+.info-content {
     grid-area:content;
     display:grid;
 }
@@ -76,7 +76,7 @@
         margin:10px;
     }
 
-    .matches-content {
+    .info-content {
         margin-top:30px;
         grid-template-rows: 64px 320px 1fr;
         grid-template-areas:
@@ -107,15 +107,15 @@
         font-size:16px;
     }
 
-    .matches-info {
+    .info-info {
         margin-left:10px;
     }
 
-    .matches-section {
+    .info-section {
         margin:15px;
     }
 
-    .matches-btn {
+    .info-btn {
         font-size:24px;
     }
 
@@ -132,7 +132,7 @@
         margin:10px;
     }
 
-    .matches-content {
+    .info-content {
         margin-top:30px;
         grid-template-rows: 64px 320px 1fr;
         grid-template-columns: 320px 1fr;
@@ -160,15 +160,15 @@
         font-size:16px;
     }
 
-    .matches-info {
+    .info-info {
         margin-left:48px;
     }
 
-    .matches-section {
+    .info-section {
         margin:15px;
     }
 
-    .matches-btn {
+    .info-btn {
         font-size:24px;
     }
 
@@ -185,7 +185,7 @@
         margin:10px;
     }
 
-    .matches-content {
+    .info-content {
         margin-top:30px;
         grid-template-rows: 64px 320px 1fr;
         grid-template-columns: 320px 1fr;
@@ -213,15 +213,15 @@
         font-size:16px;
     }
 
-    .matches-info {
+    .info-info {
         margin-left:48px;
     }
 
-    .matches-section {
+    .info-section {
         margin:15px;
     }
 
-    .matches-btn {
+    .info-btn {
         font-size:24px;
     }
 
@@ -239,7 +239,7 @@
         margin:10px;
     }
 
-    .matches-content {
+    .info-content {
         margin-top:30px;
         grid-template-rows: 64px 320px 1fr;
         grid-template-columns: 320px 1fr;
@@ -267,15 +267,15 @@
         font-size:16px;
     }
 
-    .matches-info {
+    .info-info {
         margin-left:48px;
     }
 
-    .matches-section {
+    .info-section {
         margin:15px;
     }
 
-    .matches-btn {
+    .info-btn {
         font-size:24px;
     }
 
