@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -22,11 +22,6 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import InfoIcon from '@material-ui/icons/Info';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
-
-
-
-
 
 const drawerWidth = 240;
 
@@ -50,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         easing: theme.transitions.easing.easeOut,
         duration: theme.transitions.duration.enteringScreen,
       }),
-    }
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -95,7 +90,21 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
   },
 }));
-
+//'Profile', 'About us', 'Logout'
+function url(url) {
+  switch (url) {
+    case 'Home':
+      return 'dashboard';
+    case 'Volunteers':
+      return 'volunteers';
+    case 'About us':
+      return 'Aboutus';
+    case 'Logout':
+      return 'logout';
+    default:
+      return '';
+  }
+}
 
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
@@ -114,30 +123,30 @@ export default function PersistentDrawerLeft() {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
+        position='fixed'
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            color='inherit'
+            aria-label='open drawer'
             onClick={handleDrawerOpen}
-            edge="start"
+            edge='start'
             className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant='h6' noWrap>
             COVOL
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
         className={classes.drawer}
-        variant="persistent"
-        anchor="left"
+        variant='persistent'
+        anchor='left'
         open={open}
         classes={{
           paper: classes.drawerPaper,
@@ -145,24 +154,30 @@ export default function PersistentDrawerLeft() {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
           </IconButton>
         </div>
         <Divider />
         <List>
-          {['Home', 'Volunteers', 'Profile', 'About us', 'Logout'].map((text, index) => (
-            <ListItem button key={text} component={Link} to={"/" + text.trim()} >
-              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
-              <ListItemIcon>
-                {index === 0 && <HomeIcon />}
-                {index === 1 && <SupervisorAccountIcon />}
-                {index === 2 && <AccountCircleIcon />}
-                {index === 3 && <InfoIcon/>}
-                {index === 4 && <ExitToAppIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          {['Home', 'Volunteers', 'Profile', 'About us', 'Logout'].map(
+            (text, index) => (
+              <ListItem button key={text} component={Link} to={'/' + url(text)}>
+                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+                <ListItemIcon>
+                  {index === 0 && <HomeIcon />}
+                  {index === 1 && <SupervisorAccountIcon />}
+                  {index === 2 && <AccountCircleIcon />}
+                  {index === 3 && <InfoIcon />}
+                  {index === 4 && <ExitToAppIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            )
+          )}
         </List>
         <Divider />
         {/* <List>
