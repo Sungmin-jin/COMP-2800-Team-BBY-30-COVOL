@@ -7,6 +7,8 @@ import LandingPage from './components/LandingPage';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
 
+import PostForm from './components/post/PostForm';
+import Posts from './components/posts/Posts';
 import Profiles from './components/profiles/Profiles';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -25,6 +27,7 @@ import Create from './components/CreateListing';
 import ResponsiveNav from './components/ResponsiveNav';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Home from './components/Home';
 
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
@@ -65,10 +68,12 @@ const App = () => {
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
-            <PrivateRoute path='/create-listing' component={Create} />
+            <PrivateRoute path='/posts' component={Posts} />
+            <PrivateRoute path='/post' component={PostForm} />
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
             <Route path='/info' component={Info} />
+            <Route path='/home' component={Home} />
           </Switch>
           <Footer />
         </Fragment>
