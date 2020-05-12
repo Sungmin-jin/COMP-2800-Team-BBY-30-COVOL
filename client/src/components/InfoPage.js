@@ -106,8 +106,6 @@ function AdditionalInfo(additonalInfo) {
     )
 }
 
-
-
 function Back() {
     return (
         <div className="Back">
