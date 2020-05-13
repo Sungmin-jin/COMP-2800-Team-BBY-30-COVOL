@@ -32,7 +32,6 @@
     grid-area: name;
 }
 
-
 @media (min-width: 426px) and (max-width: 768px) {
     .footerContainer {
         padding: 0;
