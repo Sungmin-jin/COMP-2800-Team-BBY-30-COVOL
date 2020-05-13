@@ -54,7 +54,7 @@ export const deletePost = (id) => async (dispatch) => {
 };
 
 // Add post
-export const addPost = (formData) => async (dispatch) => {
+export const addPost = (formData, history) => async (dispatch) => {
   const config = {
     headers: {
       'Content-Type': 'application/json',

@@ -5,12 +5,18 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions/post';
 
-const PostItem = ({
+const ShowPost = ({
   deletePost,
   auth,
   post: { _id, text, name, avatar, title, location, email, task, user, date },
-}) => ( 
+}) => (
   <div>
+    <div>
+      <Link to={`/profile/${user}`}>
+        <img className='round-img' src={avatar} alt='' />
+        <h4>{name}</h4>
+      </Link>
+    </div>
     <div>
       <p>{text}</p>
       <p>{location}</p>
@@ -37,7 +43,7 @@ const PostItem = ({
   </div>
 );
 
-PostItem.propTypes = {
+ShowPost.propTypes = {
   post: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
   deletePost: PropTypes.func.isRequired,
@@ -47,4 +53,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { deletePost })(PostItem);
+export default connect(mapStateToProps, { deletePost })(ShowPost);

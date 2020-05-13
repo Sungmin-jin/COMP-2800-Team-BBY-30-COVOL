@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { addPost } from '../../actions/post';
 import { connect } from 'react-redux';
 
-const PostForm = ({ addPost }) => {
+const PostForm = ({ addPost, history }) => {
   const [formData, setFormData] = useState({
     text: '',
     location: '',
@@ -18,7 +18,7 @@ const PostForm = ({ addPost }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
-    <div class='container'>
+    <div className='container'>
       <h1 className='large text-primary'>Add Post</h1>
       <small>* = required field</small>
 
@@ -26,8 +26,7 @@ const PostForm = ({ addPost }) => {
         className='form'
         onSubmit={(e) => {
           e.preventDefault();
-          addPost({ formData });
-          return <Redirect to='/posts' />;
+          addPost(formData, history);
         }}
       >
         <div className='form-group'>
