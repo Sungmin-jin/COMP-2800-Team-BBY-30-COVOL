@@ -38,7 +38,9 @@ router.post(
         user: req.user.id,
       });
 
-      const post = await newPost.save();
+      const post = await newPost.save((err) => {
+        console.log(err);
+      });
       res.json(post);
     } catch (err) {
       console.error(err.message);

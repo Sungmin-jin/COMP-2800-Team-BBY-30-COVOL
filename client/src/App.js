@@ -7,7 +7,8 @@ import LandingPage from './components/LandingPage';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
 
-import PostForm from './components/post/PostForm';
+import Post from './components/post/Post';
+import PostForm from './components/post-form/PostForm';
 import Posts from './components/posts/Posts';
 import Profiles from './components/profiles/Profiles';
 import Register from './components/auth/Register';
@@ -67,8 +68,9 @@ const App = () => {
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
+            <PrivateRoute path='/posts/:id' component={Post} />
             <PrivateRoute path='/posts' component={Posts} />
-            <PrivateRoute path='/post' component={PostForm} />
+            <PrivateRoute path='/post-form' component={PostForm} />
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
