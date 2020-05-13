@@ -1,3 +1,5 @@
+
+
 .AboutUs {
     display:grid;
     width:100%;
@@ -34,6 +36,8 @@
     margin:auto;
     grid-area:jason;
 }
+
+
 
 .AnthonyPic {
     margin:auto;
