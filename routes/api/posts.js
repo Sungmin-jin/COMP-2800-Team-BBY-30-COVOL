@@ -47,6 +47,19 @@ router.post(
   }
 );
 
+// @route  POST api/post/me
+// @desc   Get post by current user
+// @access Private
+router.get('/me', auth, async (req, res) => {
+  try {
+    const posts = await Post.find({user: req.user.id});
+    res.json(posts);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 // @route  POST api/post
 // @desc   Get all posts
 // @access Private
@@ -77,19 +90,6 @@ router.get('/:id', auth, async (req, res) => {
     if (err.kind === 'ObjectId') {
       return res.status(404).json({ msg: 'Post not found' });
     }
-    res.status(500).send('Server Error');
-  }
-});
-
-// @route  POST api/post/:user_id
-// @desc   Get post by current user
-// @access Private
-router.get('/:user_id', auth, async (req, res) => {
-  try {
-    const posts = await Post.find({user: req.user.id});
-    res.json(posts);
-  } catch (err) {
-    console.error(err.message);
     res.status(500).send('Server Error');
   }
 });
