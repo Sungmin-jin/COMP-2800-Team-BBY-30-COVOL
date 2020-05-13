@@ -18,6 +18,22 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 
+//Get current user posts
+export const getMyPosts = () => async (dispatch) => {
+  try {
+    const res = await axios.get('/api/posts/:user_id');
+    dispatch({
+      type: GET_POSTS,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
 // Delete post
 export const deletePost = (id) => async (dispatch) => {
   try {

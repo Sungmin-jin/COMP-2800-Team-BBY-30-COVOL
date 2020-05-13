@@ -1,13 +1,9 @@
 import React, {Component} from 'react'
-
-//Importing Footer Component
-import Footer from './Footer';
-
-//Prop Types
 import PropTypes from 'prop-types';
-
-//Material UI components    
-import Button from "@material-ui/core/Button";
+import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
+import { connect } from 'react-redux';
+import { deletePost } from './../actions/post';
 
 //CSS
 import './../styles/InfoPage.css';

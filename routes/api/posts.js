@@ -81,6 +81,19 @@ router.get('/:id', auth, async (req, res) => {
   }
 });
 
+// @route  POST api/post/:user_id
+// @desc   Get post by current user
+// @access Private
+router.get('/:user_id', auth, async (req, res) => {
+  try {
+    const posts = await Post.find({user: req.user.id});
+    res.json(posts);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 // @route  DELETE api/post/:id
 // @desc   Delete a post
 // @access Private

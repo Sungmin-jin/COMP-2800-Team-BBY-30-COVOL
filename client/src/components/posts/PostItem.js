@@ -9,14 +9,8 @@ const PostItem = ({
   deletePost,
   auth,
   post: { _id, text, name, avatar, title, location, email, task, user, date },
-}) => (
+}) => ( 
   <div>
-    <div>
-      <Link to={`/profile/${user}`}>
-        <img className='round-img' src={avatar} alt='' />
-        <h4>{name}</h4>
-      </Link>
-    </div>
     <div>
       <p>{text}</p>
       <p>{location}</p>
