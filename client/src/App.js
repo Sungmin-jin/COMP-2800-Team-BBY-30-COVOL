@@ -27,6 +27,7 @@ import ResponsiveNav from './components/ResponsiveNav';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import FindVolunteerListings from './components/FindVolunteerListings';
 
 //this is the way to use an image file in React
 //you ACTUALLY have to import the image file
@@ -73,6 +74,7 @@ const App = () => {
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
             <Route path='/home' component={Home} />
+            <Route path='/findvolunteerlistings' component={FindVolunteerListings} />
           </Switch>
           <Footer />
         </Fragment>
