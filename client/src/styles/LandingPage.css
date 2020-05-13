@@ -1,6 +1,6 @@
 .LandingPage {
     background-color:white;
-    width:100vw;
+    width:100%;
     max-width: 1500px;
     height:100vh;
     display:grid;
@@ -53,13 +53,13 @@
 @media (max-width: 425px) {
     .logo {
         margin-top: 5vh;
-        width: 60vw;
+        width: 50vw;
         height: 50vw;
     }
 
     .LandingPageBtn {
         margin-top: 3vh;
-        font-size:10vw;
+        font-size:6vw;
         padding:2vh 5vw 2vh 5vw;
         width: 50vw;
     }
