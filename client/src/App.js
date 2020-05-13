@@ -75,6 +75,7 @@ const App = () => {
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
             <Route path='/home' component={Home} />
+            <Route path ='/findvolunteerlistings' component={Posts} />
           </Switch>
           <Footer />
         </Fragment>

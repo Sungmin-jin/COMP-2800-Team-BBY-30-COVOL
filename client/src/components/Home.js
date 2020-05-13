@@ -18,7 +18,7 @@ function Home() {
 function HomePageCreateVolunteerListingBtn() {
     return (
         <div className='homeBtnDiv'>
-            <a className='homeBtn' href='/CreateVolunteerListing'>
+            <a className='homeBtn' href='/createvolunteerlisting'>
                 Create Volunteer Listing
             </a>
         </div>
@@ -28,7 +28,7 @@ function HomePageCreateVolunteerListingBtn() {
 function HomePageManageVolunteerListingsBtn() {
     return (
         <div className='homeBtnDiv'>
-            <a className='homeBtn' href='/ManageVolunteerListings'>
+            <a className='homeBtn' href='/managevolunteerlistings'>
                 Manage Volunteer Listings
             </a>
         </div>
@@ -38,7 +38,7 @@ function HomePageManageVolunteerListingsBtn() {
 function HomePageFindVolunteerListingsBtn() {
     return (
         <div className='homeBtnDiv'>
-            <a className='homeBtn' href='/FindVolunteerListings'>
+            <a className='homeBtn' href='/findvolunteerlistings'>
                 Find Volunteer Listings
             </a>
         </div>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import PostItem from './PostItem';
 import { getPosts } from '../../actions/post';
+import '../../styles/Post.css';
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
     <div className='container'>
-      <h1 className='learge text-primary'>Volunteer Lists</h1>
+      <h1 className='learge text-primary'>All Volunteer Listings</h1>
       <div className='posts'>
         {posts.map((post) => (
           <PostItem key={post._id} post={post} />

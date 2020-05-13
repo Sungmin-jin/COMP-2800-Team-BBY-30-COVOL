@@ -10,7 +10,7 @@ const PostItem = ({
   auth,
   post: { _id, text, name, avatar, title, location, email, task, user, date },
 }) => (
-  <div>
+  <div className='postitem'>
     <div>
       <Link to={`/profile/${user}`}>
         <img className='round-img' src={avatar} alt='' />
