@@ -55,6 +55,7 @@ function HomePageAccountManagementBtn() {
     );
 }
 
+//Don't think this does anything
 const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
   });

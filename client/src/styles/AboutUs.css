@@ -1,7 +1,9 @@
+
+
 .AboutUs {
     display:grid;
     width:100%;
-    height:100vh;
+    height:100%;
     grid-template-rows: 36px 1fr 0.2fr;
     grid-template-areas: 
     "nav"
@@ -21,22 +23,24 @@
 }
 
 .TonyPic {
-    margin:0 auto 0 auto;
+    margin:auto;
     grid-area:tony;
 }
 
 .JustinPic {
-    margin:0 auto 0 auto;
+    margin:auto;
     grid-area:justin;
 }
 
 .JasonPic {
-    margin:0 auto 0 auto;
+    margin:auto;
     grid-area:jason;
 }
 
+
+
 .AnthonyPic {
-    margin:0 auto 0 auto;
+    margin:auto;
     grid-area:anthony;
 }
 
@@ -56,26 +60,29 @@
 @media (max-width: 425px) {
 
     .content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1fr);
         grid-template-areas: 
-        "tony justin"
-        "jason anthony"
-        "paragraph paragraph";
+        "tony"
+        "justin"
+        "jason"
+        "anthony"
+        "paragraph";
     }
 
     .pic {
-        margin-top:40px;
+        margin-top:5px;
         width:20vw;
         height:20vw;
     }
 
     .name {
-        font-size:3.5vw;
+        font-size:2.5vw;
+        text-align: center;
     }
 
     .team-paragraph {
-        font-size:3.5vw;
-        margin: 2vh 0 0 0;
+        font-size:3vw;
+        margin: 5vh 5vh 0 5vh;
     }
 
 }
@@ -102,7 +109,7 @@
 
     .team-paragraph {
         font-size:2.5vw;
-        margin: 5vh 10vh 0 10vh;
+        margin: 5vh 5vh 0 5vh;
     }
 
 }
@@ -129,7 +136,7 @@
 
     .team-paragraph {
         font-size:2vw;
-        margin: 10vh 10vh 0vh 10vh;
+        margin: 5vh 10vh 0vh 10vh;
     }
 
     @media (max-height: 1024px) {

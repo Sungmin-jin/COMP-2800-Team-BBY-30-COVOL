@@ -17,7 +17,6 @@ function LandingPage({ logo }) {
       <LandingPageLogo logo={logo} />
       <LandingPageButtonLogin />
       <LandingPageButtonRegister />
-      <Footer className='footer' />
     </div>
   );
 }
