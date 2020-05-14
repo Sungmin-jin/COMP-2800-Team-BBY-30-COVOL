@@ -74,7 +74,7 @@ const App = () => {
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
             <Route path='/matches' component={Matches} />
-            <Route path='/home' component={Home} />
+            <PrivateRoute path='/home' component={Home} />
           </Switch>
           <Footer />
         </Fragment>
