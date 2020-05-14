@@ -13,7 +13,6 @@ const $ = window.$;
 $(document).ready(function() {
 
   $('.easterEggTrigger').hover(function(){
-    // $(".TonyPic").css("-webkit-animation-play-state","running");
     $(".TonyPic").addClass('rotate-scale-up');
     $(".JustinPic").addClass('hidingPic');
     $(".JasonPic").addClass('movingPic');
@@ -29,11 +28,6 @@ $(document).ready(function() {
     $(".banner-container").removeClass('bannerAni');
   });
 })
-
-
-// $('.workstream-comment').mouseout(function(){
-//   $(this).parent().next().find(".chatdate").css("opacity","0.5");
-// });
 
 function AboutUs({ profilePic, userName, userEmail }) {
   return (
