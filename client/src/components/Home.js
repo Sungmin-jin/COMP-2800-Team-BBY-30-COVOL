@@ -28,7 +28,7 @@ function HomePageCreateVolunteerListingBtn() {
 function HomePageManageVolunteerListingsBtn() {
     return (
         <div className='homeBtnDiv'>
-            <a className='homeBtn' href='/ManageVolunteerListings'>
+            <a className='homeBtn' href='/manage'>
                 Manage Volunteer Listings
             </a>
         </div>

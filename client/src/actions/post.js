@@ -24,7 +24,7 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 
-//Get current user posts
+//Get current user's posts
 export const getMyPosts = () => async (dispatch) => {
   try {
     const res = await axios.get('/api/posts/me');
@@ -60,7 +60,7 @@ export const deletePost = (id) => async (dispatch) => {
 };
 
 // Add post
-export const addPost = (formData) => async (dispatch) => {
+export const addPost = (formData, history) => async (dispatch) => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -102,3 +102,4 @@ export const getPost = (id) => async (dispatch) => {
     });
   }
 };
+

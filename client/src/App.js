@@ -7,7 +7,7 @@ import LandingPage from './components/LandingPage';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
 
-import Post from './components/post/Post';
+import Post from './components/post/Info';
 import PostForm from './components/post-form/PostForm';
 import Posts from './components/posts/Posts';
 import Profiles from './components/profiles/Profiles';
@@ -23,8 +23,6 @@ import AddEducation from './components/Profile-form/AddEducation';
 import Profile from './components/profile/Profile';
 import AboutUs from './components/AboutUs';
 import Management from './components/ManagementPage';
-import Info from './components/InfoPage';
-import Create from './components/CreateListing';
 import ResponsiveNav from './components/ResponsiveNav';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -69,12 +67,11 @@ const App = () => {
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
-            <PrivateRoute path='/posts/:id' component={Post} />
+            <PrivateRoute path='/info/:id' component={Post} />
             <PrivateRoute path='/posts' component={Posts} />
             <PrivateRoute path='/post-form' component={PostForm} />
             <Route path='/aboutus' component={AboutUs} />
             <Route path='/manage' component={Management} />
-            <Route path='/info' component={Info} />
             <Route path='/home' component={Home} />
           </Switch>
           <Footer />

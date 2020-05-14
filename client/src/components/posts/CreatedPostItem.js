@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions/post';
+import '../../styles/CreatedPosts.css';
 
 const PostItem = ({
   deletePost,
   auth,
   post: { _id, text, name, avatar, title, location, email, task, user, date },
-}) => ( 
-  <div>
+}) => (
+  <div className="created-post">
     <div>
+      <Link to={`/info/${_id}`} className='btn btn-primary'> 
       <p>{text}</p>
       <p>{location}</p>
       <p>{title}</p>
@@ -20,7 +22,7 @@ const PostItem = ({
       <p>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
       </p>
-
+      </Link>
       {!auth.loading && user === auth.user._id && (
         <button
           onClick={() => deletePost(_id)}

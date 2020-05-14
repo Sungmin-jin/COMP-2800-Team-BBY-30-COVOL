@@ -20,7 +20,7 @@ const PostItem = ({
       <p>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
       </p>
-      <Link to={`/posts/${_id}`} className='btn btn-primary'>
+      <Link to={`/info/${_id}`} className='btn btn-primary'>
         <p className='large'> More Detail </p>
       </Link>
 
