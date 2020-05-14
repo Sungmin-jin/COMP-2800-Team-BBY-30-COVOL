@@ -2,8 +2,33 @@
     text-align: center;
 }
 
-.postitem {
+.postItem {
     border: solid 2px #17a2b8;
     margin: 2vh 2vw;
-    padding: 2vh 2vw;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 500px;
+    margin: 10px auto 10px auto;
+}
+
+.postInfo {
+    margin: 2vh 2vw;
+}
+
+.postName {
+    text-align: center;
+    color: #17a2b8;
+}
+
+.postButton {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+ 
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
