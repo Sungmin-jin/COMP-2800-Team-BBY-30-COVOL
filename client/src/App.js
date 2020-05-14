@@ -74,14 +74,6 @@ const App = () => {
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
-<<<<<<< HEAD
-
-            <Route path='/Aboutus' component={AboutUs} />
-            
-            <Route path='/manage' component={Management} />
-            <Route path='/matches' component={Matches} />
-            <Route path='/home' component={Home} />
-=======
             <PrivateRoute path='/posts/:id' component={Post} />
             <PrivateRoute path='/posts' component={Posts} />
             <PrivateRoute path='/post-form' component={PostForm} />
@@ -90,7 +82,6 @@ const App = () => {
             <Route path='/matches' component={Matches} />
             <Route path='/home' component={Home} />
             <Route path ='/findvolunteerlistings' component={Posts} />
->>>>>>> justin_post_page
           </Switch>
           <Footer />
         </Fragment>
