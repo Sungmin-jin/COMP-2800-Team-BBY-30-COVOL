@@ -1,6 +1,10 @@
 .home {
     background-color:white;
+<<<<<<< HEAD
     width:100%;
+=======
+    width:100vw;
+>>>>>>> justin_post_page
     height:100vh;
     display:grid;
 }

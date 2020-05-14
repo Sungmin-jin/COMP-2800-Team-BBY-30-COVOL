@@ -18,7 +18,11 @@ function Home() {
 function HomePageCreateVolunteerListingBtn() {
     return (
         <div className='homeBtnDiv'>
+<<<<<<< HEAD
             <a className='homeBtn' href='/CreateVolunteerListing'>
+=======
+            <a className='homeBtn' href='/createvolunteerlisting'>
+>>>>>>> justin_post_page
                 Create Volunteer Listing
             </a>
         </div>
@@ -28,7 +32,11 @@ function HomePageCreateVolunteerListingBtn() {
 function HomePageManageVolunteerListingsBtn() {
     return (
         <div className='homeBtnDiv'>
+<<<<<<< HEAD
             <a className='homeBtn' href='/ManageVolunteerListings'>
+=======
+            <a className='homeBtn' href='/managevolunteerlistings'>
+>>>>>>> justin_post_page
                 Manage Volunteer Listings
             </a>
         </div>
@@ -38,7 +46,11 @@ function HomePageManageVolunteerListingsBtn() {
 function HomePageFindVolunteerListingsBtn() {
     return (
         <div className='homeBtnDiv'>
+<<<<<<< HEAD
             <a className='homeBtn' href='/FindVolunteerListings'>
+=======
+            <a className='homeBtn' href='/findvolunteerlistings'>
+>>>>>>> justin_post_page
                 Find Volunteer Listings
             </a>
         </div>
@@ -55,7 +67,10 @@ function HomePageAccountManagementBtn() {
     );
 }
 
+<<<<<<< HEAD
 //Don't think this does anything
+=======
+>>>>>>> justin_post_page
 const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
   });
