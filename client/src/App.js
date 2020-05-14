@@ -71,8 +71,8 @@ const App = () => {
             <PrivateRoute path='/posts' component={Posts} />
             <PrivateRoute path='/post-form' component={PostForm} />
             <Route path='/aboutus' component={AboutUs} />
-            <Route path='/manage' component={Management} />
-            <Route path='/home' component={Home} />
+            <PrivateRoute path='/manage' component={Management} />
+            <PrivateRoute path='/home' component={Home} />
           </Switch>
           <Footer />
         </Fragment>
