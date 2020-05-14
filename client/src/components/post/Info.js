@@ -37,7 +37,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       </div>
       <div className='info-buttons'>
         <div className='info-contact'>
-          <a href={'mailto:' + match.params.email} className='btn btn-primary info-button'>Contact</a>
+          <a href={'mailto:' + post.email} className='btn btn-primary info-button'>Contact</a>
         </div>
         <div className='info-save'>
           <button className='btn btn-primary info-button'>Save</button>
