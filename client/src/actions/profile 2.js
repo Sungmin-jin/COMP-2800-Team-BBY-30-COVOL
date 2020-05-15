@@ -46,7 +46,7 @@ export const getProfiles = () => async (dispatch) => {
   }
 };
 
-// Get profile by ID
+// Get all profile by ID
 export const getProfileById = (userId) => async (dispatch) => {
   try {
     const res = await axios.get(`/api/profile/user/${userId}`);
@@ -87,36 +87,6 @@ export const createProfile = (formData, history, edit = false) => async (
   } catch (err) {
     const errors = err.response.data.errors;
 
-    if (errors) {
-      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
-    }
-
-    dispatch({
-      type: PROFILE_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status },
-    });
-  }
-};
-
-// Add Favourite Post
-export const addFavourite = (formData) => async (dispatch) => {
-  try {
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-
-    const res = await axios.put('/api/profile/favourite', formData, config);
-
-    dispatch({
-      type: UPDATE_PROFILE,
-      payload: res.data,
-    });
-
-    dispatch(setAlert('Post is Saved in your favourite post', 'success'));
-  } catch (err) {
-    const errors = err.response.data.errors;
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
     }

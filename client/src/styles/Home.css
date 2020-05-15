@@ -1,0 +1,67 @@
+.home {
+    background-color:white;
+    width:100vw;
+    height:80vh;
+    margin-top:72px;
+    display:grid;
+}
+
+.homeBtn {
+    text-decoration: none;
+    font-weight: bold;
+    font-family:calibri;
+    color:teal;
+
+    display: inline-block;
+
+    border-radius: 25px;
+}
+
+.homeBtn:hover {
+    background-color: teal;
+    color: white;
+    transition: background-color 0.5s ease-out;
+}
+
+.homeBtnDiv {
+    margin: auto auto auto auto;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .homeBtn {
+        margin-top: 1vh;
+        font-size:3vh;
+        padding:3vh 0vw 3vh 0vw;
+        width: 90vw;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    .homeBtn {
+        font-size:3vh;
+        padding:3vh 0vw 3vh 0vw;
+        width: 50vw;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .homeBtn {
+        width:50vw;
+        padding:3vh 0vw 3vh 0vw;
+        font-size: 3vh;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .homeBtn {  
+        width:50vw;
+        padding:3vh 0 3vh 0;
+        font-size: 3vh;
+    }
+}

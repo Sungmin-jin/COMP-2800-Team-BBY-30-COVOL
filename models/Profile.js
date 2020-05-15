@@ -5,10 +5,15 @@ const ProfileSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user',
   },
+  favourite: [
+    {
+      post: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'posts',
+      },
+    },
+  ],
   company: {
-    type: String,
-  },
-  website: {
     type: String,
   },
   location: {

@@ -8,6 +8,27 @@ import justinIMG from './../image/justin.jpg';
 import jasonIMG from './../image/jason.jpg';
 import anthonyIMG from './../image/anthony.jpg';
 
+// this is for to use JQuery in React
+const $ = window.$;
+$(document).ready(function() {
+
+  $('.easterEggTrigger').mouseenter(function(){
+    $(".TonyPic").addClass('rotate-scale-up');
+    $(".JustinPic").addClass('hidingPic');
+    $(".JasonPic").addClass('movingPic');
+    $(".AnthonyPic").addClass('growingPic');
+    $(".banner-container").addClass('bannerAni');
+  });
+
+    $('.easterEggTrigger').mouseleave(function(){
+    $(".TonyPic").removeClass('rotate-scale-up');
+    $(".JustinPic").removeClass('hidingPic');
+    $(".JasonPic").removeClass('movingPic');
+    $(".AnthonyPic").removeClass('growingPic');
+    $(".banner-container").removeClass('bannerAni');
+  });
+})
+
 function AboutUs({ profilePic, userName, userEmail }) {
   return (
     <div className='AboutUs'>
@@ -17,6 +38,7 @@ function AboutUs({ profilePic, userName, userEmail }) {
         <JasonPic />
         <AnthonyPic />
         <TeamParagraph />
+        <EasterEggBanner />
       </div>
     </div>
   );
@@ -62,13 +84,21 @@ function TeamParagraph() {
   return (
     <div className='TeamParagraph'>
       <p className='team-paragraph'>
-        Due to the rise of the recent epidemic, COVID-19, many groups and
+        Due to the rise of the recent epidemic, <a className="easterEggTrigger">COVID-19</a>, many groups and
         organizations need help to survive and combat these trying times. We as
         a group are using this chance as a learning experience while also
         assisting these groups in fighting back against the epidemic. We hope to
         make an simple to use application that can find these groups the help
         they need.
       </p>
+    </div>
+  );
+}
+
+function EasterEggBanner() {
+  return (
+    <div className='banner-container'>
+      <span className='banner-text'>COVOL - BBY TEAM 30</span>
     </div>
   );
 }

@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 //Material UI components
 import Button from '@material-ui/core/Button';
 
+import Posts from './posts/CreatedPosts'
+
 //CSS
 import './../styles/ManagementPage.css';
 
@@ -18,14 +20,11 @@ import Nav from './Nav';
 function ManagementPage() {
   return (
     <div className='ManagementPage'>
-      {/* <Nav className="nav"/> */}
-
-      <div className='management-content'>
-        <ManageCreatedListings />
-        <ManageFoundListings />
-        <CreateListingsBtn />
-        <FindListingsBtn />
-        <Back />
+      <div className='created-posts'>
+        <Posts />
+      </div>
+      <div className='found-posts'>
+        
       </div>
     </div>
   );
@@ -74,7 +73,7 @@ function ManageFoundListings() {
 function CreateListingsBtn() {
   return (
     <div className='CreateListingsBtn'>
-      <a className='management-btn create-listings' href=''>
+      <a className='management-btn create-listings' href='/create-listing'>
         Create Listings
       </a>
     </div>

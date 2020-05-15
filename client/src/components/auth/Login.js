@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import './../../styles/Login.css';
-import Nav from './../Nav';
-import Footer from './../Footer';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -26,7 +24,7 @@ const Login = ({ login, isAuthenticated }) => {
   // this is checking
   // it checks token
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    return <Redirect to='/home' />;
   }
 
   return (
