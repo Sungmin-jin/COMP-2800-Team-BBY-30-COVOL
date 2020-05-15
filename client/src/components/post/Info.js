@@ -18,7 +18,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     <Spinner />
   ) : (
     <div className='container'>
-      <Link to={`/profile/${post.user}`} className='btn btn-primary'>
+      <Link to={`/profile/${post.user}`}>
       <div className="info-top">
         <img className="info-avatar round-img" src={post.avatar} />
         <p className="info-title">{post.title}</p>
@@ -46,9 +46,6 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
           e.preventDefault();
           addFavourite(post.id, loading);
         }}>
-        <div className='info-save'>
-          <button type='submit' className='btn btn-primary info-button'>Save</button>
-        </div>
         </form>
       </div>
     </div>

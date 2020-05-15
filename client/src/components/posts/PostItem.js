@@ -21,8 +21,6 @@ const PostItem = ({
     <div className='postInfo'>
       <p>Title: {title}</p>
       <p>Location: {location}</p>
-      <p>Required Task: {task}</p>
-      <p>Summary: {text}</p>
       <p>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
       </p>
@@ -31,16 +29,6 @@ const PostItem = ({
           <p className='postButton'> More Detail </p>
         </Link>
       </div>
-
-      {!auth.loading && user === auth.user._id && (
-        <button
-          onClick={() => deletePost(_id)}
-          type='button'
-          className='btn btn-danger'
-        >
-          Delete
-        </button>
-      )}
     </div>
   </div>
 );

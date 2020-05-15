@@ -5,10 +5,22 @@
 .info-buttons {
     display:flex;
     justify-content: center;
+    margin-bottom:100px;
+}
+
+.info-top{
+    background-color:cadetblue;
+    color:white;
+}
+
+.info-top:hover {
+    background-color:teal;
+    color:white;
 }
 
 @media (max-width: 425px) {
     .info-top {
+        padding:2vw;
         flex-direction:column;
         margin-bottom: 10px;
     }
@@ -20,17 +32,16 @@
         font-size: 18px
     }
     .info-title {
-        font-size:30px;
+        font-size: 8vw;;
         margin:auto auto auto auto;
     }
     .info-avatar {
         margin:auto;
-        width:300px;
-        height:300px;
+        width:60vw;
     }
 
     .info-buttons {
-        margin-top:10px
+        margin-top:10px;
     }
 }
 
@@ -38,21 +49,21 @@
     .info-top {
         flex-direction:column;
         margin-bottom: 10px;
+        padding:10px
     }
     .info-content {
         font-size: 20px;
     }
     .info-user {
         margin-bottom: 10px;
-        font-size: 24px
+        font-size: 22px
     }
     .info-title {
-        font-size:60px;
+        font-size:4vw;
         margin:auto auto auto auto;
     }
     .info-avatar {
-        width:300px;
-        height:300px;
+        width:30vw;
         margin:auto;
     }
 
@@ -67,6 +78,7 @@
     .info-top {
         flex-direction:row;
         margin-bottom: 10px;
+        padding:10px;
     }
     .info-content {
         font-size: 20px;
@@ -76,12 +88,11 @@
         font-size: 24px
     }
     .info-title {
-        font-size:60px;
+        font-size:4vw;
         margin:auto auto auto 30px;
     }
     .info-avatar {
-        width:300px;
-        height:300px;
+        width:20vw;
     }
 
     .info-buttons {
@@ -93,6 +104,7 @@
 @media (min-width: 1025px) {
     .info-top {
         flex-direction:row;
+        padding:10px;
         margin-bottom: 10px;
     }
     .info-content {
@@ -103,16 +115,16 @@
         font-size: 24px
     }
     .info-title {
-        font-size:80px;
+        font-size:50px;
         margin:auto auto auto 30px;
     }
     .info-avatar {
-        width:300px;
-        height:300px;
+        width:200px;
+        height:200px;
     }
 
     .info-buttons {
-        margin-top:10px
+        margin-top:20px
     }
 
 }

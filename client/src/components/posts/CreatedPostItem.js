@@ -13,12 +13,9 @@ const PostItem = ({
 }) => (
   <div className="created-post">
     <div>
-      <Link to={`/info/${_id}`} className='btn btn-primary'> 
-      <p>{text}</p>
+      <Link to={`/info/${_id}`} className='btn btn-primary'>
+      <p>{title}</p> 
       <p>{location}</p>
-      <p>{title}</p>
-      <p>{task}</p>
-      <p>{email}</p>
       <p>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
       </p>

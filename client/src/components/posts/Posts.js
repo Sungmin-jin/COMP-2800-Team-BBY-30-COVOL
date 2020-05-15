@@ -15,7 +15,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
     <div className='container'>
-      <h1 className='large text-primary'>Volunteer Lists</h1>
+      <h1 className='large text-primary'>Volunteer Listings</h1>
       <div className='posts'>
         {posts.map((post) => (
           <PostItem key={post._id} post={post} />

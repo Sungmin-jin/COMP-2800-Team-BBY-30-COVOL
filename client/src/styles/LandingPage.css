@@ -1,8 +1,7 @@
 .LandingPage {
     background-color:white;
     width:100%;
-    max-width: 1500px;
-    height:100vh;
+    height:100%;
     display:grid;
     grid-template-rows: 36px 6fr 2fr 2fr 1fr;
     grid-template-areas:
@@ -35,9 +34,7 @@
     text-decoration: none;
     font-weight: bold;
     font-family:calibri;
-    color:white;
-
-    background-color: cadetblue;
+    color:cadetblue;
 
     display: inline-block;
 
@@ -52,16 +49,15 @@
 
 @media (max-width: 425px) {
     .logo {
-        margin-top: 5vh;
+        margin-top: 10vh;
         width: 50vw;
-        height: 50vw;
     }
 
     .LandingPageBtn {
-        margin-top: 3vh;
+        margin-top: 4vh;
         font-size:6vw;
         padding:2vh 5vw 2vh 5vw;
-        width: 50vw;
+        width: 70vw;
     }
 }
 
@@ -69,15 +65,14 @@
 
     .logo {
         margin-top: 100px;
-        width: 30vw;
-        height: 24vw;
+        width: 40vw;
     }
 
     .LandingPageBtn {
-        margin-top:10px;
-        font-size:6vw;
+        margin-top:3vh;
+        font-size:5vw;
         padding:3vh 0vw 3vh 0vw;
-        width: 50vw;
+        width: 70vw;
     }
 
 }
@@ -100,14 +95,13 @@
 
 @media (min-width: 1025px) {
     .logo {
-        margin:6vh auto 6vh auto;
-        width: 19vw;
-        height: 15vw;
+        margin:10vh auto 0 auto;
+        width: 30vh;
     }
 
     .LandingPageBtn {
-        margin: 0;
-        width:20vw;
+        margin: 2vh auto 2vh auto;
+        width:40vw;
         padding:3vh 0 3vh 0;
         font-size: 2vw;
     }

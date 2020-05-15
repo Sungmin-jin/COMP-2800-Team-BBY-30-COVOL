@@ -1,7 +1,8 @@
 .home {
     background-color:white;
     width:100vw;
-    height:100vh;
+    height:80vh;
+    margin-top:72px;
     display:grid;
 }
 
@@ -9,9 +10,7 @@
     text-decoration: none;
     font-weight: bold;
     font-family:calibri;
-    color:white;
-
-    background-color: cadetblue;
+    color:teal;
 
     display: inline-block;
 
@@ -35,7 +34,7 @@
         margin-top: 1vh;
         font-size:3vh;
         padding:3vh 0vw 3vh 0vw;
-        width: 50vw;
+        width: 90vw;
     }
 }
 
