@@ -2,19 +2,19 @@
   0% {
     transform: scale(1);
     opacity: 0;
-    z-index: 1;
+    z-index: -4;
   }
 
   75% {
     transform: scale(2);
     opacity: 1;
-    z-index: 2;
+    z-index: -3;
   }
 
   100% {
     transform: scale(0);
     opacity: 0;
-    z-index: 3;
+    z-index: -2;
   }
 }
 
@@ -53,11 +53,11 @@
 @keyframes growingPic {
   0% {
     transform: scale(0.8);
-    z-index: 3;
+    z-index: 1;
   }
   100% {
     transform: scale(1.2);
-    z-index: 1;
+    z-index: -3;
   }
 }
 
@@ -127,6 +127,7 @@
 
 .easterEggTrigger {
   color: #000;
+  z-index: 5;
 }
 
 .rotate-scale-up {
@@ -158,6 +159,7 @@
   margin: auto;
   grid-area: jason;
   position: relative;
+  z-index: -1;
 }
 
 .growingPic {

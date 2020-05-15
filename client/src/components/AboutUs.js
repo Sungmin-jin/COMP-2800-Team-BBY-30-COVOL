@@ -12,7 +12,7 @@ import anthonyIMG from './../image/anthony.jpg';
 const $ = window.$;
 $(document).ready(function() {
 
-  $('.easterEggTrigger').hover(function(){
+  $('.easterEggTrigger').mouseenter(function(){
     $(".TonyPic").addClass('rotate-scale-up');
     $(".JustinPic").addClass('hidingPic');
     $(".JasonPic").addClass('movingPic');

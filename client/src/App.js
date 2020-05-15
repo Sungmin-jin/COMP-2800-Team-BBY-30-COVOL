@@ -79,7 +79,7 @@ const App = () => {
             <PrivateRoute path='/posts' component={Posts} />
             <PrivateRoute path='/createvolunteerlisting' component={PostForm} />
 
-            <Route path='/Aboutus' component={AboutUs} />
+            <Route path='/aboutus' component={AboutUs} />
             <PrivateRoute path='/managevolunteerlistings' component={Management} />
             <PrivateRoute path='/home' component={Home} />
             <PrivateRoute path ='/findvolunteerlistings' component={Posts} />
