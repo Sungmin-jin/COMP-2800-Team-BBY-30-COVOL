@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../actions/auth';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -105,7 +108,7 @@ function url(url) {
   }
 }
 
-export default function ResponsiveNav() {
+const ResponsiveNav = ({ auth: { isAuthenticated, loading }, logout }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -117,6 +120,24 @@ export default function ResponsiveNav() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const authLink = (
+    <ListItem button key={'Logout'} component={Link} onClick={logout}>
+      <ListItemIcon>
+        <ExitToAppIcon />
+      </ListItemIcon>
+      <ListItemText primary={'Log out'} />
+    </ListItem>
+  );
+
+  const guestLink = (
+    <ListItem button key={'Login'} component={Link} to='/login'>
+      <ListItemIcon>
+        <ExitToAppIcon />
+      </ListItemIcon>
+      <ListItemText primary={'Log in'} />
+    </ListItem>
+  );
 
   return (
     <div className={classes.root}>
@@ -162,20 +183,41 @@ export default function ResponsiveNav() {
         </div>
         <Divider />
         <List>
-          {['Home', 'Volunteers', 'Profile', 'About us', 'Logout'].map(
-            (text, index) => (
-              <ListItem button key={text} component={Link} to={'/' + url(text)}>
-                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
-                <ListItemIcon>
-                  {index === 0 && <HomeIcon />}
-                  {index === 1 && <SupervisorAccountIcon />}
-                  {index === 2 && <AccountCircleIcon />}
-                  {index === 3 && <InfoIcon />}
-                  {index === 4 && <ExitToAppIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            )
+          <ListItem button key={'Home'} component={Link} to={'/Home'}>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary={'home'} />
+          </ListItem>
+
+          <ListItem button key={'Volunteers'} component={Link} to={'/profiles'}>
+            <ListItemIcon>
+              <SupervisorAccountIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Volunteers'} />
+          </ListItem>
+
+          <ListItem
+            button
+            key={'My Profile'}
+            component={Link}
+            to={'/dashboard'}
+          >
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <ListItemText primary={'My Profile'} />
+          </ListItem>
+
+          <ListItem button key={'About Us'} component={Link} to={'/Aboutus'}>
+            <ListItemIcon>
+              <InfoIcon />
+            </ListItemIcon>
+            <ListItemText primary={'About Us'} />
+          </ListItem>
+
+          {!loading && (
+            <Fragment>{isAuthenticated ? authLink : guestLink}</Fragment>
           )}
         </List>
         <Divider />
@@ -190,4 +232,15 @@ export default function ResponsiveNav() {
       </Drawer>
     </div>
   );
-}
+};
+
+ResponsiveNav.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { logout })(ResponsiveNav);

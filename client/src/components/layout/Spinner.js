@@ -2,10 +2,15 @@ import React, { Fragment } from 'react';
 import spinner from './spinner.gif';
 
 export default () => (
-  <Fragment>
+  <div>
     <img
       src={spinner}
-      style={{ width: '200px', margin: 'auto', display: 'block' }}
+      style={{
+        width: '200px',
+        margin: 'auto',
+        display: 'block',
+        marginTop: '5rem',
+      }}
       alt='Loading...'
     />
     <br />
@@ -13,7 +18,7 @@ export default () => (
       classname='lead container'
       style={{ margin: 'auto', display: 'block', textAlign: 'center' }}
     >
-      If loading takes too much time,refresh the page please
+      If loading takes too much time, refresh the page please
     </p>
-  </Fragment>
+  </div>
 );
