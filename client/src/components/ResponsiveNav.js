@@ -91,9 +91,11 @@ const useStyles = makeStyles((theme) => ({
 function url(url) {
   switch (url) {
     case 'Home':
-      return 'dashboard';
+      return 'home';
     case 'Volunteers':
-      return 'volunteers';
+      return 'profiles';
+    case 'Profile':
+      return 'dashboard';
     case 'About us':
       return 'Aboutus';
     case 'Logout':
