@@ -24,6 +24,22 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 
+//Get current user's saved posts
+export const getSavedPosts = () => async (dispatch) => {
+  try {
+    const res = await axios.get('/api/posts/saved');
+    dispatch({
+      type: GET_POSTS,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
 //Get current user's posts
 export const getMyPosts = () => async (dispatch) => {
   try {

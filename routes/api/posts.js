@@ -50,11 +50,24 @@ router.post(
 );
 
 // @route  POST api/post/me
-// @desc   Get post by current user
+// @desc   Get posts by current user
 // @access Private
 router.get('/me', auth, async (req, res) => {
   try {
     const posts = await Post.find({user: req.user.id});
+    res.json(posts);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route  POST api/post/saved
+// @desc   Get posts saved by current user
+// @access Private
+router.get('/saved', auth, async (req, res) => {
+  try {
+    const posts = await Post.find({_id: { $in: profiles.favourite }});
     res.json(posts);
   } catch (err) {
     console.error(err.message);

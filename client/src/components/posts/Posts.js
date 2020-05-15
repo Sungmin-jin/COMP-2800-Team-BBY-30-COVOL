@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import PostItem from './PostItem';
-import { getPosts } from '../../actions/post';
+import { getSavedPosts } from '../../actions/post';
 
-const Posts = ({ getPosts, post: { posts, loading } }) => {
+const Posts = ({ getSavedPosts, post: { posts, loading } }) => {
   useEffect(() => {
-    getPosts();
-  }, [getPosts]);
+    getSavedPosts();
+  }, [getSavedPosts]);
 
   return loading ? (
     <Spinner />
@@ -25,7 +25,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
 };
 
 Posts.propTypes = {
-  getPosts: PropTypes.func.isRequired,
+  getSavedPosts: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
 };
 
@@ -33,4 +33,4 @@ const mapStateToProps = (state) => ({
   post: state.post,
 });
 
-export default connect(mapStateToProps, { getPosts })(Posts);
+export default connect(mapStateToProps, { getSavedPosts })(Posts);

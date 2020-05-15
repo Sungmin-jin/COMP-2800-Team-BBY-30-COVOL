@@ -5,6 +5,7 @@ import Spinner from '../layout/Spinner';
 import { getPost } from '../../actions/post';
 import Moment from 'react-moment';
 import ShowPost from './ShowPost';
+import { addFavourite } from '../../actions/profile';
 import { Link } from 'react-router-dom';
 import '../../styles/Info.css';
 
@@ -39,9 +40,16 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
         <div className='info-contact'>
           <a href={'mailto:' + post.email} className='btn btn-primary info-button'>Contact</a>
         </div>
+        <form
+        className='form'
+        onSubmit={(e) => {
+          e.preventDefault();
+          addFavourite(post.id, loading);
+        }}>
         <div className='info-save'>
-          <button className='btn btn-primary info-button'>Save</button>
+          <button type='submit' className='btn btn-primary info-button'>Save</button>
         </div>
+        </form>
       </div>
     </div>
   );

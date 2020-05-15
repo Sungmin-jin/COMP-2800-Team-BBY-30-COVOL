@@ -151,7 +151,7 @@ router.put('/favourite', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({ user: req.user.id });
 
-    profile.favourite.unshift(newPost);
+    profile.favourite.push(newPost);
 
     await profile.save();
     res.json(profile);
