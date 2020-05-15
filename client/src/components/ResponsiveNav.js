@@ -162,7 +162,6 @@ const ResponsiveNav = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Typography variant='h6' noWrap>
               COVOL
             </Typography>
-            <a></a>
           </Link>
         </Toolbar>
       </AppBar>
@@ -190,7 +189,7 @@ const ResponsiveNav = ({ auth: { isAuthenticated, loading }, logout }) => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary={'home'} />
+            <ListItemText primary={'Home'} />
           </ListItem>
 
           <ListItem button key={'Volunteers'} component={Link} to={'/profiles'}>
