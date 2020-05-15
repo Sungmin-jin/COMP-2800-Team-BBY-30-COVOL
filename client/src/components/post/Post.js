@@ -6,6 +6,7 @@ import { getPost } from '../../actions/post';
 import { addFavourite, addExperience } from '../../actions/profile';
 import Moment from 'react-moment';
 import ShowPost from './ShowPost';
+import { $CombinedState } from 'redux';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       <button
         // type='submit'
         // value='Favourite'
+        id="testBtn"
         class='btn btn-primary'
         onClick={async (e) => {
           setId(post._id);
