@@ -57,7 +57,6 @@ const App = () => {
           <ResponsiveNav />
           <Switch>
             <Route exact path='/' component={LandingPage} />
-            <Route exact path='/' path='/Home' component={LandingPage} />
 
             <Route path='/register' component={Register} />
 
