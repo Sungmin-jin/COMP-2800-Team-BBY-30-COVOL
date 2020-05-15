@@ -158,9 +158,12 @@ const ResponsiveNav = ({ auth: { isAuthenticated, loading }, logout }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' noWrap>
-            COVOL
-          </Typography>
+          <Link to='/home' style={{ color: 'white' }}>
+            <Typography variant='h6' noWrap>
+              COVOL
+            </Typography>
+            <a></a>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
