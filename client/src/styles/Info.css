@@ -1,0 +1,118 @@
+.info-top {
+    display:flex;
+}
+
+.info-buttons {
+    display:flex;
+    justify-content: center;
+}
+
+@media (max-width: 425px) {
+    .info-top {
+        flex-direction:column;
+        margin-bottom: 10px;
+    }
+    .info-content {
+        font-size: 16px;
+    }
+    .info-user {
+        margin-bottom: 10px;
+        font-size: 18px
+    }
+    .info-title {
+        font-size:30px;
+        margin:auto auto auto auto;
+    }
+    .info-avatar {
+        margin:auto;
+        width:300px;
+        height:300px;
+    }
+
+    .info-buttons {
+        margin-top:10px
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .info-top {
+        flex-direction:column;
+        margin-bottom: 10px;
+    }
+    .info-content {
+        font-size: 20px;
+    }
+    .info-user {
+        margin-bottom: 10px;
+        font-size: 24px
+    }
+    .info-title {
+        font-size:60px;
+        margin:auto auto auto auto;
+    }
+    .info-avatar {
+        width:300px;
+        height:300px;
+        margin:auto;
+    }
+
+    .info-buttons {
+        margin-top:10px
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .info-top {
+        flex-direction:row;
+        margin-bottom: 10px;
+    }
+    .info-content {
+        font-size: 20px;
+    }
+    .info-user {
+        margin-bottom: 10px;
+        font-size: 24px
+    }
+    .info-title {
+        font-size:60px;
+        margin:auto auto auto 30px;
+    }
+    .info-avatar {
+        width:300px;
+        height:300px;
+    }
+
+    .info-buttons {
+        margin-top:10px
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .info-top {
+        flex-direction:row;
+        margin-bottom: 10px;
+    }
+    .info-content {
+        font-size: 20px;
+    }
+    .info-user {
+        margin-bottom: 10px;
+        font-size: 24px
+    }
+    .info-title {
+        font-size:80px;
+        margin:auto auto auto 30px;
+    }
+    .info-avatar {
+        width:300px;
+        height:300px;
+    }
+
+    .info-buttons {
+        margin-top:10px
+    }
+
+}

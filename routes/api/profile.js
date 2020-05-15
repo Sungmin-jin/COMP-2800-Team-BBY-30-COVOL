@@ -133,6 +133,34 @@ router.get('/user/:user_id', async (req, res) => {
   }
 });
 
+// @route    PUT api/profile/favourite
+// @desc     Add favourite post in profile
+// @access   Private
+router.put('/favourite', auth, async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  console.log(req.body);
+  const postId = req.body.id;
+
+  const newPost = {
+    postId,
+  };
+
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+
+    profile.favourite.push(newPost);
+
+    await profile.save();
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 // @route    PUT api/profile/experience
 // @desc     Add profile experience
 // @access   Private

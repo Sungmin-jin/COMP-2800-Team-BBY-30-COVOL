@@ -3,34 +3,23 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
-import { deletePost } from '../../actions/post';
-import '../../styles/Post.css';
+import { deletePost } from './../actions/post';
 
 const PostItem = ({
   deletePost,
   auth,
   post: { _id, text, name, avatar, title, location, email, task, user, date },
-}) => (
-  <div className='postItem'>
+}) => ( 
+  <div>
     <div>
-      {/* <Link to={`/profile/${user}`}> */}
-        <img className='postAvatar' src={avatar} alt='' />
-        <h4 className='postName'>{name}</h4>
-      {/* </Link> */}
-    </div>
-    <div className='postInfo'>
-      <p>Title: {title}</p>
-      <p>Location: {location}</p>
-      <p>Required Task: {task}</p>
-      <p>Summary: {text}</p>
+      <p>{text}</p>
+      <p>{location}</p>
+      <p>{title}</p>
+      <p>{task}</p>
+      <p>{email}</p>
       <p>
         Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
       </p>
-      <div className='postButton'>
-        <Link to={`/info/${_id}`} className='btn btn-primary'>
-          <p className='postButton'> More Detail </p>
-        </Link>
-      </div>
 
       {!auth.loading && user === auth.user._id && (
         <button
