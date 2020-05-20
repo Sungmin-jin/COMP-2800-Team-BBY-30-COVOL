@@ -10,24 +10,23 @@ import anthonyIMG from './../image/anthony.jpg';
 
 // this is for to use JQuery in React
 const $ = window.$;
-$(document).ready(function() {
-
-  $('.easterEggTrigger').click(function(){
-    $(".TonyPic").addClass('rotate-scale-up');
-    $(".JustinPic").addClass('hidingPic');
-    $(".JasonPic").addClass('movingPic');
-    $(".AnthonyPic").addClass('growingPic');
-    $(".banner-container").addClass('bannerAni');
+$(document).ready(function () {
+  $('.easterEggTrigger').click(function () {
+    $('.TonyPic').addClass('rotate-scale-up');
+    $('.JustinPic').addClass('hidingPic');
+    $('.JasonPic').addClass('movingPic');
+    $('.AnthonyPic').addClass('growingPic');
+    $('.banner-container').addClass('bannerAni');
   });
 
-    $('.easterEggTrigger').mouseleave(function(){
-    $(".TonyPic").removeClass('rotate-scale-up');
-    $(".JustinPic").removeClass('hidingPic');
-    $(".JasonPic").removeClass('movingPic');
-    $(".AnthonyPic").removeClass('growingPic');
-    $(".banner-container").removeClass('bannerAni');
+  $('.easterEggTrigger').mouseleave(function () {
+    $('.TonyPic').removeClass('rotate-scale-up');
+    $('.JustinPic').removeClass('hidingPic');
+    $('.JasonPic').removeClass('movingPic');
+    $('.AnthonyPic').removeClass('growingPic');
+    $('.banner-container').removeClass('bannerAni');
   });
-})
+});
 
 function AboutUs({ profilePic, userName, userEmail }) {
   return (
@@ -84,13 +83,30 @@ function TeamParagraph() {
   return (
     <div className='TeamParagraph'>
       <p className='team-paragraph'>
-        Due to the rise of the recent epidemic, <a className="easterEggTrigger">COVID-19</a>, many groups and
+        Due to the rise of the recent epidemic,{' '}
+        <a className='easterEggTrigger'>COVID-19</a>, many groups and
         organizations need help to survive and combat these trying times. We as
         a group are using this chance as a learning experience while also
         assisting these groups in fighting back against the epidemic. We hope to
         make an simple to use application that can find these groups the help
         they need.
       </p>
+      <div className='share-button'>
+        <div
+          className='fb-share-button'
+          data-href='https://covol.herokuapp.com/'
+          data-layout='button'
+          data-size='large'
+        >
+          <a
+            target='_blank'
+            href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovol.herokuapp.com%2F&amp;src=sdkpreparse'
+            className='fb-xfbml-parse-ignore'
+          >
+            Share
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

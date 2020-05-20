@@ -19,15 +19,16 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   ) : (
     <div className='container'>
       <Link to={`/profile/${post.user}`}>
-      <div className="info-top">
-        <img className="info-avatar round-img" src={post.avatar} />
-        <p className="info-title">{post.title}</p>
-      </div>
+        <div className='info-top'>
+          <img className='info-avatar round-img' src={post.avatar} />
+          <p className='info-title'>{post.title}</p>
+        </div>
       </Link>
       <div className='info-user'>
-      <p>Posted on:&nbsp;
-        <Moment format='YYYY/MM/DD'>{post.date}</Moment>
-      </p>
+        <p>
+          Posted on:&nbsp;
+          <Moment format='YYYY/MM/DD'>{post.date}</Moment>
+        </p>
         <p>Posted by: {post.name}</p>
         <p>Contact Info: {post.email}</p>
       </div>
@@ -38,15 +39,20 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       </div>
       <div className='info-buttons'>
         <div className='info-contact'>
-          <a href={'mailto:' + post.email} className='btn btn-primary info-button'>Contact</a>
+          <a
+            href={'mailto:' + post.email}
+            className='btn btn-primary info-button'
+          >
+            Contact
+          </a>
         </div>
         <form
-        className='form'
-        onSubmit={(e) => {
-          e.preventDefault();
-          addFavourite(post.id, loading);
-        }}>
-        </form>
+          className='form'
+          onSubmit={(e) => {
+            e.preventDefault();
+            addFavourite(post.id, loading);
+          }}
+        ></form>
       </div>
     </div>
   );
