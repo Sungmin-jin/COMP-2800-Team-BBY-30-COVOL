@@ -13,9 +13,6 @@ export const DashboardAction = () => {
       <Link to='/add-education' className='btn btn-light'>
         Add Education
       </Link>
-      <Link to='createvolunteerlisting' className='btn btn-light'>
-        Create Volunteer Listing
-      </Link>
     </div>
   );
 };
