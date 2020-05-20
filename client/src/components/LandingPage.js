@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 import { connect } from 'react-redux';
 
-// Nav component
-import Nav from './Nav';
-// Footer component
-import Footer from './Footer';
-
 import logoIMG from './../image/logo.png';
 
 function LandingPage({ logo }) {
@@ -21,17 +16,11 @@ function LandingPage({ logo }) {
   );
 }
 
-// LandingPage.propTypes = {
-//     logo: PropTypes.string.isRequired
-// }
 
-function LandingPageLogo({ logo }) {
+function LandingPageLogo() {
   return <img className='logo' alt='App Logo' src={logoIMG}></img>;
 }
 
-// LandingPageLogo.propTypes = {
-//     logo: PropTypes.string.isRequired
-// }
 
 function LandingPageButtonLogin() {
   return (

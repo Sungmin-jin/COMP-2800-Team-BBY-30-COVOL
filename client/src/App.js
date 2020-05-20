@@ -4,9 +4,6 @@ import './App.css';
 
 // Our own components
 import LandingPage from './components/LandingPage';
-import WelcomePage from './components/WelcomePage';
-import SwipePage from './components/SwipePage';
-
 import Post from './components/post/Info';
 import PostForm from './components/post-form/PostForm';
 import Posts from './components/posts/Posts';
@@ -24,14 +21,9 @@ import Profile from './components/profile/Profile';
 import AboutUs from './components/AboutUs';
 import Management from './components/ManagementPage';
 import ResponsiveNav from './components/ResponsiveNav';
-import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 
-//this is the way to use an image file in React
-//you ACTUALLY have to import the image file
-import logo from './image/logo.png';
-import profile from './image/profilepic.jpg';
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -67,10 +59,8 @@ const App = () => {
             <Route path='/login' component={Login} />
 
             <PrivateRoute path='/dashboard' component={Dashboard} />
-            <PrivateRoute path='/welcome' component={WelcomePage} />
             <PrivateRoute path='/create-profile' component={CreateProfile} />
 
-            <Route path='/swipepage' component={SwipePage} />
 
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
