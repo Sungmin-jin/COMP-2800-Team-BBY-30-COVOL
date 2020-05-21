@@ -176,7 +176,7 @@
   margin: auto;
   grid-area: jason;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .growingPic {
