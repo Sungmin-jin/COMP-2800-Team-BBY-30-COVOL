@@ -29,6 +29,14 @@
 }
 
 body {
+  background-color: purple;
+}
+
+.fb-xfbml-parse-ignore {
+  text-emphasis: center;
+}
+
+body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
