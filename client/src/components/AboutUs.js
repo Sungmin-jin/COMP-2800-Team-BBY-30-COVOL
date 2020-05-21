@@ -91,12 +91,36 @@ function TeamParagraph() {
         make an simple to use application that can find these groups the help
         they need.
       </p>
+<<<<<<< HEAD
       <div className='share-button'>
         <div
           className='fb-share-button'
           data-href='https://covol.herokuapp.com/'
           data-layout='button'
           data-size='large'
+=======
+      <div className="share-button">
+        <div
+          class="fb-share-button"
+          data-href="https://covol.herokuapp.com/"
+          data-layout="button_count"
+          data-size="small"
+        >
+          <a
+            target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore"
+          >
+            Share
+          </a>
+        </div>
+
+        {/* <div
+          className="fb-share-button"
+          data-href="https://covol.herokuapp.com/"
+          data-layout="button"
+          data-size="large"
+>>>>>>> 30594c03d9e2285ca2d917026b7f195b8692cc19
         >
           <a
             target='_blank'
@@ -105,9 +129,21 @@ function TeamParagraph() {
           >
             Share
           </a>
+<<<<<<< HEAD
         </div>
 
         <a class='twitter-share-button' href='https://twitter.com/intent/tweet'>
+=======
+        </div> */}
+        
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          class="twitter-share-button"
+          data-size="medium"
+          data-url="https://covol.herokuapp.com/"
+          data-show-count="false"
+        >
+>>>>>>> 30594c03d9e2285ca2d917026b7f195b8692cc19
           Tweet
         </a>
       </div>

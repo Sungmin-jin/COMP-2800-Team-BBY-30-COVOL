@@ -1,6 +1,7 @@
 .share-button {
+  width: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: auto;
   margin-top: 5rem;
 }
