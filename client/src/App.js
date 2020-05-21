@@ -24,7 +24,6 @@ import Profile from './components/profile/Profile';
 import AboutUs from './components/AboutUs';
 import Management from './components/ManagementPage';
 import ResponsiveNav from './components/ResponsiveNav';
-import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 
@@ -61,7 +60,12 @@ const App = () => {
 
             <Route path='/profile/:id' component={Profile} />
 
-            <Route exact path='/profiles' path='/profile' component={Profiles} />
+            <Route
+              exact
+              path='/profiles'
+              path='/profile'
+              component={Profiles}
+            />
             <Route path='/profiles' component={Profiles} />
 
             <Route path='/login' component={Login} />
@@ -80,10 +84,12 @@ const App = () => {
             <PrivateRoute path='/createvolunteerlisting' component={PostForm} />
 
             <Route path='/aboutus' component={AboutUs} />
-            <PrivateRoute path='/managevolunteerlistings' component={Management} />
+            <PrivateRoute
+              path='/managevolunteerlistings'
+              component={Management}
+            />
             <PrivateRoute path='/home' component={Home} />
-            <PrivateRoute path ='/findvolunteerlistings' component={Posts} />
-            
+            <PrivateRoute path='/findvolunteerlistings' component={Posts} />
           </Switch>
           <Footer />
         </Fragment>
