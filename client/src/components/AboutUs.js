@@ -106,6 +106,10 @@ function TeamParagraph() {
             Share
           </a>
         </div>
+
+        <a class='twitter-share-button' href='https://twitter.com/intent/tweet'>
+          Tweet
+        </a>
       </div>
     </div>
   );
