@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 import './../styles/LandingPage.css';
 import { connect } from 'react-redux';
 
-// Nav component
-import Nav from './Nav';
-// Footer component
-import Footer from './Footer';
-
 import logoIMG from './../image/logo.png';
 
 function LandingPage({ logo }) {

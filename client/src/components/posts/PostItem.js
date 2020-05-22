@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions/post';
+
+//CSS
 import '../../styles/Post.css';
 
+//Creates the post item with data from the database 
 const PostItem = ({
   deletePost,
   auth,
@@ -33,12 +36,14 @@ const PostItem = ({
   </div>
 );
 
+//PropTypes to check if incoming props are of the correct type
 PostItem.propTypes = {
   post: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
   deletePost: PropTypes.func.isRequired,
 };
 
+//Connects the component to the redux store
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });

@@ -9,6 +9,7 @@ import { addFavourite } from '../../actions/profile';
 import { Link } from 'react-router-dom';
 import '../../styles/Info.css';
 
+// Component that gets the data of a post from a database and displays it
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
     getPost(match.params.id);
