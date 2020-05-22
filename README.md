@@ -9,7 +9,7 @@ COMP 2800 BBY TEAM 30
 * [Database Configurations](#database-configurations)
 * [Testing](#testing)
 * [Content](#content)
-* [Quick Start](#quick-start)
+* [Quick Start 🚀](#quick-start-🚀)
 * [Deploy to Heroku](#deploy-to-heroku)
 
 
