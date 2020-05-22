@@ -1,8 +1,13 @@
 import React from 'react';
-import './../styles/Home.css';
 import { connect } from 'react-redux';
+
+//CSS
+import './../styles/Home.css';
+
+//Images
 import volunteerPic from './../image/volunteer.jpg';
 
+//Creates the home page with smaller components
 const Home = ({ auth: { user } }) => {
   return (
     <div className='home'>
@@ -15,6 +20,7 @@ const Home = ({ auth: { user } }) => {
   );
 };
 
+//Creates the description and picture component for the home page
 function CovolInfo() {
   return (
     <div className='homeInfo'>
@@ -37,6 +43,7 @@ function CovolInfo() {
   );
 }
 
+//Creates the Create Volunteer Listing button for the home page
 function HomePageCreateVolunteerListingBtn() {
   return (
     <div className='homeBtnDiv'>
@@ -47,6 +54,7 @@ function HomePageCreateVolunteerListingBtn() {
   );
 }
 
+//Creates the Manage Volunteer Listing button for the home page
 function HomePageManageVolunteerListingsBtn() {
   return (
     <div className='homeBtnDiv'>
@@ -57,6 +65,7 @@ function HomePageManageVolunteerListingsBtn() {
   );
 }
 
+//Creates the Find Volunteer Listings button for the home page
 function HomePageFindVolunteerListingsBtn() {
   return (
     <div className='homeBtnDiv'>
@@ -67,6 +76,7 @@ function HomePageFindVolunteerListingsBtn() {
   );
 }
 
+//Connects the component to the redux store
 const mapStateToProps = (state) => ({
   auth: state.auth,
   profile: state.profile,
