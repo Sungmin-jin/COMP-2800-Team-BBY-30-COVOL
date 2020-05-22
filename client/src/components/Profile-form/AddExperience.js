@@ -16,9 +16,10 @@ const AddExperience = ({ addExperience, history }) => {
   });
 
   const [toDateDisabled, toggleDisabled] = useState(false);
-
+  // inputs for experience
   const { company, title, location, from, to, current, description } = formData;
 
+  //set inputs for experience
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -33,6 +34,7 @@ const AddExperience = ({ addExperience, history }) => {
       <form
         className='form'
         onSubmit={(e) => {
+          //using add experience function send inputs to back-end
           e.preventDefault();
           addExperience(formData, history);
         }}
@@ -83,6 +85,8 @@ const AddExperience = ({ addExperience, history }) => {
               checked={current}
               value={current}
               onChange={() => {
+                //if user is still working at the place
+                //disable toData input
                 setFormData({ ...formData, current: !current });
                 toggleDisabled(!toDateDisabled);
               }}
@@ -93,6 +97,8 @@ const AddExperience = ({ addExperience, history }) => {
         <div className='form-group'>
           <h4>To Date</h4>
           <input
+            // if user set toData input
+            // disable current input
             type='date'
             name='to'
             value={to}

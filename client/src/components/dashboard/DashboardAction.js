@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//Users can edit or add their profile fields
 export const DashboardAction = () => {
   return (
     <div className='dash-buttons'>

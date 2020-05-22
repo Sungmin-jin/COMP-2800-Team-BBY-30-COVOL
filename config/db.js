@@ -1,3 +1,4 @@
+// Connect with mongodb database using mongoose
 const mongoose = require('mongoose');
 const config = require('config');
 const db = config.get('mongoURI');

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
+//show education field of user
 function ProfileEducation({
   education: { school, degree, fieldofstudy, current, to, from, description },
 }) {

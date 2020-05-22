@@ -20,8 +20,12 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
-
-
+/*
+deploy mern application through heroku
+Found this code on Youtube
+author: Esterling Acclime
+@see: https://www.youtube.com/watch?v=e1LaekAnVIM&t=738s
+*/
 //Server static assets in production
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
@@ -35,5 +39,5 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  console.log(`program running on ${PORT}`);
 });

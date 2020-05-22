@@ -15,6 +15,7 @@ const AddEducation = ({ addEducation, history }) => {
     description: '',
   });
 
+  //inputs for education
   const {
     school,
     degree,
@@ -25,6 +26,7 @@ const AddEducation = ({ addEducation, history }) => {
     current,
   } = formData;
 
+  // set inputs for education
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -34,6 +36,7 @@ const AddEducation = ({ addEducation, history }) => {
       <p className='lead'>Add any school that you have attended</p>
       <small>* = required field</small>
       <form
+        //using addEducation function send inputs to back-end
         className='form'
         onSubmit={(e) => {
           e.preventDefault();
@@ -81,6 +84,8 @@ const AddEducation = ({ addEducation, history }) => {
               checked={current}
               value={current}
               onChange={() =>
+                //if user is still attending the place
+                //disable toData input
                 setFormData({ ...formData, current: !formData.current })
               }
             />{' '}
@@ -90,6 +95,8 @@ const AddEducation = ({ addEducation, history }) => {
         <div className='form-group'>
           <h4>To Date</h4>
           <input
+            // if user set toData input
+            // disable current input
             type='date'
             name='to'
             value={to}

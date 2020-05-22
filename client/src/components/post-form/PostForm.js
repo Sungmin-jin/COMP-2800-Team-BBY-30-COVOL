@@ -4,6 +4,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { addPost } from '../../actions/post';
 import { connect } from 'react-redux';
 
+// post form pages
+// post for looking for or looking to volunteer
 const PostForm = ({ addPost, history }) => {
   const [formData, setFormData] = useState({
     text: '',
@@ -12,8 +14,10 @@ const PostForm = ({ addPost, history }) => {
     task: '',
   });
 
+  //user post datas
   const { text, location, title, task } = formData;
 
+  //set posts datas
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -24,6 +28,8 @@ const PostForm = ({ addPost, history }) => {
 
       <form
         className='form'
+        // using addPost function send
+        // post datas to back-end
         onSubmit={(e) => {
           e.preventDefault();
           addPost(formData, history);

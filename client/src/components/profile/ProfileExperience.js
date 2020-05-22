@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
+//show experience filed of user
 function ProfileExperience({
   experience: { company, title, location, current, to, from, description },
 }) {
@@ -9,6 +10,7 @@ function ProfileExperience({
     <div>
       <h3 className='text-dark'>{company}</h3>
       <p>
+        {/* formating date field */}
         <Moment format='YYYY/MM/DD'>{from}</Moment> -
         {!to ? ' Now' : <Moment format='YYYY/MM/DD'>{to}</Moment>}
       </p>

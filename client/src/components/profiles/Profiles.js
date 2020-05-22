@@ -12,6 +12,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 
   return (
     <div className='container'>
+      {/* if datas are loading or profiles do not exist show spinner */}
       {loading || profiles === undefined || profiles === null ? (
         <Spinner />
       ) : (
@@ -22,8 +23,11 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             Voulunteers!
           </p>
           <div className='profiles'>
+            {/* if there is no profile */}
             {profiles.length > 0 ? (
+              //map an array that contains all users' profile
               profiles.map((profile) => (
+                // pass each person's profile data
                 <ProfileItem key={profile._id} profile={profile} />
               ))
             ) : (

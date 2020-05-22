@@ -8,6 +8,7 @@ import DashboardAction from './DashboardAction';
 import Experience from './Experience';
 import Education from './Education';
 
+//Dashboard AKA user profile page
 const Dashboard = ({
   getCurrentProfile,
   deleteAccount,
@@ -18,6 +19,8 @@ const Dashboard = ({
     getCurrentProfile();
   }, [getCurrentProfile]);
 
+  //if datas are loading or cannot find profile show spinner
+  // else show dashboard page
   return loading || profile === null ? (
     <Spinner />
   ) : (
@@ -32,6 +35,7 @@ const Dashboard = ({
             <Education education={profile.education} />
             <div className='my-2'>
               <button
+                //delete whole account and profile
                 onClick={() => deleteAccount()}
                 className='btn btn-danger'
               >

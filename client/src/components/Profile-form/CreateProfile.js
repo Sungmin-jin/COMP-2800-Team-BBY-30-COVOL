@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createProfile } from '../../actions/profile';
 import { Link, withRouter } from 'react-router-dom';
 
+//Form page for creating basic profile for user
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
     location: '',
@@ -12,11 +13,15 @@ const CreateProfile = ({ createProfile, history }) => {
     bio: '',
   });
 
+  // inputs for user profile
   const { location, status, skills, bio } = formData;
 
+  // set inputs for user profile
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  // using createProfile function
+  // send inputs to back-end
   const onSubmit = (e) => {
     e.preventDefault();
     createProfile(formData, history);

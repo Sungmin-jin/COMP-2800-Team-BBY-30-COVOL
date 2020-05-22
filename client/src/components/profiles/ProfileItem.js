@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FaCheck } from 'react-icons/fa';
 
+//show basic user info that is passed from Profile.js
 const ProfileItem = ({
   profile: {
     user: { _id, name, avatar },
@@ -18,6 +19,7 @@ const ProfileItem = ({
       <div>
         <h2>{name}</h2>
         <h4>
+          {/* check company exists */}
           {status} {company && <span> at {company}</span>}
         </h4>
         <h4 className='my-1'>{location && <span>{location}</span>}</h4>

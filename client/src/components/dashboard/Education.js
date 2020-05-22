@@ -5,6 +5,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { deleteEducation } from '../../actions/profile';
 
+//show user's education that he or she added
 const Education = ({ education, deleteEducation }) => {
   const educations = education.map((edu) => (
     <tr key={edu._id}>
@@ -19,6 +20,7 @@ const Education = ({ education, deleteEducation }) => {
         )}
       </td>
       <td>
+        {/* delete education filed */}
         <button
           onClick={() => deleteEducation(edu._id)}
           className='btn btn-danger'

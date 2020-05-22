@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
 import { Link, withRouter } from 'react-router-dom';
 
+// Page where users can edit their profile
 const EditProfile = ({
   profile: { profile, loading },
   createProfile,
@@ -20,6 +21,7 @@ const EditProfile = ({
   useEffect(() => {
     getCurrentProfile();
     setFormData({
+      // check if datas are laoding or existing
       location: loading || !profile.location ? '' : profile.location,
       status: loading || !profile.status ? '' : profile.status,
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
@@ -27,11 +29,15 @@ const EditProfile = ({
     });
   }, [loading, getCurrentProfile]);
 
-  const { company, website, location, status, skills, bio } = formData;
+  // profile inputs
+  const { location, status, skills, bio } = formData;
 
+  // set profile inputs
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  // using createProfile
+  // send inputs to back-end to create new profile
   const onSubmit = (e) => {
     e.preventDefault();
     createProfile(formData, history, true);

@@ -5,6 +5,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { deleteExperience } from '../../actions/profile';
 
+//users work or volunteer experience that he or she added
 const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map((exp) => (
     <tr key={exp._id}>
@@ -20,6 +21,7 @@ const Experience = ({ experience, deleteExperience }) => {
       </td>
       <td>
         <button
+          // delete a experience filed
           onClick={() => deleteExperience(exp._id)}
           className='btn btn-danger'
         >

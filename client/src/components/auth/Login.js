@@ -5,17 +5,21 @@ import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import './../../styles/Login.css';
 
+//Login page component
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
 
+  //inputs for login
   const { email, password } = formData;
 
+  //set email and password inputs
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  //using login function, send data to back-end
   const onSubmit = async (e) => {
     e.preventDefault();
     login(email, password);
@@ -29,7 +33,6 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <div className='Login'>
-      {/* <Nav className="nav" /> */}
       <Fragment>
         <div className='container'>
           <h1 className='large text-primary'>Sign In</h1>

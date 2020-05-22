@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import spinner from './spinner.gif';
 
+// While datas are loading, show this componenet to imform datas are loading.
 export default () => (
   <div>
     <img
