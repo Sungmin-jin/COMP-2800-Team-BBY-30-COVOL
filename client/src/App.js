@@ -4,9 +4,6 @@ import './App.css';
 
 // Our own components
 import LandingPage from './components/LandingPage';
-import WelcomePage from './components/WelcomePage';
-import SwipePage from './components/SwipePage';
-
 import Post from './components/post/Info';
 import PostForm from './components/post-form/PostForm';
 import Posts from './components/posts/Posts';
@@ -27,10 +24,6 @@ import ResponsiveNav from './components/ResponsiveNav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 
-//this is the way to use an image file in React
-//you ACTUALLY have to import the image file
-import logo from './image/logo.png';
-import profile from './image/profilepic.jpg';
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -55,11 +48,8 @@ const App = () => {
           <ResponsiveNav />
           <Switch>
             <Route exact path='/' component={LandingPage} />
-
             <Route path='/register' component={Register} />
-
             <Route path='/profile/:id' component={Profile} />
-
             <Route
               exact
               path='/profiles'
@@ -67,22 +57,14 @@ const App = () => {
               component={Profiles}
             />
             <Route path='/profiles' component={Profiles} />
-
             <Route path='/login' component={Login} />
-
             <PrivateRoute path='/dashboard' component={Dashboard} />
-            <PrivateRoute path='/welcome' component={WelcomePage} />
             <PrivateRoute path='/create-profile' component={CreateProfile} />
-
-            <Route path='/swipepage' component={SwipePage} />
-
             <PrivateRoute path='/add-experience' component={AddExperience} />
             <PrivateRoute path='/edit-profile' component={EditProfile} />
             <PrivateRoute path='/add-education' component={AddEducation} />
             <PrivateRoute path='/info/:id' component={Post} />
-            <PrivateRoute path='/posts' component={Posts} />
             <PrivateRoute path='/createvolunteerlisting' component={PostForm} />
-
             <Route path='/aboutus' component={AboutUs} />
             <PrivateRoute
               path='/managevolunteerlistings'

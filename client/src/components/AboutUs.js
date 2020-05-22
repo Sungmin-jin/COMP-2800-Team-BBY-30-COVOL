@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./../styles/AboutUs.css";
-import Nav from "./Nav";
-import Footer from "./Footer";
 import tonyIMG from "./../image/tony.jpg";
 import justinIMG from "./../image/justin.jpg";
 import jasonIMG from "./../image/jason.jpg";
@@ -28,6 +26,7 @@ $(document).ready(function () {
   });
 });
 
+// Component that will create About Us page
 function AboutUs({ profilePic, userName, userEmail }) {
   return (
     <div className="AboutUs">
@@ -43,6 +42,7 @@ function AboutUs({ profilePic, userName, userEmail }) {
   );
 }
 
+// Contains Tony's picture and name
 function TonyPic() {
   return (
     <div className="TonyPic">
@@ -52,6 +52,7 @@ function TonyPic() {
   );
 }
 
+// Contains Justin's picture and name
 function JustinPic() {
   return (
     <div className="JustinPic">
@@ -61,6 +62,7 @@ function JustinPic() {
   );
 }
 
+// Contains Jason's picture and name
 function JasonPic() {
   return (
     <div className="JasonPic">
@@ -70,6 +72,7 @@ function JasonPic() {
   );
 }
 
+// Contains Anthony's picture and name
 function AnthonyPic() {
   return (
     <div className="AnthonyPic">
@@ -79,6 +82,7 @@ function AnthonyPic() {
   );
 }
 
+// Contains team paragraph
 function TeamParagraph() {
   return (
     <div className="TeamParagraph">
@@ -136,6 +140,7 @@ function TeamParagraph() {
   );
 }
 
+// Contains easter egg
 function EasterEggBanner() {
   return (
     <div className="banner-container">

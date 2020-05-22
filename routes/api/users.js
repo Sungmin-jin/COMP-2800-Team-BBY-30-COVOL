@@ -8,22 +8,17 @@ const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
 
-// @route POST api/users
-// @desc register
-// @access public
+//Register Route
 router.post(
   '/',
   [
+    //check name, email, password fields are filled or not
     check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
-    check(
-      'password',
-      'Please enter a password with 6 or more character'
-    ).isLength({
-      min: 6,
-    }),
+    check('password', 'Please enter a password with 6 or more character'),
   ],
   async (req, res) => {
+    // Intialize a new instance of ValidationResult
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
@@ -49,13 +44,13 @@ router.post(
       }
 
       // Get users gravatar
-
       const avatar = gravatar.url(email, {
         s: '200',
         r: 'pg',
         d: 'mm',
       });
 
+      //new user object
       user = new User({
         name,
         email,
@@ -66,7 +61,7 @@ router.post(
       const salt = await bcrypt.genSaltSync(10);
 
       user.password = await bcrypt.hash(password, salt);
-
+      //save new user
       await user.save();
 
       // Return jsonwebtoken
@@ -76,10 +71,12 @@ router.post(
         },
       };
 
+      //log in with password that just used
       jwt.sign(
         payload,
         config.get('jwtSecret'),
         {
+          //expiring time of token
           expiresIn: 360000,
         },
         (err, token) => {

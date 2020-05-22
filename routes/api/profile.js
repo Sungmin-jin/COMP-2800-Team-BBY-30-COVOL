@@ -6,20 +6,22 @@ const config = require('config');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
-// @route GET api/profile/me
-// @desc  Get current user profile
-// @access Private
+//get current user profile
 router.get('/me', auth, async (req, res) => {
   try {
+    //find user by id
     const profile = await Profile.findOne({
       user: req.user.id,
+      //reference user colleciton
     }).populate('user', ['name', 'avatar']);
+
+    // check profile exists
     if (!profile) {
-      console.log('here');
       return res.status(400).json({
         msg: 'There is no profile for this user',
       });
     }
+    // send profile data
     res.json(profile);
   } catch (err) {
     console.error(err.message);
@@ -27,19 +29,19 @@ router.get('/me', auth, async (req, res) => {
   }
 });
 
-// @route Post api/profile
-// @desc  Create or update user profile
-// @access Private
+//Create and Edit profile
 router.post(
   '/',
   [
     auth,
     [
+      //check status and skills are filled or not
       check('status', 'Status is required').not().isEmpty(),
       check('skills', 'Skills is required').not().isEmpty(),
     ],
   ],
   async (req, res) => {
+    // Intialize a new instance of ValidationResult
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
@@ -62,12 +64,14 @@ router.post(
     }
 
     try {
+      //find profile by id
       let profile = await Profile.findOne({
         user: req.user.id,
       });
 
+      //if profile already exists
       if (profile) {
-        //update
+        //update profile
         profile = await Profile.findOneAndUpdate(
           {
             user: req.user.id,
@@ -82,7 +86,7 @@ router.post(
         return res.json(profile);
       }
 
-      //Create
+      //Create profile
       profile = new Profile(profileFields);
 
       await profile.save();
@@ -94,12 +98,13 @@ router.post(
   }
 );
 
-// @route Get api/profile
-// @desc  Get all profiles
-// @access public
+//Get all profile
 router.get('/', async (req, res) => {
   try {
+    //load all profiles and reference user data
     const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+
+    //send
     res.json(profiles);
   } catch (err) {
     console.error(err.message);

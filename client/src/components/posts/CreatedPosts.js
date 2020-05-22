@@ -5,6 +5,7 @@ import Spinner from '../layout/Spinner';
 import PostItem from './CreatedPostItem';
 import { getMyPosts } from '../../actions/post';
 
+// Component that displays all the user's created posts
 const Posts = ({ getMyPosts, post: { posts, loading } }) => {
   useEffect(() => {
     getMyPosts();

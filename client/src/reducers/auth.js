@@ -16,6 +16,8 @@ const initialState = {
   user: null,
 };
 
+//Manage states
+// states change through the cases which are from actions
 export default function (state = initialState, action) {
   const { type, payload } = action;
 
