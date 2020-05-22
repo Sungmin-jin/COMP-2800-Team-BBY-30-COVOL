@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions/post';
+
+//CSS
 import '../../styles/CreatedPosts.css';
 
 // Component that contains the information for a post

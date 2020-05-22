@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./../styles/AboutUs.css";
-import Nav from "./Nav";
-import Footer from "./Footer";
 import tonyIMG from "./../image/tony.jpg";
 import justinIMG from "./../image/justin.jpg";
 import jasonIMG from "./../image/jason.jpg";

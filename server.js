@@ -20,15 +20,12 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
-<<<<<<< HEAD
 /*
 deploy mern application through heroku
 Found this code on Youtube
 author: Esterling Acclime
 @see: https://www.youtube.com/watch?v=e1LaekAnVIM&t=738s
 */
-=======
->>>>>>> dev
 //Server static assets in production
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
