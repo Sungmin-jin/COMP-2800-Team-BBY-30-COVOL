@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 // show basic profile of the user
 const ProfileTop = ({
   profile: {

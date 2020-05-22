@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+//Creates the alert component that is used for alerting errors in 
+//pages with input reqiured
 const Alert = ({ alerts }) =>
   alerts !== null &&
   alerts.length > 0 &&

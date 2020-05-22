@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
 
+//Creates the add expereince page form page
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
     company: '',

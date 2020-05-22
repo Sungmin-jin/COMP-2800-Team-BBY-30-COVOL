@@ -1,14 +1,10 @@
-/* This Heading component contains an img and a text. */
-
 import React from 'react';
 
 //CSS
 import './../styles/Heading.css';
 
-// For styling Material UI components
+//Material UI
 import { makeStyles } from '@material-ui/core/styles';
-
-// For User Profile page header profile picture
 import Avatar from '@material-ui/core/Avatar';
 
 

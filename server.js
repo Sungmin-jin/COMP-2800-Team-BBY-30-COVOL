@@ -31,21 +31,13 @@ if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
 
-<<<<<<< HEAD
-  //send all routes
-=======
   // Send all routes
->>>>>>> bd92483ca4dfb580ab6d57f624758908655f6f29
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
 
-<<<<<<< HEAD
-//localhost port
-=======
 //local host port
->>>>>>> bd92483ca4dfb580ab6d57f624758908655f6f29
 const PORT = process.env.PORT || 8000;
 
 //run the server

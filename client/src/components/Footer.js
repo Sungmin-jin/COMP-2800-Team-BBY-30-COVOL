@@ -1,7 +1,7 @@
 import React from 'react';
 import './../styles/Footer.css';
 
-// This is how you directly exporting a component.
+// Creates the footer component
 export default function Footer() {
     return (
         <div className="footerContainer">

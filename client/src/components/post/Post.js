@@ -7,6 +7,7 @@ import { addFavourite, addExperience } from '../../actions/profile';
 import Moment from 'react-moment';
 import ShowPost from './ShowPost';
 
+//Creates a single post component with a specific user's id 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
     getPost(match.params.id);

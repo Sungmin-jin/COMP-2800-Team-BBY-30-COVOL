@@ -3,9 +3,8 @@ import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-// make other components private
-// if user is not logged in
-// redirect to login page
+// make other components private if user is not logged in
+// redirects to login page
 const PrivateRoute = ({
   component: Component,
   auth: { isAuthenticated, loading },

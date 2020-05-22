@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions/post';
 
+//Creates the showPost component which shows a single volunteer post
 const ShowPost = ({
   deletePost,
   auth,

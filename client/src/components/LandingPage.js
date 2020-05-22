@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './../styles/LandingPage.css';
 import { connect } from 'react-redux';
 
+//CSS
+import './../styles/LandingPage.css';
+
+//Images
 import logoIMG from './../image/logo.png';
 
+//Creates the landing page with multiple components
 function LandingPage({ logo }) {
   return (
     <div className='LandingPage'>
@@ -16,18 +20,12 @@ function LandingPage({ logo }) {
   );
 }
 
-// LandingPage.propTypes = {
-//     logo: PropTypes.string.isRequired
-// }
-
+//Creates the logo copoment for the landing page
 function LandingPageLogo({ logo }) {
   return <img className='logo' alt='App Logo' src={logoIMG}></img>;
 }
 
-// LandingPageLogo.propTypes = {
-//     logo: PropTypes.string.isRequired
-// }
-
+//Creates the login button for the landing page
 function LandingPageButtonLogin() {
   return (
     <div
@@ -41,6 +39,7 @@ function LandingPageButtonLogin() {
   );
 }
 
+//Creates the register button for the landing page
 function LandingPageButtonRegister() {
   return (
     <div
@@ -53,6 +52,7 @@ function LandingPageButtonRegister() {
     </div>
   );
 }
+
 LandingPage.propTypes = {
   isAuthenticated: PropTypes.bool,
 };
