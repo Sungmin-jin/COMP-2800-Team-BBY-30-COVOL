@@ -14,12 +14,14 @@ import setAuthToken from '../utils/setAuthToken';
 
 // Load User
 export const loadUser = () => async (dispatch) => {
+  //set token
   if (localStorage.token) {
     setAuthToken(localStorage.token);
   }
 
   try {
     console.log('try catch');
+    //get user through the route
     const res = await axios.get('/api/auth');
     dispatch({
       type: USER_LOADED,
@@ -35,21 +37,25 @@ export const loadUser = () => async (dispatch) => {
 
 // Reigster User
 export const register = ({ name, email, password }) => async (dispatch) => {
+  // get token in json
   const config = {
     headers: {
       'Content-Type': 'application/json',
     },
   };
 
+  //covert to json
   const body = JSON.stringify({ name, email, password });
 
   try {
+    //send data through the route
     const res = await axios.post('/api/users', body, config);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
 
+    //load user
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;

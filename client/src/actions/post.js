@@ -11,6 +11,8 @@ import {
 //Get posts
 export const getPosts = () => async (dispatch) => {
   try {
+    //get posts through the route
+    // method: get
     const res = await axios.get('/api/posts');
     dispatch({
       type: GET_POSTS,
@@ -59,6 +61,8 @@ export const getMyPosts = () => async (dispatch) => {
 // Delete post
 export const deletePost = (id) => async (dispatch) => {
   try {
+    //send id param through the route
+    // method: delete
     const res = await axios.delete(`/api/posts/${id}`);
 
     dispatch({
@@ -66,6 +70,7 @@ export const deletePost = (id) => async (dispatch) => {
       payload: id,
     });
 
+    //send success message by alert
     dispatch(setAlert('Post Removed', 'success'));
   } catch (err) {
     dispatch({
@@ -77,12 +82,15 @@ export const deletePost = (id) => async (dispatch) => {
 
 // Add post
 export const addPost = (formData, history) => async (dispatch) => {
+  // get token in json
   const config = {
     headers: {
       'Content-Type': 'application/json',
     },
   };
 
+  //send data through the route
+  //method: post
   try {
     const res = await axios.post(`/api/posts/`, formData, config);
 
@@ -91,6 +99,7 @@ export const addPost = (formData, history) => async (dispatch) => {
       payload: res.data,
     });
 
+    //send success message by alert
     dispatch(setAlert('Post Created', 'success'));
     history.push('/posts');
   } catch (err) {
@@ -105,6 +114,7 @@ export const addPost = (formData, history) => async (dispatch) => {
 // Get post
 export const getPost = (id) => async (dispatch) => {
   try {
+    //get post by send id param through the route
     const res = await axios.get(`/api/posts/${id}`);
 
     dispatch({
@@ -118,4 +128,3 @@ export const getPost = (id) => async (dispatch) => {
     });
   }
 };
-

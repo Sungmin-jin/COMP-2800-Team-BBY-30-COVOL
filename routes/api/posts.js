@@ -6,14 +6,13 @@ const Profile = require('../../models/Profile');
 const { check, validationResult } = require('express-validator');
 const auth = require('../../middleware/auth');
 
-// @route  POST api/post
-// @desc   just test for now
-// @access public
+// Create post route
 router.post(
   '/',
   [
     auth,
     [
+      //check all the fields are filled
       check('text', 'Text is required').not().isEmpty(),
       check('title', 'Title is required').not().isEmpty(),
       check('task', 'Task is required').not().isEmpty(),
@@ -21,11 +20,13 @@ router.post(
     ],
   ],
   async (req, res) => {
+    // Intialize a new instance of ValidationResult
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
     try {
+      //find user by id
       const user = await User.findById(req.user.id).select('-password');
       const newPost = new Post({
         text: req.body.text,
@@ -38,6 +39,7 @@ router.post(
         user: req.user.id,
       });
 
+      //save post from front-end to database
       const post = await newPost.save((err) => {
         console.log(err);
       });
@@ -54,7 +56,7 @@ router.post(
 // @access Private
 router.get('/me', auth, async (req, res) => {
   try {
-    const posts = await Post.find({user: req.user.id});
+    const posts = await Post.find({ user: req.user.id });
     res.json(posts);
   } catch (err) {
     console.error(err.message);
@@ -67,7 +69,7 @@ router.get('/me', auth, async (req, res) => {
 // @access Private
 router.get('/saved', auth, async (req, res) => {
   try {
-    const posts = await Post.find({_id: { $in: profiles.favourite }});
+    const posts = await Post.find({ _id: { $in: profiles.favourite } });
     res.json(posts);
   } catch (err) {
     console.error(err.message);
@@ -75,11 +77,10 @@ router.get('/saved', auth, async (req, res) => {
   }
 });
 
-// @route  POST api/post
-// @desc   Get all posts
-// @access Private
+//Get all posts from users
 router.get('/', auth, async (req, res) => {
   try {
+    //find posts and sort in lastest order
     const posts = await Post.find().sort({ date: -1 });
     res.json(posts);
   } catch (err) {
@@ -88,17 +89,18 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
-// @route  POST api/post/:ㅑㅇ
-// @desc   Get post by ID
-// @access Private
+// Get post by ID
 router.get('/:id', auth, async (req, res) => {
   try {
+    //find post by id
     const post = await Post.findById(req.params.id);
 
+    //check post exists
     if (!post) {
       return res.status(404).json({ msg: 'post not found' });
     }
 
+    //sends json response
     res.json(post);
   } catch (err) {
     console.error(err.message);
@@ -109,24 +111,25 @@ router.get('/:id', auth, async (req, res) => {
   }
 });
 
-// @route  DELETE api/post/:id
-// @desc   Delete a post
-// @access Private
+//Delete post
 router.delete('/:id', auth, async (req, res) => {
   try {
+    //find post by id
     const post = await Post.findById(req.params.id);
 
     if (!post) {
       return res.status(404).json({ msg: 'post not found' });
     }
 
-    // Check user
+    // Check user is a authorized to delete post or not
     if (post.user.toString() !== req.user.id) {
       return res.status(401).json({ msg: 'user not authorized' });
     }
 
+    //remove post
     await post.remove();
 
+    //send msg
     res.json({ msg: 'Post removed' });
   } catch (err) {
     console.error(err.message);
