@@ -28,6 +28,7 @@ $(document).ready(function () {
   });
 });
 
+// Component that will create About Us page
 function AboutUs({ profilePic, userName, userEmail }) {
   return (
     <div className="AboutUs">
@@ -43,6 +44,7 @@ function AboutUs({ profilePic, userName, userEmail }) {
   );
 }
 
+// Contains Tony's picture and name
 function TonyPic() {
   return (
     <div className="TonyPic">
@@ -52,6 +54,7 @@ function TonyPic() {
   );
 }
 
+// Contains Justin's picture and name
 function JustinPic() {
   return (
     <div className="JustinPic">
@@ -61,6 +64,7 @@ function JustinPic() {
   );
 }
 
+// Contains Jason's picture and name
 function JasonPic() {
   return (
     <div className="JasonPic">
@@ -70,6 +74,7 @@ function JasonPic() {
   );
 }
 
+// Contains Anthony's picture and name
 function AnthonyPic() {
   return (
     <div className="AnthonyPic">
@@ -79,6 +84,7 @@ function AnthonyPic() {
   );
 }
 
+// Contains team paragraph
 function TeamParagraph() {
   return (
     <div className="TeamParagraph">
@@ -136,6 +142,7 @@ function TeamParagraph() {
   );
 }
 
+// Contains easter egg
 function EasterEggBanner() {
   return (
     <div className="banner-container">

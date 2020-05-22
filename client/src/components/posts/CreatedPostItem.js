@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { deletePost } from '../../actions/post';
 import '../../styles/CreatedPosts.css';
 
+// Component that contains the information for a post
 const PostItem = ({
   deletePost,
   auth,
