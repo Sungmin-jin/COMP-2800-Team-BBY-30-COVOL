@@ -9,7 +9,7 @@ COMP 2800 BBY TEAM 30
 * [Database Configurations](#database-configurations)
 * [Testing](#testing)
 * [Content](#content)
-* [Quick Start 🚀](#quick-start-🚀)
+* [Quick Start](#quick-start)
 * [Deploy to Heroku](#deploy-to-heroku)
 
 
@@ -248,7 +248,7 @@ Content of the project folder:
 
 [`Back to top`](#covol)
 
-## Quick Start 🚀
+## Quick Start
 
 ### Add a default.json file in config folder with the following
 
