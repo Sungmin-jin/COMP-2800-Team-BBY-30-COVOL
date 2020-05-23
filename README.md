@@ -24,17 +24,23 @@ We are a group of term 1 and term 2 BCIT students who are eager to learn new tec
 [`Back to top`](#covol)
 
 ## General Information
-Air Tutor is a web application for students who are not doing well with their classes in remote learning. In Air Tutor, students can request help with their homework and tutors can message these students, eventually scheduling a session where both tutors and students can use voice call and canvas features so that the tutor can better teach the material and the student can better understand it. 
+
+Thousands of people are infected by COVID-19 everyday and that won’t stop any time soon.
+Right now, governments, hospitals, and companies are all looking for volunteers to help in these difficult times. 
+But finding volunteers can be a long and stressful procedure.
+We hope to fix that.
+With COVOL, we will put volunteers in contact with a company of their choice in seconds. 
+Volunteers can choose groups they wanna help and companies can choose the volunteers that fit their needs.
+The world needs our help.
+Volunteer with COVOL today.
+
 
 The features of this project include:
-* A submission feature utilized by students so they can request help for homework
-* A messaging feature utilized by tutors so they can communicate their ability to help with their homework
-* A scheduling feature utilized by students so they can schedule sessions with a tutor
-* A voice call feature utilized by both students and tutors so that tutors can better teach the material and the student can better understand the material
-* A canvas feature utilized by both students and tutors so tutors can visually communicate the material and students can show the thought process of their learning
-* A live chat feature utilized by both students and tutors where students can ask quick questions about their homework and tutors can respond in real time
-* A rating feature utilized by students where they can rate their tutor after a session; this rating will then be displayed in the tutor’s profile page to highlight their credibility
-* A Google sign in feature utilized by both students and tutors where they can easily sign in with their Google accounts 
+* Login
+* Updatable User Profile
+* Swipable Profile Cards
+* Recruit Volunteers
+* Apply for Volunteering
 * A social media share feature utilized by both students and tutors where they can share the link with their friends through Facebook or Twitter
 
 [`Back to top`](#covol)
